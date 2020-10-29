@@ -59,7 +59,7 @@
         "name": "errorMessage",
         "type": "object",
         "required": false,
-        "description": "Options for the errorMessage component (e.g. text).",
+        "description": "Options for the error message component. The error message component will not display if you use a falsy value for `errorMessage`, for example `false` or `null`.",
         "isComponent": true
     },
     {
@@ -87,6 +87,12 @@
         "type": "object",
         "required": false,
         "description": "HTML attributes (for example data attributes) to add to the textarea."
+    },
+    {
+        "name": "spellcheck",
+        "type": "boolean",
+        "required": false,
+        "description": "Optional field to enable or disable the spellcheck attribute on the character count."
     },
     {
         "name": "countMessage",

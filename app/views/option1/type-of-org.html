@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What type of organisation are you? - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/type-of-org-answer" method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  What type of organisation are you?
+                </h1>
+              </legend>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="type-of-org" name="type-of-org" type="radio" value="a company">
+                  <label class="govuk-label govuk-radios__label" for="type-of-org">
+                    a company
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="type-of-org-2" name="type-of-org" type="radio" value="a sole trader">
+                  <label class="govuk-label govuk-radios__label" for="type-of-org-2">
+                    a sole trader
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="type-of-org-3" name="type-of-org" type="radio" value="a partnership">
+                  <label class="govuk-label govuk-radios__label" for="type-of-org-3">
+                  a partnership
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="type-of-org-4" name="type-of-org" type="radio" value="a charity, public body or not for profit organisation">
+                  <label class="govuk-label govuk-radios__label" for="type-of-org-4">
+                    a charity, public body or not for profit organisation
+                  </label>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

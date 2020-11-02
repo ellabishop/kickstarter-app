@@ -48,22 +48,27 @@
               Enter your Charity number
             </label>
             <input class="govuk-input govuk-input--width-20" id="charity-number" name="charity-number" type="email" spellcheck="false"></div>
+          </div>
 
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="cregister-2" name="register" type="radio" value="Office of the Scottish Charity Regulator" data-aria-controls="conditional-register-2">
-          <label class="govuk-label govuk-radios__label" for="company-2">
-            Office of the Scottish Charity Regulator
-          </label> </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="register-3" name="register" type="radio" value="Other" data-aria-controls="conditional-register-3">
-            <label class="govuk-label govuk-radios__label" for="register-3">
-              Other
-            </label>
+            <input class="govuk-radios__input" id="register-2" name="register" type="radio" value="Office of the Scottish Charity Regulator" data-aria-controls="conditional-register-2">
+            <label class="govuk-label govuk-radios__label" for="register-2">
+              Office of the Scottish Charity Regulator
+            </label> </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-register-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="scottish-number">
+                  Enter your Scottish Charity number
+                </label>
+                <input class="govuk-input govuk-input--width-20" id="scottish-number" name="scottish-number" type="email" spellcheck="false"></div>
+              </div>
 
-        </div>
-
-        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="register-4" name="register" type="radio" value="Other" data-aria-controls="conditional-register-4">
+          <label class="govuk-label govuk-radios__label" for="register-4">
+            Other
+          </label> </div>
+    </div>
 
     </fieldset>
 </div>

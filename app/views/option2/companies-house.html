@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Is your organisation registered with Companies House? - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/companies-house-answer" method="post" novalidate>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          Is your organisation registered with Companies House?
+        </h1>
+      </legend>
+      <div id="contact-hint" class="govuk-hint">
+        Select one option.
+      </div>
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+          <label class="govuk-label govuk-radios__label" for="contact">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-email">
+              Enter your Company number
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false"></div>
+
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+          <label class="govuk-label govuk-radios__label" for="contact-2">
+            No
+          </label>
+
+        </div>
+
+        </div>
+
+    </fieldset>
+</div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

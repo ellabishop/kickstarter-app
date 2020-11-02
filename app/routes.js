@@ -42,7 +42,7 @@ router.post('/companies-house-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (compHouse == "No") {
     // Send user to next page
-    res.redirect('/registered')
+    res.redirect('option2/registered')
   }
   else {
     // Send user to ineligible page

@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What type of organisation are you? - Kickstart scheme application
+  Who is your organisation registered with? - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/">Back</a>
+  <a class="govuk-back-link" href="companies-house">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -13,44 +13,50 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="/type-of-org-answer" method="post" novalidate>
+      <form action="/registered-answer" method="post" novalidate>
 
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          Who is your organisation registered with?
+        </h1>
+      </legend>
+      <div id="register-hint" class="govuk-hint">
+        Select one option.
+      </div>
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="register" name="register" type="radio" value="Charity Commission" data-aria-controls="conditional-register">
+          <label class="govuk-label govuk-radios__label" for="register">
+            Charity Commission
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-register">
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  What type of organisation are you?
-                </h1>
-              </legend>
-              <div class="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="type-of-org" name="type-of-org" type="radio" value="a company">
-                  <label class="govuk-label govuk-radios__label" for="type-of-org">
-                    a company
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="type-of-org-2" name="type-of-org" type="radio" value="a sole trader">
-                  <label class="govuk-label govuk-radios__label" for="type-of-org-2">
-                    a sole trader
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="type-of-org-3" name="type-of-org" type="radio" value="a partnership">
-                  <label class="govuk-label govuk-radios__label" for="type-of-org-3">
-                  a partnership
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="type-of-org-4" name="type-of-org" type="radio" value="a charity, public body or not for profit organisation">
-                  <label class="govuk-label govuk-radios__label" for="type-of-org-4">
-                    a charity, public body or not for profit organisation
-                  </label>
-                </div>
-              </div>
+            <label class="govuk-label" for="charity-number">
+              Enter your Charity number
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="charity-number" name="charity-number" type="email" spellcheck="false"></div>
 
-            </fieldset>
-          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="cregister-2" name="register" type="radio" value="Office of the Scottish Charity Regulator" data-aria-controls="conditional-register-2">
+          <label class="govuk-label govuk-radios__label" for="company-2">
+            Office of the Scottish Charity Regulator
+          </label> </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="register-3" name="register" type="radio" value="Other" data-aria-controls="conditional-register-3">
+            <label class="govuk-label govuk-radios__label" for="register-3">
+              Other
+            </label>
+
+        </div>
+
+        </div>
+
+    </fieldset>
+</div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue

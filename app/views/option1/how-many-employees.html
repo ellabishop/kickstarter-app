@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  How many Kickstart Scheme job placements can you offer? - Kickstart scheme application
+  How many paid employees are there where the job placements will be based? - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
@@ -29,31 +29,13 @@
   <fieldset class="govuk-fieldset" aria-describedby="company-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h1 class="govuk-fieldset__heading">
-          How many Kickstart Scheme job placements can you offer?
+          How many paid employees are there where the job placements will be based?
         </h1>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
       </legend>
 
-      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="register" name="register" type="radio" value="29 or fewer" data-aria-controls="conditional-register">
-          <label class="govuk-label govuk-radios__label" for="register">
-            29 or fewer
-          </label>
-        </div>
-
-
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="register-2" name="register" type="radio" value="3" data-aria-controls="conditional-register-2">
-            <label class="govuk-label govuk-radios__label" for="register-2">
-              30 or more
-            </label> </div>
-
-
-
-    </div>
-
-    </fieldset>
-</div>
+    
+      </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue

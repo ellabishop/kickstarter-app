@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  You need 30 or more Kickstart Scheme job placements to apply - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+  <a class="govuk-back-link" href="companies-house">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/registered-answer" method="post" novalidate>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          You need 30 or more Kickstart Scheme job placements to apply
+        </h1>
+      </legend>
+
+      <p class="govuk-body">If your organisation is looking to create fewer than 30 Kickstart Scheme job placements you need to follow a different process.</p>
+      <p class="govuk-body">You can:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>choose a <a href="https://secure.dwp.gov.uk/find-a-kickstart-gateway">Kickstart gateway"</a> to help you apply for the grant. They will also take on <a href="https://www.gov.uk/guidance/help-employers-apply-for-a-kickstart-scheme-grant-kickstart-gateway#responsibilities-of-a-representative">responsibilities</a></li>
+	<li>contact your <a href="https://www.gov.uk/government/publications/kickstart-scheme-employer-contacts">local Jobcentre Employer Partnership</a> if you need help to decide what to do</li>
+
+      </ul>
+
+
+<p class="govuk-body">Apply again when you have 30 or more Kickstart Scheme job placements through a Kickstart gateway or a group of employers.</p>
+
+
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

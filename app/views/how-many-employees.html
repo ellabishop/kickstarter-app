@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What sort of roles are you (or your group of employers) planning to create for the Kickstart Scheme? - Kickstart scheme application
+  How many paid employees are there where the job placements will be based? - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,31 +23,27 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="kickstart-additional-info" method="post" novalidate>
+      <form action="/registered-answer" method="post" novalidate>
 
 <div class="govuk-form-group">
   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-          What sort of roles are you (or your group of employers) planning to create for the Kickstart Scheme?
+          How many paid employees are there in your organisation?
 </label>
         </h1>
         <div id="register-hint" class="govuk-hint">
-          We use this to understand the type of work young people will be asked to do.
-
+          We need this information to work out how the young people will be supported
         </div>
-
-        <div id="register-hint" class="govuk-hint">
-          Enter all the types of roles you are planning to create
-        </div>
-
-        <textarea class="govuk-textarea" id="more-detail" name="role-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+          <input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text">
+      </div>
 
 
 
 
-      <button class="govuk-button" data-module="govuk-button">
-        Continue
-      </button>
-      </form>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+
     </div>
   </div>
 

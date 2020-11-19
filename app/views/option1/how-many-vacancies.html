@@ -23,7 +23,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="/registered-answer" method="post" novalidate>
+
+        <form action="kickstart-criteria" method="post" class="form">
+
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="company-hint">
@@ -33,22 +35,25 @@
         </h1>
       </legend>
 
-      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="register" name="register" type="radio" value="29 or fewer" data-aria-controls="conditional-register">
-          <label class="govuk-label govuk-radios__label" for="register">
+
+      <div class="govuk-radios">
+      <div class="govuk-radios__item">
+
+
+<input class="govuk-radios__input" id="over-30-yes" name="over-30" type="radio" value="true">
+<label class="govuk-label govuk-radios__label" for="over-30-yes">
+          30 or more
+        </label>
+      </div>
+
+      <div class="govuk-radios">
+      <div class="govuk-radios__item">
+
+          <input class="govuk-radios__input" id="over-30-no" name="over-30" type="radio" value="false">
+              <label class="govuk-label govuk-radios__label" for="over-30-no">
             29 or fewer
           </label>
         </div>
-
-
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="register-2" name="register" type="radio" value="3" data-aria-controls="conditional-register-2">
-            <label class="govuk-label govuk-radios__label" for="register-2">
-              30 or more
-            </label> </div>
-
-
 
     </div>
 

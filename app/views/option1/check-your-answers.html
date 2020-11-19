@@ -32,7 +32,7 @@
 
             </legend>
 <p class="govuk-body"></p>
-      <form action="/summary-answer" method="post" novalidate>
+      <form action="application-complete" method="post" novalidate>
 <h3 class="govuk-heading-m">Organisation details</h3>
         <dl class="govuk-summary-list">
     <div class="govuk-summary-list__row">
@@ -40,7 +40,7 @@
         Employer or Kickstart gateway
       </dt>
       <dd class="govuk-summary-list__value">
-        Employer
+        <p>{{ data['kstype'] }}</p>
       </dd>
       <dd class="govuk-summary-list__actions">
         <a class="govuk-link" href="#">
@@ -53,7 +53,7 @@
         Organisation name
       </dt>
       <dd class="govuk-summary-list__value">
-        Sample Industries Limited
+        <p>{{ data['org-name'] }}</p>
       </dd>
       <dd class="govuk-summary-list__actions">
         <a class="govuk-link" href="#">
@@ -82,7 +82,15 @@
         Organisation address
       </dt>
       <dd class="govuk-summary-list__value">
-        72 Guild Street<br>London<br>SE23 6FH
+      <p>{{ data['address-line-1'] }}</p>
+<p>{{ data['address-line-2'] }}</p>
+<p>{{ data['address-town'] }}</p>
+<p>{{ data['address-county'] }}</p>
+<p>{{ data['address-postcode'] }}</p>
+
+
+
+
       </dd>
       <dd class="govuk-summary-list__actions">
         <a class="govuk-link" href="#">
@@ -97,8 +105,9 @@
         Contact details
       </dt>
       <dd class="govuk-summary-list__value">
-        <p class="govuk-body">07700 900457</p>
-        <p class="govuk-body">sarah.phillips@example.com</p>
+         <p>{{ data['full-name'] }}</p>
+        <p>{{ data['telephone-number'] }}</p>
+      <p>{{ data['email'] }}</p>
       </dd>
       <dd class="govuk-summary-list__actions">
         <a class="govuk-link" href="#">
@@ -117,7 +126,7 @@
 placements
       </dt>
       <dd class="govuk-summary-list__value">
-        44
+        <p>{{ data['number-placements'] }}</p>
       </dd>
       <dd class="govuk-summary-list__actions">
         <a class="govuk-link" href="#">

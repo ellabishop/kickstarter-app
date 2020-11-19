@@ -53,17 +53,17 @@ router.get('/examples/template-data', function (req, res) {
 })
 
 // Branching
-router.post('/examples/branching/over-18-answer', function (req, res) {
+router.post('/../views/option1/how-many-vacancies', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  const over18 = req.session.data['over-18']
+  const over30 = req.session.data['over-30']
 
   if (over18 === 'false') {
-    res.redirect('/docs/examples/branching/under-18')
+    res.redirect('/../views/option1/under-30')
   } else {
-    res.redirect('/docs/examples/branching/over-18')
+    res.redirect('/../views/option1/over-30')
   }
 })
 

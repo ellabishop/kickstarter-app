@@ -43,7 +43,7 @@
         <p>{{ data['kstype'] }}</p>
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="#">
+        <a class="govuk-link" href="are-you-an-employer">
           Change<span class="govuk-visually-hidden"> Employer or Kickstart gateway</span>
         </a>
       </dd>
@@ -56,7 +56,7 @@
         <p>{{ data['org-name'] }}</p>
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="#">
+        <a class="govuk-link" href="organisation-details">
           Change<span class="govuk-visually-hidden"> Organisation name</span>
         </a>
       </dd>
@@ -70,7 +70,7 @@
         01234567
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="#">
+        <a class="govuk-link" href="registered">
           Change<span class="govuk-visually-hidden"> Organisation reference number</span>
         </a>
       </dd>
@@ -93,7 +93,7 @@
 
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="#">
+        <a class="govuk-link" href="organisation-details">
           Change<span class="govuk-visually-hidden"> Organisation address</span>
         </a>
       </dd>
@@ -110,12 +110,34 @@
       <p>{{ data['email'] }}</p>
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="#">
+        <a class="govuk-link" href="organisation-details">
           Change<span class="govuk-visually-hidden"> contact details</span>
         </a>
       </dd>
     </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Paid employees in organisation
+      </dt>
+      <dd class="govuk-summary-list__value">
+         <p>{{ data['paid-employees'] }}</p>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="how-many-employees">
+          Change<span class="govuk-visually-hidden"> paid employees in organisation</span>
+        </a>
+      </dd>
+    </div>
+
+
+
+
 </dl>
+
+
+
+
 <h3 class="govuk-heading-m">Kickstart Scheme job placement details</h3>
 <dl class="govuk-summary-list">
 
@@ -129,7 +151,7 @@ placements
         <p>{{ data['number-placements'] }}</p>
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="#">
+        <a class="govuk-link" href="how-many-placements">
           Change<span class="govuk-visually-hidden"> Number of job
 placements</span>
         </a>
@@ -153,7 +175,7 @@ information. This is a second paragraph of text provided by the user.This is a l
 
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="#">
+        <a class="govuk-link" href="types-of-roles">
           Change<span class="govuk-visually-hidden"> Types of role</span>
         </a>
       </dd>
@@ -178,7 +200,7 @@ just for Kickstart Scheme
 
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="#">
+        <a class="govuk-link" href="kickstart-additional-info">
           Change<span class="govuk-visually-hidden"> Information to show
 job placements are
 just for Kickstart Scheme</span>
@@ -203,7 +225,7 @@ just for Kickstart Scheme</span>
 
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="#">
+        <a class="govuk-link" href="kickstart-employability-info">
           Change<span class="govuk-visually-hidden"> Employability support</span>
         </a>
       </dd>
@@ -217,12 +239,12 @@ just for Kickstart Scheme</span>
         Location of job placements
       </dt>
       <dd class="govuk-summary-list__value">
-        <p>{{ data['region'] }} </p>
+        <p>{{ data['region'] }}  </p>
 
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="#">
-          Change<span class="govuk-visually-hidden"> Employability support</span>
+        <a class="govuk-link" href="where-placements-based">
+          Change<span class="govuk-visually-hidden"> location of job placements</span>
         </a>
       </dd>
     </div>

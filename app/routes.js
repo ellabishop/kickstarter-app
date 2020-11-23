@@ -5,14 +5,14 @@ const router = express.Router()
 // Add your routes here - above the module.exports line
 
 
-router.post('/howmanyvacs', function (req, res) {
+router.post('option2/howmanyvacs', function (req, res) {
 
   var over30 = req.session.data['over-30']
 
 if (over30 === 'true') {
-  res.redirect('need-30-placements')
+  res.redirect('option2/need-30-placements')
 } else {
-  res.redirect('kickstart-criteria')
+  res.redirect('option2/kickstart-criteria')
 }
 })
 
@@ -30,7 +30,7 @@ router.post('/companies-house-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (compHouse == "No") {
     // Send user to next page
-    res.redirect('/registered')
+    res.redirect('option2/registered')
   }
   else {
     // Send user to ineligible page

@@ -5,14 +5,14 @@ const router = express.Router()
 // Add your routes here - above the module.exports line
 
 
-router.post('/option2/howmanyvacs', function (req, res) {
+router.post('/howmanyvacs', function (req, res) {
 
   var over30 = req.session.data['over-30']
 
 if (over30 === 'true') {
-  res.redirect('option2/need-30-placements')
-} else {
   res.redirect('option2/kickstart-criteria')
+} else {
+  res.redirect('option2/not-eligible-kickstart-criteria')
 }
 })
 

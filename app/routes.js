@@ -5,7 +5,7 @@ const router = express.Router()
 // Add your routes here - above the module.exports line
 
 
-router.post('option2/howmanyvacs', function (req, res) {
+router.post('/option2/howmanyvacs', function (req, res) {
 
   var over30 = req.session.data['over-30']
 
@@ -22,7 +22,7 @@ if (over30 === 'true') {
 
 
 
-router.post('/companies-house-answer', function (req, res) {
+router.post('/option2/companies-house-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var compHouse = req.session.data['company']

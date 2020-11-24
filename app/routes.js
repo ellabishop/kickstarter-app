@@ -18,7 +18,7 @@ if (over30 === 'true') {
 
 
 
-router.post('/crieria', function (req, res) {
+router.post('/criteria', function (req, res) {
 
   var metcrit = req.session.data['true']
 

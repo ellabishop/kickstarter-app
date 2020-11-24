@@ -12,7 +12,20 @@ router.post('/howmanyvacs', function (req, res) {
 if (over30 === 'true') {
   res.redirect('option2/kickstart-criteria')
 } else {
-  res.redirect('option2/not-eligible-kickstart-criteria')
+  res.redirect('option2/need-30-placements')
+}
+})
+
+
+
+router.post('/crieria', function (req, res) {
+
+  var metcrit = req.session.data['true']
+
+if (metcrit === 'true') {
+  res.redirect('option2/kickstart-additional')
+} else {
+  res.redirect('option2/not-eligible-vacancy-just-for-kickstart')
 }
 })
 

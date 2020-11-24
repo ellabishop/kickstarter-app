@@ -20,7 +20,7 @@ if (over30 === 'true') {
 
 router.post('/criteria', function (req, res) {
 
-  var metcrit = req.session.data['true']
+  var metcrit = req.session.data['metcrit']
 
 if (metcrit === 'true') {
   res.redirect('option2/kickstart-additional')

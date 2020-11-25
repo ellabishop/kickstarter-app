@@ -25,7 +25,31 @@ router.post('/criteria', function (req, res) {
 if (metcrit === 'true') {
   res.redirect('option2/kickstart-additional')
 } else {
+  res.redirect('option2/not-eligible-kickstart-criteria')
+}
+})
+
+
+router.post('/additional', function (req, res) {
+
+  var metcrit = req.session.data['metcrit']
+
+if (metcrit === 'true') {
+  res.redirect('option2/kickstart-employability-support')
+} else {
   res.redirect('option2/not-eligible-vacancy-just-for-kickstart')
+}
+})
+
+
+router.post('/support', function (req, res) {
+
+  var metsup = req.session.data['metsup']
+
+if (metsup === 'true') {
+  res.redirect('option2/organisation-details')
+} else {
+  res.redirect('option2/not-eligible-support-for-young-people')
 }
 })
 

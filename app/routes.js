@@ -32,10 +32,10 @@ if (metcrit === 'true') {
 
 router.post('/additional', function (req, res) {
 
-  var metcrit = req.session.data['metcrit']
+  var metadd = req.session.data['metadd']
 
-if (metcrit === 'true') {
-  res.redirect('option2/kickstart-employability-support')
+if (metadd === 'true') {
+  res.redirect('option2/employability-support')
 } else {
   res.redirect('option2/not-eligible-vacancy-just-for-kickstart')
 }

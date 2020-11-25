@@ -59,19 +59,19 @@ if (metsup === 'true') {
 
 
 
-router.post('/option2/companies-house-answer', function (req, res) {
+router.post('/companies-house-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var compHouse = req.session.data['company']
 
   // Check whether the variable matches a condition
-  if (compHouse == "No") {
+  if (compHouse == "false") {
     // Send user to next page
     res.redirect('option2/registered')
   }
   else {
     // Send user to ineligible page
-    res.redirect('/error')
+    res.redirect('option2/how-many-employees')
   }
 
 })

@@ -35,12 +35,18 @@
 
         </div>
 
-        <div id="register-hint" class="govuk-hint">
-          Enter all the types of roles you are planning to create
-        </div>
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="5000">
+  <div class="govuk-form-group">
 
-        <textarea class="govuk-textarea" id="more-detail" name="role-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+  
+  <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="10" aria-describedby="with-hint-info with-hint-hint"></textarea>
+  </div>
 
+  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+  You can enter up to 5000 characters
+  </div>
+
+  </div>
 
 
 

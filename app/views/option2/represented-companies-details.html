@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Which employers do you represent? - Kickstart scheme application
+  Enter details of employers in your Kickstart gateway - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
@@ -29,7 +29,7 @@
   <fieldset class="govuk-fieldset" aria-describedby="company-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h1 class="govuk-fieldset__heading">
-          Which employers do you represent?
+          Enter details of employers in your Kickstart gateway
         </h1>
       </legend>
 
@@ -38,13 +38,16 @@
 
   <div id="with-hint-hint" class="govuk-hint">
 
-    Enter the number of employers your represent in your group and then provide their details.
-    <br>
-    <br>
 
+    <ul class="govuk-list govuk-list--bullet">
+<p class="govuk-body">For each employer, enter their:</p>
+<li>registered company or charity name</li>
+<li>postcode from their registered address</li>
+<li>registered company or charity number</li>
+</ul>
 
-    Enter all relevant information such as the registered organisation name, organisation postcode, Charity Commission number, or Companies House registration number.
-  </div>
+</div>
+
   <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="rep-companies" rows="10" aria-describedby="with-hint-info with-hint-hint"></textarea>
   </div>
 

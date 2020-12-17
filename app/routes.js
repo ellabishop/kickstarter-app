@@ -71,7 +71,7 @@ router.post('/companies-house-answer', function (req, res) {
   }
   else {
     // Send user to ineligible page
-    res.redirect('option2/how-many-employees')
+    res.redirect('option2/how-many-placements')
   }
 
 })

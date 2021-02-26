@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Who is your organisation registered with? - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/registered-answer" method="post" novalidate>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          Who is your organisation registered with?
+        </h1>
+      </legend>
+      <div id="register-hint" class="govuk-hint">
+        Select one option.
+      </div>
+
+
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="register" name="register" type="radio" value="Companies House" data-aria-controls="conditional-register">
+            <label class="govuk-label govuk-radios__label" for="register">
+              Companies House
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-register">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="company-number">
+                Enter your Company number
+              </label>
+              <input class="govuk-input govuk-input--width-20" id="company-number" name="company-number" type="email" spellcheck="false"></div>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="register-2" name="register" type="radio" value="Charity Commission" data-aria-controls="conditional-register-2">
+              <label class="govuk-label govuk-radios__label" for="register-2">
+                Charity Commission
+              </label> </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-register-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="charity-number">
+                    Enter your Charity number
+                  </label>
+                  <input class="govuk-input govuk-input--width-20" id="charity-number" name="charity-number" type="email" spellcheck="false"></div>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="register-3" name="register" type="radio" value="Office of the Scottish Charity Regulator" data-aria-controls="conditional-register-3">
+                  <label class="govuk-label govuk-radios__label" for="register-3">
+                    Office of the Scottish Charity Regulator
+                  </label> </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-register-3">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="scottish-number">
+                        Enter your Scottish Charity number
+                      </label>
+                      <input class="govuk-input govuk-input--width-20" id="scottish-number" name="scottish-number" type="email" spellcheck="false"></div>
+                    </div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="register-4" name="register" type="radio" value="Other" data-aria-controls="conditional-register-4">
+            <label class="govuk-label govuk-radios__label" for="register-4">
+              Other
+            </label> </div>
+      </div>
+
+
+
+    </fieldset>
+</div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

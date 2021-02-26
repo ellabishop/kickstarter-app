@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Please tell us how you will help the successful candidates to find permanent work after their job placements. - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+      <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="kickstart-additional-info">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="kickstart-employability-support-5" method="post" novalidate>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="event-name">
+          Please tell us how you will help the successful candidates to find permanent work after their job placements.
+</label>
+          </h1>
+
+          <p class="govuk-body">
+          For example; providing training on searching for future work, CV writing and preparing for interviews.</p>
+          
+<p class="govuk-body">
+          If you plan to use an external organisation, such as a Kickstart gateway or a training company, to deliver this support please give details.
+</p>
+
+        <div id="register-hint" class="govuk-hint">
+          Enter details of how you will support people's onward job search.
+        </div>   
+            <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="400">
+              <div class="govuk-form-group">
+                <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="5" aria-describedby="word-count-info"></textarea>
+              </div>
+
+              <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+    You can enter up to 400 words
+  </div>
+
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+          </form>
+        </div>
+      </div>
+
+    {% endblock %}

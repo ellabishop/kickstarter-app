@@ -49,7 +49,7 @@ router.post('/additional', function (req, res) {
   var metadd = req.session.data['metadd']
 
 if (metadd === 'true') {
-  res.redirect('design-features/1152-employability/kickstart-additional-info')
+  res.redirect('design-features/1152-employability/employability-support')
 } else {
   res.redirect('design-features/1152-employability/not-eligible-vacancy-just-for-kickstart')
 }
@@ -62,7 +62,7 @@ router.post('/support', function (req, res) {
   var metsup = req.session.data['metsup']
 
 if (metsup === 'true') {
-  res.redirect('design-features/1152-employability/organisation-details')
+  res.redirect('design-features/1152-employability/kickstart-additional-info')
 } else {
   res.redirect('design-features/1152-employability/not-eligible-support-for-young-people')
 }

@@ -5,16 +5,16 @@
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
       beta
     </strong>
-    <span class="govuk-phase-banner__text">
+      <span class="govuk-phase-banner__text">
       This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
     </span>
-  </p>
-</div>
+    </p>
+  </div>
   <a class="govuk-back-link" href="how-many-placements">Back</a>
 {% endblock %}
 
@@ -25,39 +25,35 @@
 
       <form action="kickstart-employability-support-1" method="post" novalidate>
 
-<div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-          What sort of roles are you planning to create for the Kickstart Scheme?
-</label>
-        </h1>
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="event-name">What sort of roles are you planning to create for the Kickstart Scheme?</label>
+          </h1>
 
+          <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="300">
+            <div class="govuk-form-group">
 
-        <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="300">
-  <div class="govuk-form-group">
+              <p class="govuk-body">
+                  We use this to understand the type of work young people will be asked to do.
+              </p>
 
-            <p class="govuk-body">
-          We use this to understand the type of work young people will be asked to do.
-        </p>
+              <div id="register-hint" class="govuk-hint">
+                Enter all the types of roles you are planning to create.
+              </div>
+              <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="5" aria-describedby="word-count-info"></textarea>
+            </div>
 
-        <div id="register-hint" class="govuk-hint">
-          Enter all the types of roles you are planning to create.
+            <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+              You can enter up to 300 words
+            </div>
+
+          </div>
+
         </div>
-    <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="5" aria-describedby="word-count-info"></textarea>
-  </div>
 
-  <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-    You can enter up to 300 words
-  </div>
-
-</div>
-
-  </div>
-
-
-
-      <button class="govuk-button" data-module="govuk-button">
-        Continue
-      </button>
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
       </form>
     </div>
   </div>

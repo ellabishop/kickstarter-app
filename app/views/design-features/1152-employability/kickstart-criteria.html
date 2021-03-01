@@ -5,16 +5,16 @@
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
       beta
     </strong>
-    <span class="govuk-phase-banner__text">
+      <span class="govuk-phase-banner__text">
       This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
     </span>
-  </p>
-</div>
+    </p>
+  </div>
   <a class="govuk-back-link" href="how-many-vacancies">Back</a>
 {% endblock %}
 
@@ -25,53 +25,45 @@
 
       <form action="/criteria" method="post" novalidate>
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="company-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">
-          Do all of your Kickstart Scheme job placements meet the criteria?
-        </h1>
-      </legend>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Do all of your Kickstart Scheme job placements meet the criteria?
+              </h1>
+            </legend>
 
-      <p class="govuk-body">The Kickstart Scheme job placements must be:</p>
+            <p class="govuk-body">The Kickstart Scheme job placements must be:</p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>6 months</li>
-<li>at least 25 hours per week</li>
-<li>paying at least the National Minimum Wage (or the National Living Wage depending on the age of the participant) through PAYE</li>
-	<li>paying the statutory employer duties for the health, safety and welfare for young people, National Insurance and pension contributions </li>
-	<li>including support for young people to help them get work after they finish their Kickstart Scheme job</li>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>6 months</li>
+              <li>at least 25 hours per week</li>
+              <li>paying at least the National Minimum Wage (or the National Living Wage depending on the age of the participant) through PAYE</li>
+              <li>paying the statutory employer duties for the health, safety and welfare for young people, National Insurance and pension contributions </li>
+              <li>including support for young people to help them get work after they finish their Kickstart Scheme job</li>
+            </ul>
 
+            <h2 class="govuk-heading-m">Do your job placements meet this criteria?</h2>
 
-      </ul>
-  <h2 class="govuk-heading-m">Do your job placements meet this criteria?</h2>
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="metcrit-yes" name="metcrit" type="radio" value="true">
+                <label class="govuk-label govuk-radios__label" for="metcrit-yes">Yes, all job placements meet this criteria</label>
+              </div>
 
-      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="metcrit-yes" name="metcrit" type="radio" value="true">
-          <label class="govuk-label govuk-radios__label" for="metcrit-yes">
-            Yes, all job placements meet this criteria
-          </label>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="metcrit-no" name="metcrit" type="radio" value="false">
+                <label class="govuk-label govuk-radios__label" for="metcrit-no">No, not all job placements meet this criteria</label>
+              </div>
+            </div>
+
+          </fieldset>
         </div>
 
-
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="metcrit-no" name="metcrit" type="radio" value="false">
-            <label class="govuk-label govuk-radios__label" for="metcrit-no">
-              No, not all job placements meet this criteria
-            </label> </div>
-
-
-
-    </div>
-
-    </fieldset>
-</div>
-
-          <button class="govuk-button" data-module="govuk-button">
+        <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-        </form>
+      </form>
 
     </div>
   </div>

@@ -5,16 +5,16 @@
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
       beta
     </strong>
-    <span class="govuk-phase-banner__text">
+      <span class="govuk-phase-banner__text">
       This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
     </span>
-  </p>
-</div>
+    </p>
+  </div>
   <a class="govuk-back-link" href="kickstart-criteria">Back</a>
 {% endblock %}
 
@@ -25,53 +25,44 @@
 
       <form action="/additional" method="post" novalidate>
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="company-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">
-          Are your job placements just for the Kickstart Scheme?
-        </h1>
-      </legend>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Are your job placements just for the Kickstart Scheme?
+              </h1>
+            </legend>
 
-      <p class="govuk-body">The Kickstart Scheme job placements must:</p>
+            <p class="govuk-body">The Kickstart Scheme job placements must:</p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>be funded by the Kickstart Scheme grant and would not exist without this funding</li>
-	<li>be paid from the grant money for the 25 hours per week on National Minimum Wage (employers can pay a higher wage and pay for more hours)</li>
-	<li>not replace existing or planned jobs </li>
-	<li>not cause existing employees or contractors to lose or reduce their employment</li>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>be funded by the Kickstart Scheme grant and would not exist without this funding</li>
+              <li>be paid from the grant money for the 25 hours per week on National Minimum Wage (employers can pay a higher wage and pay for more hours)</li>
+              <li>not replace existing or planned jobs </li>
+              <li>not cause existing employees or contractors to lose or reduce their employment</li>
+            </ul>
 
+            <h2 class="govuk-heading-m">Do all of your Kickstart Scheme job placements meet this criteria?</h2>
 
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="metadd-yes" name="metadd" type="radio" value="true">
+                <label class="govuk-label govuk-radios__label" for="metadd-yes">Yes, all job placements meet this criteria</label>
+              </div>
 
-      </ul>
-  <h2 class="govuk-heading-m">Do all of your Kickstart Scheme job placements meet this criteria?</h2>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="metadd-no" name="metadd" type="radio" value="false">
+                <label class="govuk-label govuk-radios__label" for="metadd-no">No, not all job placements meet this criteria</label>
+              </div>
+            </div>
 
-      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="metadd-yes" name="metadd" type="radio" value="true">
-          <label class="govuk-label govuk-radios__label" for="metadd-yes">
-            Yes, all job placements meet this criteria
-          </label>
+          </fieldset>
         </div>
 
-
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="metadd-no" name="metadd" type="radio" value="false">
-            <label class="govuk-label govuk-radios__label" for="metadd-no">
-              No, not all job placements meet this criteria
-            </label> </div>
-
-
-
-    </div>
-
-    </fieldset>
-</div>
-
-          <button class="govuk-button" data-module="govuk-button">
+        <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-        </form>
+      </form>
 
     </div>
   </div>

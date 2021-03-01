@@ -5,16 +5,16 @@
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
       beta
     </strong>
-    <span class="govuk-phase-banner__text">
+      <span class="govuk-phase-banner__text">
       This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
     </span>
-  </p>
-</div>
+    </p>
+  </div>
   <a class="govuk-back-link" href="companies-house">Back</a>
 {% endblock %}
 
@@ -25,23 +25,17 @@
 
       <form action="how-many-placements" method="post" novalidate>
 
-<div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-          How many paid employees are there in your organisation?
-</label>
-        </h1>
-        
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="event-name">How many paid employees are there in your organisation?</label>
+          </h1>
           <input class="govuk-input govuk-input--width-5" id="width-5" name="paid-employees" type="text">
-
-      </div>
-
-
-
+        </div>
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-        </form>
+      </form>
 
     </div>
   </div>

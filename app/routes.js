@@ -49,7 +49,7 @@ router.post('/additional', function (req, res) {
   var metadd = req.session.data['metadd']
 
 if (metadd === 'true') {
-  res.redirect('design-features/1152-employability/employability-support')
+  res.redirect('design-features/1152-employability/kickstart-additional-info')
 } else {
   res.redirect('design-features/1152-employability/not-eligible-vacancy-just-for-kickstart')
 }

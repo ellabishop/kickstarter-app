@@ -40,6 +40,26 @@ router.post('/employability-support', function (req, res) {
 });
 
 
+// submitting variations options
+router.post('/select-how-to-submit-variations', function (req, res) {
+  var ksSupport = req.session.data['ksVariations']
+  if (ksSupport === 'true') {
+    res.redirect('design-features/1197_grant-variations/gateway/add-details-options/upload-instructions')
+  } else {
+    res.redirect('design-features/1197_grant-variations/gateway/add-details-options/employer-details')
+  }
+});
+
+// next we choose to add another 
+router.post('/add-another', function (req, res) {
+  var ksSupport = req.session.data['ksAddAnother']
+  if (ksSupport === 'true') {
+    res.redirect('design-features/1197_grant-variations/gateway/tell-us-why-you-need-the-additional-jobs')
+  } else {
+    res.redirect('design-features/1197_grant-variations/gateway/add-details-options/employer-details')
+  }
+});
+
 // <------------------------------------------------------->
 
 // KICK-1152 improve employability questions

@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What is your Kickstart Application ID - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+  <a class="govuk-back-link" href="companies-house">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="add-details-of-each-organisation-applying-for-jobs" method="post" novalidate>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+          What is your Kickstart Application ID?
+</label>
+        </h1>
+
+            <div id="register-hint" class="govuk-hint">
+              It starts with KS followed by 8 digits.
+            </div>
+        
+          <input class="govuk-input govuk-input--width-20" id="width-20" name="paid-employees" type="text">
+
+      </div>
+
+        {{ govukDetails({
+            summaryText: "I cannot find my Kickstart Application ID",
+            html: '<p>You can find your Application ID on your grant agreement. If you cannot find it we can confirm this with you at a later date.</p>
+            <p><a href="add-details-of-each-organisation-applying-for-jobs">Continue without providing Application ID</a></p>
+            '
+        }) }}      
+
+
+
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -7,6 +7,41 @@ const router = express.Router()
 
 // <------------------------------------------------------->
 
+// KICK-1197 grant variations – Gateways
+
+// are you an employer
+router.post('/are-you-an-employer', function (req, res) {
+  var kstype = req.session.data['kstype']
+  if (kstype === 'true') {
+    res.redirect('design-features/1197_grant-variations/gateway/do-you-have-a-kickstart-grant-agreement')
+  } else {
+    res.redirect('design-features/1152-employability/do-you-have-a-kickstart-grant-agreement')
+  }
+});
+
+// after employer we do KS grant
+router.post('/have-a-kickstart-grant', function (req, res) {
+  var KickstartGrant = req.session.data['KickstartGrant']
+  if (KickstartGrant === 'true') {
+    res.redirect('design-features/1197_grant-variations/gateway/enter-your-kickstart-reference-id')
+  } else {
+    res.redirect('design-features/1197_grant-variations/gateway/application-process-has-changed')
+  }
+});
+
+// next we do employability support
+router.post('/employability-support', function (req, res) {
+  var ksSupport = req.session.data['ksSupport']
+  if (ksSupport === 'true') {
+    res.redirect('design-features/1197_grant-variations/gateway/where-placements-based')
+  } else {
+    res.redirect('design-features/1197_grant-variations/gateway/what-additional-suuport-is-needed')
+  }
+});
+
+
+// <------------------------------------------------------->
+
 // KICK-1152 improve employability questions
 
 // are you an employer

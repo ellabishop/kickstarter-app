@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Are you an employer or a Kickstart gateway? - Kickstart scheme application
+  Add details of the employers and Kickstart jobs you want to add to your Grant Agreement - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
@@ -29,22 +29,29 @@
           <fieldset class="govuk-fieldset" aria-describedby="company-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Choose how you want to submit your new variations 
+                Add details of the employers and Kickstart jobs you want to add to your Grant Agreement 
             </h1>
             </legend>
-            <div id="register-hint" class="govuk-hint">
-              Bla Bla Bla. They manage the grant process and sometimes provide employability support to the young people on the scheme.
-            </div>
-
+            <p class="govuk-body">We need to know:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>employer name</li>
+                  <li>employer's registered address</li>
+                  <li>Charity Commission number or Companies House number</li>
+                  <li>number of paid employees</li>
+                  <li>number of additional jobs the employer is offering</li>
+                  <li>are they completely new to you as a gateway?</li>
+                  <li>are they an existing employer you deal with who wish to increase the number of placements they offer through you?</li>
+                </ul>
+                
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="ksVariations" name="ksVariations" type="radio" value="false">
-                <label class="govuk-label govuk-radios__label" for="ksVariations">One by one</label>
+                <label class="govuk-label govuk-radios__label" for="ksVariations">Add employer details one-by-one</label>
               </div>
 
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="ksVariations" name="ksVariations" type="radio" value="true">
-                <label class="govuk-label govuk-radios__label" for="ksVariations">Upload a spreadsheet</label>
+                <label class="govuk-label govuk-radios__label" for="ksVariations">Download, complete and upload the multiple variations template</label>
               </div>
 
             </div>

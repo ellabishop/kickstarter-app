@@ -27,12 +27,14 @@
 
 <div class="govuk-form-group">
   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-          What is your Kickstart Application ID?
+          Enter your Kickstart reference number
 </label>
         </h1>
 
+                <p class="govuk-body">You can find this on your original Grant Agreement and on payment remittance documents.  </p>
+
             <div id="register-hint" class="govuk-hint">
-              It starts with KS followed by 8 digits.
+              It starts with KS followed by 8 characters. For example: KS123ABC78
             </div>
         
           <input class="govuk-input govuk-input--width-20" id="width-20" name="paid-employees" type="text">
@@ -40,9 +42,9 @@
       </div>
 
         {{ govukDetails({
-            summaryText: "I cannot find my Kickstart Application ID",
-            html: '<p>You can find your Application ID on your grant agreement. If you cannot find it we can confirm this with you at a later date.</p>
-            <p><a href="add-details-of-each-organisation-applying-for-jobs">Continue without providing Application ID</a></p>
+            summaryText: "I cannot find my original Kickstart reference number",
+            html: '<p>If you cannot find this reference number you can continue and we will try to link this addition to your grant agreement. This may delay the processing of your new request.</p>
+            <p><a href="add-details-of-each-organisation-applying-for-jobs">Continue without Kickstart reference number</a></p>
             '
         }) }}      
 

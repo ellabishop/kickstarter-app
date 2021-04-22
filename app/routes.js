@@ -44,7 +44,7 @@ router.post('/employability-support', function (req, res) {
 router.post('/select-how-to-submit-variations', function (req, res) {
   var ksSupport = req.session.data['ksVariations']
   if (ksSupport === 'true') {
-    res.redirect('design-features/1197_grant-variations/gateway/add-details-options/upload-instructions')
+    res.redirect('design-features/1197_grant-variations/gateway/upload-instructions')
   } else {
     res.redirect('design-features/1197_grant-variations/gateway/add-details-options/employer-details')
   }

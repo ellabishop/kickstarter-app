@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Provide details that these jobs are just for the Kickstart scheme - Kickstart scheme application
+  Confirm these roles have been created for the Kickstart Scheme - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
@@ -27,22 +27,25 @@
 
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="event-name">Provide details that these jobs are just for the Kickstart scheme</label>
+            <label class="govuk-label govuk-label--l" for="event-name">Confirm these roles have been created for the Kickstart Scheme</label>
           </h1>
 
-          <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+          <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="1000">
             <div class="govuk-form-group">
 
 
               <div id="register-hint" class="govuk-hint">
-                <p class="govuk-body">For instance some text goes here each employer member you want to add to the grant variation you will need to provide:</p>
-
+                <p class="govuk-body">Include proof that these Kickstart job placements:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>do not replace existing or planned vacancies</li>
+                  <li>will not cause existing employees to lose work or have their hours reduced</li>
+                </ul>     
               </div>
               <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10" aria-describedby="word-count-info"></textarea>
             </div>
 
             <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-              You can enter up to 500 words
+              You can enter up to 1000 words
             </div>
 
           </div>

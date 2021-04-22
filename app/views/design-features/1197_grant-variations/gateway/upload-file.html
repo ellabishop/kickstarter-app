@@ -15,32 +15,38 @@
     </span>
     </p>
   </div>
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <main class="govuk-main-wrapper " id="main-content" role="main">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">Upload your employer details file</h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
+      <form action="tell-us-why-you-need-the-additional-jobs" method="post" novalidate >
 
-        
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Upload your multiple variations template 
+            </h1>
+            </legend>
 <div class="govuk-form-group">
   <label class="govuk-label" for="file-upload-1">
     When you have created your spreadsheet… bla bla
   </label>
   <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
 </div>
+          </fieldset>
+        </div>
 
         <button class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-
-      </div>
+            Save and continue
+          </button>
+      </form>
 
     </div>
-  </main>
-</div>
+  </div>
 
 {% endblock %}

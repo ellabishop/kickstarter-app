@@ -22,7 +22,6 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
       <form action="upload-file" method="post" novalidate >
 
         <div class="govuk-form-group">
@@ -30,9 +29,14 @@
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
                 Download, complete and upload the multiple variations template 
-            </h1>
+              </h1>
             </legend>
             <p class="govuk-body">For each employer we need to know:</p>
+
+            <p class="govuk-body">
+              <b>¿ Shouldn't we be saying that the template has the columns set up with what we want to collect ?</b>
+            </p>
+
             <ul class="govuk-list govuk-list--bullet">
               <li>the organisation name</li>
               <li>registered address</li>
@@ -41,20 +45,21 @@
               <li>or an existing employer you deal with who wish to increase the number of jobs they offer through you?</li>
             </ul>
 
-          <p class="govuk-body">
-            <a class="govuk-link" href="#">Download a copy of our template</a>
-          </p>
+            <div class="govuk-inset-text">
+              You need to use the template provided, you cannot use your own file, bla, bla.
+            </div>
 
+            <p class="govuk-body">
+              <a class="govuk-link" href="#">Download a preformatted copy of the template</a>
+            </p>
           </fieldset>
         </div>
 
         <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
+          Continue
+        </button>
       </form>
-
     </div>
   </div>
-
 
 {% endblock %}

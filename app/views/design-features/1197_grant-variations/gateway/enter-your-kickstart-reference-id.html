@@ -1,20 +1,20 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What is your Kickstart Application ID - Kickstart scheme application
+  Enter your Kickstart Application ID - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
       beta
     </strong>
-    <span class="govuk-phase-banner__text">
+      <span class="govuk-phase-banner__text">
       This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
     </span>
-  </p>
-</div>
+    </p>
+  </div>
   <a class="govuk-back-link" href="companies-house">Back</a>
 {% endblock %}
 
@@ -25,36 +25,31 @@
 
       <form action="how-you-want-to-submit-details" method="post" novalidate>
 
-<div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-          Enter your Kickstart reference number
-</label>
-        </h1>
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="event-name">
+              Enter your Kickstart reference number
+            </label>
+          </h1>
+          <p class="govuk-body">You can find this on your original Grant Agreement and on payment remittance documents.</p>
 
-                <p class="govuk-body">You can find this on your original Grant Agreement and on payment remittance documents.  </p>
-
-            <div id="register-hint" class="govuk-hint">
+          <div id="register-hint" class="govuk-hint">
               It starts with KS followed by 8 characters. For example: KS123ABC78
-            </div>
-        
+          </div>
           <input class="govuk-input govuk-input--width-20" id="width-20" name="paid-employees" type="text">
-
-      </div>
+        </div>
 
         {{ govukDetails({
             summaryText: "I cannot find my original Kickstart reference number",
             html: '<p>If you cannot find this reference number you can continue and we will try to link this addition to your grant agreement. This may delay the processing of your new request.</p>
             <p><a href="how-you-want-to-submit-details">Continue without Kickstart reference number</a></p>
             '
-        }) }}      
+        }) }}
 
-
-
-
-          <button class="govuk-button" data-module="govuk-button">
+        <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-        </form>
+      </form>
 
     </div>
   </div>

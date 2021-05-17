@@ -23,24 +23,21 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="add-another" method="post" novalidate>
+      <form action="how-many-employees" method="post" novalidate>
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="company-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">Add details of each employer and their additional Kickstart jobs</h1>
+              <h1 class="govuk-fieldset__heading">Provide details of employer</h1>
             </legend>
 
             <div class="govuk-form-group">
               <label class="govuk-label" for="paidEmployees">
-                Employer name
+                Registered business name
               </label>
-              <div id="register-hint" class="govuk-hint">
-                  This should be your registered business name
-              </div>
               <input class="govuk-input govuk-!-width-two-thirds" id="paidEmployees" name="org-name" type="text" spellcheck="false" autocomplete="name"></div>
 
-              <label class="govuk-label" for="paidEmployees">
+            <label class="govuk-label" for="paidEmployees">
                 Companies House registration number or Charity Commission number
               </label>
             <div id="register-hint" class="govuk-hint">
@@ -49,11 +46,8 @@
             <input class="govuk-input govuk-!-width-two-thirds" id="company-number" name="co-number" type="text" spellcheck="false" autocomplete="name"></div>
 
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h4 class="govuk-heading-s">Organisation address</h4>
+            <h4 class="govuk-heading-s">Registered business address</h4>
           </legend>
-          <div id="register-hint" class="govuk-hint">
-        This should be their registered business address
-        </div>
           <div class="govuk-form-group">
             <label class="govuk-label" for="address-line-1">
         Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
@@ -84,63 +78,18 @@
             </label>
             <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
 
-            <br>
-
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h3 class="govuk-heading-m">About the jobs</h3>
-          </legend>
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="width-4">
-              Number of paid employees
-            </label>
-            <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text"></div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="telephone-number">
-                Number of jobs the employer is offering 
-              </label>
-
-            <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text"></div>
-          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <br>
-
-              <h3 class="govuk-heading-m">Do you work with this company already?</h3>
-            </legend>
-            <div class="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="new-employer" name="new-employer" type="radio" value="government-gateway" aria-describedby="new-employer-item-hint">
-                <label class="govuk-label govuk-radios__label" for="new-employer">
-          No, they are a new employer in our gateway
-        </label>
-                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-          They are new company who wish to apply to be a Kickstart employer within our gateway
-        </div>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-                <label class="govuk-label govuk-radios__label" for="sign-in-2">
-          Yes, they are an exisiting employer within in our gateway
-        </label>
-                <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-          They are an existing employer who wish to increase the number of placements they offer.
-        </div>
-              </div>
-            </div>
-            <br>
-
             <button class="govuk-button" data-module="govuk-button">
-                Save and continue 
+                Continue 
             </button>
           </fieldset>
         </div>
-          <br>
+        <br>
 
-          </div>
-        </div>
-
-      </form>
+      </div>
     </div>
-  </div>
+
+  </form>
+</div>
+</div>
 
 {% endblock %}

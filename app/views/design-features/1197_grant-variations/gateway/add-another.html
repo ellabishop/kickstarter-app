@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Apply for a Kickstart Scheme Grant for Employers
+  Are you an employer or a Kickstart gateway? - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,28 +23,32 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="uploading-file-progress" method="post" novalidate >
+      <form action="/add-another" method="post" novalidate >
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="company-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Upload your completed template 
+                Do you want to add another employer? 
               </h1>
             </legend>
-            <div class="govuk-form-group">
-              <p class="govuk-body">
-                When you have completed all columns in the template, save it with your organisation name and today's date. For example: 'GatewayName290421'
-              </p>
-              <p class="govuk-body">
-                Files must be smaller than 5MB
-              </p>
-              <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="ksAddAnother" name="ksAddAnother" type="radio" value="false">
+                <label class="govuk-label govuk-radios__label" for="ksAddAnother">Yes, I want to add another employer</label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="ksAddAnother" name="ksAddAnother" type="radio" value="true">
+                <label class="govuk-label govuk-radios__label" for="ksAddAnother">No, I have finished adding employers</label>
+              </div>
             </div>
+
           </fieldset>
         </div>
 
-          <button class="govuk-button" data-module="govuk-button">
+        <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
       </form>

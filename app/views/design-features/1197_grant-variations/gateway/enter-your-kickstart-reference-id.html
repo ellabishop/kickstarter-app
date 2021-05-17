@@ -25,26 +25,51 @@
 
       <form action="how-you-want-to-submit-details" method="post" novalidate>
 
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Do you have your Kickstart Scheme Application ID?
+      </h1>
+    </legend>
+            <p class="govuk-body">
+      It starts with KS followed by 8 characters. For example: KS123ABC78.<br> You can find this on your original grant agreement and on payment remittance documents.
+    </p>
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
         <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="event-name">
-              Enter your Kickstart reference number
-            </label>
-          </h1>
-          <p class="govuk-body">You can find this on your original Grant Agreement and on payment remittance documents.</p>
+          <label class="govuk-label" for="contact-by-email">
+            Enter your Kickstart Scheme Application ID
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false"></div>
 
-          <div id="register-hint" class="govuk-hint">
-              It starts with KS followed by 8 characters. For example: KS123ABC78
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          No, continue without a Kickstart Scheme Application ID
+        </label>
+          <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">This may delay the processing of your new request.
           </div>
-          <input class="govuk-input govuk-input--width-20" id="width-20" name="paid-employees" type="text">
-        </div>
+      
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+        <div class="govuk-form-group">
 
-        {{ govukDetails({
-            summaryText: "I cannot find my original Kickstart reference number",
-            html: '<p>If you cannot find this reference number you can continue and we will try to link this addition to your grant agreement. This may delay the processing of your new request.</p>
-            <p><a href="how-you-want-to-submit-details">Continue without Kickstart reference number</a></p>
-            '
-        }) }}
+
+      </div>
+
+    </div>
+
+  </fieldset>
+</div>
+
 
         <button class="govuk-button" data-module="govuk-button">
             Continue

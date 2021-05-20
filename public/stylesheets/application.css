@@ -7866,7 +7866,6 @@ p + .govuk-heading-s,
 .csv-container {
   background-image: url(/public/images/csv-visual.png);
   background-repeat: no-repeat;
-  background-position: center top;
   padding-top: 40px;
   width: 960px;
   height: 100px;

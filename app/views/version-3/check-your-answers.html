@@ -1,0 +1,274 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+  <a class="govuk-back-link" href="where-placements-based">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Check your answers before sending your application
+              </h1>
+
+
+            </legend>
+<p class="govuk-body"></p>
+      <form action="application-complete" method="post" novalidate>
+<h3 class="govuk-heading-m">Organisation details</h3>
+        <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Employer or Kickstart gateway
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <p>{{ data['kstype'] }}</p>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="are-you-an-employer">
+          Change<span class="govuk-visually-hidden"> Employer or Kickstart gateway</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Organisation name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <p>{{ data['org-name'] }}</p>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="organisation-details">
+          Change<span class="govuk-visually-hidden"> Organisation name</span>
+        </a>
+      </dd>
+    </div>
+
+
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Organisation address
+      </dt>
+      <dd class="govuk-summary-list__value">
+      <p>{{ data['address-line-1'] }}</p>
+<p>{{ data['address-line-2'] }}</p>
+<p>{{ data['address-town'] }}</p>
+<p>{{ data['address-county'] }}</p>
+<p>{{ data['address-postcode'] }}</p>
+
+
+
+
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="organisation-details">
+          Change<span class="govuk-visually-hidden"> Organisation address</span>
+        </a>
+      </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Contact details
+      </dt>
+      <dd class="govuk-summary-list__value">
+         <p>{{ data['contact-name'] }}</p>
+        <p>{{ data['telephone-number'] }}</p>
+      <p>{{ data['email'] }}</p>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="organisation-details">
+          Change<span class="govuk-visually-hidden"> contact details</span>
+        </a>
+      </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Organisation reference number
+      </dt>
+      <dd class="govuk-summary-list__value">
+          <p>{{ data['company-number'] }}</p>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="companies-house">
+          Change<span class="govuk-visually-hidden"> Organisation reference number</span>
+        </a>
+      </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Paid employees in organisation
+      </dt>
+      <dd class="govuk-summary-list__value">
+         <p>{{ data['paid-employees'] }}</p>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="how-many-employees">
+          Change<span class="govuk-visually-hidden"> paid employees in organisation</span>
+        </a>
+      </dd>
+    </div>
+
+
+
+
+</dl>
+
+
+
+
+<h3 class="govuk-heading-m">Kickstart Scheme job placement details</h3>
+<dl class="govuk-summary-list">
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Number of job
+placements
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <p>{{ data['number-placements'] }}</p>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="how-many-placements">
+          Change<span class="govuk-visually-hidden"> Number of job
+placements</span>
+        </a>
+      </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Types of role
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <p>{{ data['type-of-roles'] }}</p>
+
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="types-of-roles">
+          Change<span class="govuk-visually-hidden"> Types of role</span>
+        </a>
+      </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Information to show
+job placements are
+just for Kickstart Scheme
+      </dt>
+      <dd class="govuk-summary-list__value">
+
+<p>{{ data['kickstart-additional-info'] }}</p>
+
+
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="kickstart-additional-info">
+          Change<span class="govuk-visually-hidden"> Information to show
+job placements are
+just for Kickstart Scheme</span>
+        </a>
+      </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Employability support
+      </dt>
+      <dd class="govuk-summary-list__value">
+
+<p>{{ data['kickstart-employability-info'] }}</p>
+
+
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="kickstart-employability-info">
+          Change<span class="govuk-visually-hidden"> Employability support</span>
+        </a>
+      </dd>
+    </div>
+
+
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Location of job placements
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <p>{{ data['region'] }}  </p>
+
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="where-placements-based">
+          Change<span class="govuk-visually-hidden"> location of job placements</span>
+        </a>
+      </dd>
+    </div>
+
+
+
+  </dl>
+
+<h3 class="govuk-heading-m">Accept and send your application</h3>
+
+<p class="govuk-body">By submitting this application you confirm you have the authority to represent the organisation stated in ‘Organisation name’.</p>
+<p class="govuk-body"></p>
+
+
+<p class="govuk-body">You confirm that:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>the information in this application is correct and complete</li>
+	<li>the organisation meets and will continue to meet all Kickstart Scheme qualifying criteria</li>
+<li>the organisation has the legal authority to participate in the Kickstart Scheme, is financially solvent and has not been the subject of any judgement for fraud, corruption or illegal activity</li>
+<li>you understand an application does not in any way signify eligibility for Kickstart Scheme funding or confirm that a grant will be approved or provided</li>
+</ul>
+<p class="govuk-body"></p>
+<p class="govuk-body">We may be in touch to ask for more information about your application.</p>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    If your organisation gives false or incomplete information to obtain a grant or uses funds for a purpose not outlined in this application, you risk prosecution and any funding provided may be repayable and future payments stopped.
+  </strong>
+</div>
+          <button class="govuk-button" data-module="govuk-button">
+            Accept and send application
+          </button>
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

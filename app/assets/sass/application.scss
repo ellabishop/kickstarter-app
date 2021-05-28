@@ -18,3 +18,37 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.progress-container {
+    background-image: url(/public/images/spinner.gif);
+    background-repeat: no-repeat;
+    background-position: center top;
+    text-align: center;
+    padding-top: 40px;
+    min-height: 400px;
+  }
+
+.attachment-thumb {
+  background-image: url(/public/images/pub-cover-spreadsheet.png);
+  display: block;
+  width: 99px;
+  height: 140px;
+  outline: 5px solid rgba(11, 12, 12, 0.1);
+  outline-color: rgba(11, 12, 12, 0.1);
+  outline-style: solid;
+  outline-width: 5px;
+  box-shadow: 0 2px 2px rgb(11, 12, 12);
+}
+
+.csv-container {
+  background-image: url(/public/images/csv-visual.png);
+  background-repeat: no-repeat;
+  padding-top: 40px;
+  width: 960px;
+  height: 100px;
+  outline: 5px solid rgba(11, 12, 12, 0.1);
+  outline-color: rgba(11, 12, 12, 0.1);
+  outline-style: solid;
+  outline-width: 5px;
+  box-shadow: 0 2px 2px rgb(11, 12, 12);
+}

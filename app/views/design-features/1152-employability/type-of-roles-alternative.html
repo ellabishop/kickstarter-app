@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  List the roles you plan to create for the Kickstart Scheme - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+      <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="kickstart-employability-support-1" method="post" novalidate>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="event-name">List the roles you plan to create for the Kickstart Scheme</label>
+          </h1>
+
+          <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="300">
+            <div class="govuk-form-group">
+
+              <p class="govuk-body">
+                  We use this to understand the type of work people will do and the experience they will gain.
+              </p>
+
+              <p class="govuk-body">
+                  For example, 1. Trainee Sewing Machinist x 3 – training and experience of using professional sewing machines to make men’s fashion clothing.
+              </p>
+
+              <p class="govuk-body">
+                  2. 3D CAD trainee x 1 – training and experience in latest computer assisted design software. Designing shop layouts and fittings.
+              </p>              
+
+              <div id="register-hint" class="govuk-hint">
+                Enter a title, number of placements and a short description for each role.
+              </div>
+              <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="5" aria-describedby="word-count-info"></textarea>
+            </div>
+
+            <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+              You can enter up to 300 words
+            </div>
+
+          </div>
+
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

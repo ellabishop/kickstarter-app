@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Tell us how you will support the young person with timekeeping, attendance management and planning their journey to work - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+      <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="kickstart-employability-support-2" method="post" novalidate>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="event-name">How will you help the young person manage their timekeeping and attendance?</label>
+          </h1>
+
+          <div id="register-hint" class="govuk-hint">
+            If you cover this in your induction of all new staff, tell us how it will apply to the Kickstart Scheme.
+          </div>
+
+          <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="400">
+            <div class="govuk-form-group">
+              <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10" aria-describedby="word-count-info"></textarea>
+            </div>
+
+            <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+              You can enter up to 400 words
+            </div>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+  </div>
+
+  {% endblock %}

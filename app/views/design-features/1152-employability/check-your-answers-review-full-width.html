@@ -1,0 +1,335 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+      <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+                Check your answers before sending
+              </h1>
+          </legend>
+
+          <p class="govuk-body"></p>
+          <form action="application-complete" method="post" novalidate>
+            <h3 class="govuk-heading-m">Employer details</h3>
+            <dl class="govuk-summary-list">
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        What information do you have to show your job placements are just for the Kickstart Scheme?
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">When you apply for a job, you often submit a resume and cover letter to outline your previous experiences that make you qualified for the position. When you get to the interview, your prospective employer has likely already reviewed your application materials and is familiar with your background. Interviewers may ask you to describe your work experience, which gives you the chance to share what you feel is most valuable to this new role.</p>
+                  <p class="govuk-body">Any job has a set of duties you’ll be responsible for, so knowing your prior experience can help your interviewer gauge how prepared you are for a role. Even though they can see your experience on your resume or application, your ability to summarize your work history and relate it to the position can show that you’ve reflected on your potential employer’s expectations.</p>
+                  <p class="govuk-body">This interview prompt gives you the chance to summarize the education and training that make you the most qualified candidate for the role. You can use this time to present the items on your resume more clearly in terms of how they prepare you for this position’s responsibilities and contributions to the company’s goals. Before your interview, consider writing out quick talking points to organize your thoughts, and use the following steps to help prepare your answer.</p>
+                  <p class="govuk-body">Familiarize yourself with the position’s expectations to best present your ability to handle its responsibilities. Briefly outline what the role entails, including the daily tasks, necessary skills and ideal goals. You should also identify the tools listed in the job description, such as specific technology or equipment. Recalling the required and preferred qualifications can help you determine which of your skills and experiences to discuss.</p>
+                  <p class="govuk-body">It’s wise to remind yourself of the professional experience you provided during the application process so you know what expectations you have set for the interviewer. Study the most relevant experiences on your resume, cover letter and formal application, and focus on the duties, skills and accomplishments of each. Use the terminology you gathered from the job listing to phrase your experiences in terms the interviewer is likely to recognize. This step can help you optimize your brief summary and focus your answer. 362/500 words</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/kickstart-additional-info">
+          Change<span class="govuk-visually-hidden">Jobs are for the Kickstart Scheme</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        Organisation name
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['org-name'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+          Change<span class="govuk-visually-hidden">Organisation name</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        Companies House registration number or Charity Commission number
+      </dt>
+                <dd class="govuk-summary-list__value">
+        45678902
+      </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+          Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        Organisation address
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['address-line-1'] }}</p>
+                  <p>{{ data['address-line-2'] }}</p>
+                  <p>{{ data['address-town'] }}</p>
+                  <p>{{ data['address-county'] }}</p>
+                  <p>{{ data['address-postcode'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+          Change<span class="govuk-visually-hidden">Organisation address</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        Contact details
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['full-name'] }}</p>
+                  <p>{{ data['telephone-number'] }}</p>
+                  <p>{{ data['email-address'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+          Change<span class="govuk-visually-hidden">Contact details</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        Give a brief description of your organisation and the type of work it does
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">If you want to cover a number of different locations with your approval, we’ll need the address for your registered head office, or the office where your finance, human resources or learning and development department is based. We’ll ask you more about those locations in the Approval scope section of the application form.</p>
+                  <p class="govuk-body">The primary contact is the person we will contact if we have any questions about your application. If your application is successful, this person will be our main contact for important information about your continued approval, including our regular renewal and monitoring processes.</p>
+                  <p class="govuk-body">In large organisations we would recommend that this is a senior professional in either the finance or human resources/learning and development function. In smaller companies it should be the person responsible for co-ordinating training and development for finance professionals.</p>
+                  <p class="govuk-body">If you are a firm of accountants in public practice and you are applying for Practising Certificate Development approval, the primary contact must be either a training partner or a training principal within your firm.</p>
+                  <p class="govuk-body">We strongly recommend that you also provide details for a secondary contact. If we can’t get in touch with your primary contact, we will contact this person in their absence.</p>
+                  <p class="govuk-body">An ACCA student or affiliate cannot be listed as the primary contact for your approval, but they can be listed as your secondary contact. 284/400 words</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/description-of-organisation">
+          Change<span class="govuk-visually-hidden">Brief description</span>
+                  </a>
+                </dd>
+              </div>
+
+            </dl>
+
+            <h3 class="govuk-heading-m">Kickstart vacancy details</h3>
+            <dl class="govuk-summary-list">
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    How many paid employees are there in your organisation?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['paid-employees'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/how-many-employees">
+                    Change<span class="govuk-visually-hidden">Number of employees</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        How many job placements are you planning to create for the Kickstart Scheme?
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['number-placements'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/how-many-placements">
+          Change<span class="govuk-visually-hidden">Number of job placements</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        What sort of roles are you planning to create for the Kickstart Scheme?
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">So there you are, coasting along at your current job. You enjoy your work, and you especially like your company. </p>
+                  <p class="govuk-body">The thing is, you’re feeling a little restless lately. Perhaps you know your job so well that you could do it in your sleep. Or maybe you don’t see much opportunity for growth or movementin your department. That little voice in your head is saying it’s ready for new challenges, but the thought of leaving your awesome company is really daunting. There’s got to be a better way, right?</p>
+                  <p class="govuk-body">Before you start polishing up your resume, it’s worth thinking about how you can create your own opportunity at your current company. But how do you do this? Where do you start? How do you even get the right people to listen to you? Read on for five easy steps for creating a new job at your current company.</p>
+                  <p class="govuk-body">Also, don’t be afraid to ask your supervisor to punch holes in this idea; you’ll want to be prepared to answer challenging questions if your idea gets to the next level. If your supervisor agrees that your idea could work, then ask about the next step—i.e., the right people to talk to in order to make the job a reality. </p>
+                  <p class="govuk-body">No matter what, again you’ll want to focus on how this new role will be a great thing for the company—and why you’re exactly the right person to take it on. 241/300 words</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/type-of-roles">
+          Change<span class="govuk-visually-hidden">Types of role</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        Tell us how you will support the young person with timekeeping, attendance management and planning their journey to work
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">As an employer, one of your priorities will be making sure that your team is as productive as possible in helping you achieve your company’s goals. But sometimes an employee may develop a theme of poor timekeeping and absence.</p>
+                  <p class="govuk-body">While there may be many justifiable reasons for poor punctuality and excessive sick days, it’s down to you and your employee to resolve any underlying issues to ensure that the business doesn’t take a hit over the lack of productivity that tardiness leads to.</p>
+                  <p class="govuk-body">The importance of punctuality is even more imperative in customer-facing businesses, where workers need to be present to serve shoppers in specific timeframes or else the customer experience will suffer.</p>
+                  <p class="govuk-body">While the 21st Century has seen something of a shift towards more flexible working hours in many offices, there are still countless environments where it’s impossible to be so lax with timing – and in these cases, the offending employee would need to be approached about their behavior accordingly.</p>
+                  <p class="govuk-body">Remember that your employee is human, and as such will have innumerable concerns, distractions and motivations at play under the skin. Perhaps their absenteeism is down to relationship troubles or a long-term family illness? Plenty of companies encourage their workers to leave their problems at the door when they enter the workplace, but sometimes a member of staff will feel overawed and unable to maintain their focus. 228/300 words</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/kickstart-employability-support-1">
+          Change<span class="govuk-visually-hidden">Types of support</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        Give details on how the young person will learn about teamwork and communication in each job placement
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">Communication is the key to success – humans are social animals designed to thrive in collaborative circumstances. However, some of us are more adept at communicating than others and it’s the failure to share thoughts, ideas and feelings effectively which can lead to uncomfortable situations.</p>
+                  <p class="govuk-body">Creating and maintaining teams within a working situation can be key to the success of a business. Bringing a diverse group of people together to work towards a common goal, for example increasing sales outcomes, ensures that different ideas and approaches to reaching the desired outcome can be evaluated and implemented. At least that’s the idea!</p>
+                  <p class="govuk-body">The reality can be that often one or two individuals can dominate a group and effectively override everyone else, so it’s beholden on those managing teams to ensure this is not allowed to happen.</p>
+                  <p class="govuk-body">Is it a good idea to have people of varying temperaments, abilities and views in one team? Of course it is, because without disagreements there’d be no discussions and without discussions nothing could ever change.</p>
+                  <p class="govuk-body">Taking extremes of homogenised teams: a team comprised solely of risk takers could potentially gamble the future success of the business by always insisting the riskiest approaches are best.</p>
+                  <p class="govuk-body">Conversely a conservatively focused team would never stray away from the straight and narrow, the tried and tested. 216/500 words</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/kickstart-employability-support-2">
+          Change<span class="govuk-visually-hidden">Teamwork and communication</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        Give details of the hands-on experience and practical skills each job placement will offer
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">The general aim for practical classes is to enhance students’ understanding of methods of scientific enquiry. This is pursued in a variety of ways where students are given the opportunity to undertake experiments; tackle problem-solving exercises; carry out survey and project work and experience at firsthand how the theory and principles of their discipline are applied. The key learning aims in practical classes (Allison, 1995) are: 
+• Consolidate subject knowledge • Introduce disciplinary methods and procedures • Develop technical skills • Develop cognitative skills • Promote teamwork skills • Increase motivation
+</p>
+                  <p class="govuk-body">Some temp roles are just that, and inevitably have an expiration date, but don’t despair. It’s not uncommon for temporary workers who perform well to be rewarded with a permanent position.</p>
+                  <p class="govuk-body">The trick is to prove your worth. Make yourself indispensable to your employer and they’ll naturally want to retain you. If you have the opportunity to gain expertise in an area vital to the business, seize it. Go above and beyond to exceed expectations on a daily basis and show that you’re worth the investment.</p>
+                  <p class="govuk-body">The benefits of hands-on learning, or practical learning, is particularly beneficial for STEM subjects as they bring complex concepts to life so they can better retain learned information. According to The Edvocate, “The processes of inquiry, reasoning and collaboration required in STEM learning are similar to any experiential activity; learning activities must be hands-on experiences.</p>
+                  <p class="govuk-body">STEM classes also demand rigor and relevance in a curriculum, and the students who take these classes must learn to think critically as they use science, technology, engineering, and mathematics to solve real world problems through direct learning experiences.</p>
+                  <p class="govuk-body">Students become more engaged and are more likely to remember the information they have learned due to their experience. Rather than just reading and memorising from a textbook, which can leave many students demotivated and cause them to lose interest, hands-on learning stimulates their senses and enables them to become more connected to their learning.</p>
+                  <p class="govuk-body">When they work on real-life projects, students can see the impact of their work, learning important skills along the way. For example, they learn collaborative and critical thinking skills during hands-on learning activities, which are essential for the workplace. It prepares them better for life after graduation, equipping them with job-ready skills and the required academic knowledge. Hands-on learning is, after all, the practical application of academic knowledge. It means students get to visualise, experience and learn by doing. 399/500 words</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/kickstart-employability-support-3">
+          Change<span class="govuk-visually-hidden">Experience and skills</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        Tell us how you will help Kickstart employees look for work in the future
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">Temporary work is a great way to try out a role in a new company, or city, without the commitment of a permanent contract.</p>
+                  <p class="govuk-body">Some temp roles are just that, and inevitably have an expiration date, but don’t despair. It’s not uncommon for temporary workers who perform well to be rewarded with a permanent position.</p>
+                  <p class="govuk-body">The trick is to prove your worth. Make yourself indispensable to your employer and they’ll naturally want to retain you. If you have the opportunity to gain expertise in an area vital to the business, seize it. Go above and beyond to exceed expectations on a daily basis and show that you’re worth the investment.</p>
+                  <p class="govuk-body">I often say a job is a problem to be solved, so show them that you are the solution to their problem.</p>
+                  <p class="govuk-body">Employers also want to know that you’ll fit in well with the company culture – not just on a personal level with your colleagues, but with the company’s core values. Follow correct company etiquette when it comes to break times, socialising and meetings, and always offer to help your co-workers.</p>
+                  <p class="govuk-body">Ensuring that you’re known as someone who is well-liked will go a long way with your employer when it comes to considering you for a full time position.</p>
+                  <p class="govuk-body">You’re in a unique position – you already have your foot in the door – so use it to your advantage. Find out what skills are required to become a full time employee and make sure that you have them, or that you’re working on building them. 254/400 words</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/kickstart-employability-support-4">
+          Change<span class="govuk-visually-hidden">Help look for work</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        Tell us about any qualifications or training candidates may have access to as part of the job placement
+      </dt>
+                <dd class="govuk-summary-list__value">
+        We should never stop learning, and there should be few excuses for employers to prevent us from accessing appropriate training. Even the least skilled job requires a certain degree of training, but good employers will go beyond the basics and offer ample opportunities for their staff to develop.
+    <p class="govuk-body"></p>
+                  <p class="govuk-body"></p>
+                  <p class="govuk-body">Training opportunities should be provided continuously throughout every employee’s career, whether on an informal basis in the workplace or in a more structured format (a course of regular classes held off-site, for example).</p>
+                  <p class="govuk-body">Besides the in-house training offered by employers themselves, a range of nationwide work-based training schemes are available through which workers can acquire specific qualifications. These schemes, often involving learning both at an employer’s premises and with an external training provider, enable staff to develop key skills that can help them progress in their careers.</p>
+                  <p class="govuk-body">Work-based training allows new starters to gain experience with an employer while they are learning, overcoming the familiar catch-22 of “no experience, no job” that jobseekers often face when they first try to find work. With some work-based training, trainees will be employed from the very beginning. Where that is not the case, there’s still a good chance if they show promise that the employer will want to take them on once they have finished their training.</p>
+                  <p class="govuk-body">Work-based training is free, high-quality training designed by employers in your industry, and those who offer it are demonstrating a commitment to developing the potential of their staff. 240/400 words</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/kickstart-employability-support-5">
+          Change<span class="govuk-visually-hidden">Training or qualifications</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        Where will your Kickstart Scheme job placements be based?
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['region'] }}
+                  </p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/where-placements-based">
+          Change<span class="govuk-visually-hidden">Employability support</span>
+                  </a>
+                </dd>
+              </div>
+
+            </dl>
+
+            <h3 class="govuk-heading-m">Accept and send your application</h3>
+
+            <p class="govuk-body">By submitting this application you confirm you have the authority to represent the organisation stated in ‘Organisation name’.</p>
+
+            <p class="govuk-body">You confirm that:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>the information in this application is correct and complete</li>
+              <li>the organisation meets and will continue to meet all Kickstart Scheme qualifying criteria</li>
+              <li>the organisation has the legal authority to participate in the Kickstart Scheme, is financially solvent and has not been the subject of any judgement for fraud, corruption or illegal activity</li>
+              <li>you understand an application does not in any way signify eligibility for Kickstart Scheme funding or confirm that a grant will be approved or provided</li>
+            </ul>
+
+            <p class="govuk-body">We may be in touch to ask for more information about your application.</p>
+
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+    If your organisation gives false or incomplete information to obtain a grant or uses funds for a purpose not outlined in this application, you risk prosecution and any funding provided may be repayable and future payments stopped.
+  </strong>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+            Accept and send application
+          </button>
+          </form>
+
+        </div>
+      </div>
+
+    {% endblock %}

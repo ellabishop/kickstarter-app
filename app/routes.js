@@ -7,7 +7,7 @@ const router = express.Router()
 
 // <------------------------------------------------------->
 
-// KICK-1197 grant variations – Gateways
+// Grant variations – Employers and Gateways
 
 // are you an employer
 router.post('/are-you-an-employer', function (req, res) {
@@ -15,17 +15,27 @@ router.post('/are-you-an-employer', function (req, res) {
   if (kstype === 'true') {
     res.redirect('design-features/1197_grant-variations/gateway/do-you-have-a-kickstart-grant-agreement')
   } else {
-    res.redirect('design-features/1152-employability/do-you-have-a-kickstart-grant-agreement')
+    res.redirect('design-features/1197_grant-variations/employer/do-you-have-a-kickstart-grant-agreement-employer')
   }
 });
 
-// after employer we do KS grant
+// after employer we do KS grant – gateway
 router.post('/have-a-kickstart-grant', function (req, res) {
   var KickstartGrant = req.session.data['KickstartGrant']
   if (KickstartGrant === 'true') {
     res.redirect('design-features/1197_grant-variations/gateway/enter-your-kickstart-reference-id')
   } else {
     res.redirect('design-features/1197_grant-variations/gateway/application-process-has-changed')
+  }
+});
+
+// after employer we do KS grant - employer
+router.post('/have-a-kickstart-grant-employer', function (req, res) {
+  var KickstartGrant = req.session.data['KickstartGrant']
+  if (KickstartGrant === 'true') {
+    res.redirect('design-features/1197_grant-variations/employer/enter-your-kickstart-reference-id')
+  } else {
+    res.redirect('design-features/1152-employability/kickstart-criteria')
   }
 });
 

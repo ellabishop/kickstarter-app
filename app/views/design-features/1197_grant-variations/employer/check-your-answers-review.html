@@ -1,0 +1,245 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+      <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Check your answers before sending
+            </h1>
+          </legend>
+
+          <p class="govuk-body"></p>
+        <form action="application-complete" method="post" novalidate>
+          <dl class="govuk-summary-list">
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Are you an employer or a Kickstart gateway?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">Kickstart gateway</p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/design-features/1152-employability/kickstart-additional-info">
+                  Change<span class="govuk-visually-hidden">Jobs are for the Kickstart Scheme</span>
+                 </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Do you already have a Kickstart Scheme grant agreement with DWP?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>Yes{{ data['org-name'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  Change<span class="govuk-visually-hidden">Organisation name</span>
+                  </a>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Do you have your Kickstart Scheme Application ID?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                KS1234KH7D
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  How many paid employees are there in your organisation?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                20
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  How many new Kickstart Scheme jobs do you want to apply for?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                2
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                </a>
+              </dd>
+            </div>
+          </dl>
+              
+            <h3 class="govuk-heading-m">Employability and additionality</h3>
+            <dl class="govuk-summary-list">
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        Provide information to show that these jobs have been created just for the Kickstart Scheme
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">So there you are, coasting along at your current job. You enjoy your work, and you especially like your company. </p>
+                  <p class="govuk-body">The thing is, you’re feeling a little restless lately. Perhaps you know your job so well that you could do it in your sleep. Or maybe you don’t see much opportunity for growth or movementin your department. That little voice in your head is saying it’s ready for new challenges, but the thought of leaving your awesome company is really daunting. There’s got to be a better way, right?</p>
+                  <p class="govuk-body">Before you start polishing up your resume, it’s worth thinking about how you can create your own opportunity at your current company. But how do you do this? Where do you start? How do you even get the right people to listen to you? Read on for five easy steps for creating a new job at your current company.</p>
+                  <p class="govuk-body">Also, don’t be afraid to ask your supervisor to punch holes in this idea; you’ll want to be prepared to answer challenging questions if your idea gets to the next level. If your supervisor agrees that your idea could work, then ask about the next step—i.e., the right people to talk to in order to make the job a reality. </p>
+                  <p class="govuk-body">No matter what, again you’ll want to focus on how this new role will be a great thing for the company—and why you’re exactly the right person to take it on. 241/300 words</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/type-of-roles">
+          Change<span class="govuk-visually-hidden">Types of role</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        What employability support will be provided for the additional Kickstart Scheme workers?
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">As an employer, one of your priorities will be making sure that your team is as productive as possible in helping you achieve your company’s goals. But sometimes an employee may develop a theme of poor timekeeping and absence.</p>
+                  <p class="govuk-body">While there may be many justifiable reasons for poor punctuality and excessive sick days, it’s down to you and your employee to resolve any underlying issues to ensure that the business doesn’t take a hit over the lack of productivity that tardiness leads to.</p>
+                  <p class="govuk-body">The importance of punctuality is even more imperative in customer-facing businesses, where workers need to be present to serve shoppers in specific timeframes or else the customer experience will suffer.</p>
+                  <p class="govuk-body">While the 21st Century has seen something of a shift towards more flexible working hours in many offices, there are still countless environments where it’s impossible to be so lax with timing – and in these cases, the offending employee would need to be approached about their behavior accordingly.</p>
+                  <p class="govuk-body">Remember that your employee is human, and as such will have innumerable concerns, distractions and motivations at play under the skin. Perhaps their absenteeism is down to relationship troubles or a long-term family illness? Plenty of companies encourage their workers to leave their problems at the door when they enter the workplace, but sometimes a member of staff will feel overawed and unable to maintain their focus. 228/400 words</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/kickstart-employability-support-1">
+          Change<span class="govuk-visually-hidden">Types of support</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Where will your Kickstart Scheme job placements be based?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>North East{{ data['region'] }}
+                  </p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/where-placements-based">
+          Change<span class="govuk-visually-hidden">Employability support</span>
+                  </a>
+                </dd>
+              </div>
+
+            </dl>
+
+              <h3 class="govuk-heading-m">Employer details</h3>
+          <dl class="govuk-summary-list">
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Organisation name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  SME Manufacturing Limited
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                  </a>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Organisation address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>2 Sparrow Way{{ data['address-line-1'] }}</p>
+                  <p>Birdland{{ data['address-line-2'] }}</p>
+                  <p>Cuckoo City{{ data['address-town'] }}</p>
+                  <p>BD12 3AA{{ data['address-county'] }}</p>
+                  <p>{{ data['address-postcode'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                    Change<span class="govuk-visually-hidden">Organisation address</span>
+                  </a>
+                </dd>
+            </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Who can we contact about this addition to your grant agreement?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>Jane Magpie{{ data['full-name'] }}</p>
+                  <p>07123 124578{{ data['telephone-number'] }}</p>
+                  <p>jane.cuckoo@smemanufacuturing.co.uk{{ data['email-address'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                    Change<span class="govuk-visually-hidden">Contact details</span>
+                  </a>
+                </dd>
+              </div>             
+          </dl>            
+
+            <h3 class="govuk-heading-m">Accept and send your application</h3>
+
+            <p class="govuk-body">By submitting this application you confirm you have the authority to represent the organisation stated in ‘Organisation name’.</p>
+
+            <p class="govuk-body">You confirm that:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>the information in this application is correct and complete</li>
+              <li>the organisation meets and will continue to meet all Kickstart Scheme qualifying criteria</li>
+              <li>the organisation has the legal authority to participate in the Kickstart Scheme, is financially solvent and has not been the subject of any judgement for fraud, corruption or illegal activity</li>
+              <li>you understand an application does not in any way signify eligibility for Kickstart Scheme funding or confirm that a grant will be approved or provided</li>
+            </ul>
+
+            <p class="govuk-body">We may be in touch to ask for more information about your application.</p>
+
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+    If your organisation gives false or incomplete information to obtain a grant or uses funds for a purpose not outlined in this application, you risk prosecution and any funding provided may be repayable and future payments stopped.
+  </strong>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+            Accept and send application
+          </button>
+          </form>
+
+        </div>
+      </div>
+
+    {% endblock %}

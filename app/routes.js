@@ -33,19 +33,46 @@ router.post('/have-a-kickstart-grant', function (req, res) {
 router.post('/have-a-kickstart-grant-employer', function (req, res) {
   var KickstartGrant = req.session.data['KickstartGrant']
   if (KickstartGrant === 'true') {
-    res.redirect('design-features/1197_grant-variations/employer/enter-your-kickstart-reference-id')
+    res.redirect('design-features/1197_grant-variations/employer/kickstart-criteria')
   } else {
     res.redirect('design-features/1152-employability/kickstart-criteria')
   }
 });
 
+//after KS grant we do criteria
+
+router.post('/variations-criteria', function (req, res) {
+
+  var metcrit = req.session.data['metcrit']
+
+if (metcrit === 'true') {
+  res.redirect('design-features/1197_grant-variations/employer/kickstart-additional')
+} else {
+  res.redirect('design-features/1152-employability/not-eligible-kickstart-criteria')
+}
+})
+
+//after criteria we do additional
+
+router.post('/variations-additional', function (req, res) {
+
+  var metadd = req.session.data['metadd']
+
+if (metadd === 'true') {
+  res.redirect('design-features/1197_grant-variations/employer/employability-support')
+} else {
+  res.redirect('design-features/1152-employability/not-eligible-vacancy-just-for-kickstart')
+}
+})
+
 // next we do employability support
-router.post('/employability-support', function (req, res) {
+
+router.post('/variations-employability-support', function (req, res) {
   var ksSupport = req.session.data['ksSupport']
   if (ksSupport === 'true') {
-    res.redirect('design-features/1197_grant-variations/gateway/where-placements-based')
+    res.redirect('design-features/1197_grant-variations/employer/what-is-your-kickstart-number')
   } else {
-    res.redirect('design-features/1197_grant-variations/gateway/what-additional-suuport-is-needed')
+    res.redirect('design-features/1152-employability/not-eligible-support-for-young-people')
   }
 });
 

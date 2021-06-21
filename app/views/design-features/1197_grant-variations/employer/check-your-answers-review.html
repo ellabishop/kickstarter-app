@@ -32,6 +32,85 @@
 
           <p class="govuk-body"></p>
         <form action="application-complete" method="post" novalidate>
+
+              <h3 class="govuk-heading-m">Employer details</h3>
+          <dl class="govuk-summary-list">
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Organisation name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  SME Manufacturing Limited
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                  </a>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Companies House registration number or Charity Commission number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  01234567
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                  </a>
+                </dd>
+            </div>            
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Organisation address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>2 Sparrow Way{{ data['address-line-1'] }}</p>
+                  <p>Birdland{{ data['address-line-2'] }}</p>
+                  <p>Cuckoo City{{ data['address-town'] }}</p>
+                  <p>BD12 3AA{{ data['address-county'] }}</p>
+                  <p>{{ data['address-postcode'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                    Change<span class="govuk-visually-hidden">Organisation address</span>
+                  </a>
+                </dd>
+            </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                   Contact name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>Jane Magpie{{ data['full-name'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                    Change<span class="govuk-visually-hidden">Contact details</span>
+                  </a>
+                </dd>
+              </div> 
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                   Contact details
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>07123 124578{{ data['telephone-number'] }}</p>
+                  <p>jane.cuckoo@smemanufacuturing.co.uk{{ data['email-address'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                    Change<span class="govuk-visually-hidden">Contact details</span>
+                  </a>
+                </dd>
+              </div>                           
+          </dl>          
           <dl class="govuk-summary-list">
 
             <div class="govuk-summary-list__row">
@@ -133,84 +212,7 @@
 
             </dl>
 
-              <h3 class="govuk-heading-m">Employer details</h3>
-          <dl class="govuk-summary-list">
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Organisation name
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  SME Manufacturing Limited
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
-                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
-                  </a>
-                </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Companies House registration number or Charity Commission number
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  01234567
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
-                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
-                  </a>
-                </dd>
-            </div>            
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Organisation address
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>2 Sparrow Way{{ data['address-line-1'] }}</p>
-                  <p>Birdland{{ data['address-line-2'] }}</p>
-                  <p>Cuckoo City{{ data['address-town'] }}</p>
-                  <p>BD12 3AA{{ data['address-county'] }}</p>
-                  <p>{{ data['address-postcode'] }}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
-                    Change<span class="govuk-visually-hidden">Organisation address</span>
-                  </a>
-                </dd>
-            </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                   Contact name
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>Jane Magpie{{ data['full-name'] }}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
-                    Change<span class="govuk-visually-hidden">Contact details</span>
-                  </a>
-                </dd>
-              </div> 
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                   Contact details
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>07123 124578{{ data['telephone-number'] }}</p>
-                  <p>jane.cuckoo@smemanufacuturing.co.uk{{ data['email-address'] }}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
-                    Change<span class="govuk-visually-hidden">Contact details</span>
-                  </a>
-                </dd>
-              </div>                           
-          </dl>            
+          
 
             <h3 class="govuk-heading-m">Accept and send your application</h3>
 

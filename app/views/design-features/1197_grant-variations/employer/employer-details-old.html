@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Organisation details - Kickstart scheme application
+Enter your gateway details - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,13 +23,16 @@ Organisation details - Kickstart scheme application
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="/company-details" method="post" novalidate>
+      <form action="check-your-answers-review" method="post" novalidate>
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="company-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">Enter employer details</h1>
+              <h1 class="govuk-fieldset__heading">Enter your details</h1>
             </legend>
+
+             <p class="govuk-body">We collect this to check your Kickstart reference number and in case any contacts or other details have changed.</p>
+
 
             <div class="govuk-form-group">
               <label class="govuk-label" for="full-name">
@@ -86,36 +89,6 @@ Organisation details - Kickstart scheme application
 
           <fieldset class="govuk-fieldset" aria-describedby="company-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-
-              <h3 class="govuk-heading-m">Who can we contact?</h3>
-            </legend>
-
-            <div id="register-hint" class="govuk-hint">
-        This is the person in your company who will deal with queries about your Kickstart Scheme application
-        </div>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="full-name">
-                Full name 
-              </label>
-              <input class="govuk-input govuk-!-width-two-thirds" id="full-name" name="full-name" type="text" autocomplete="full-name"></div>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="telephone-number">
-                Telephone number 
-              </label>
-              <div id="register-hint" class="govuk-hint">
-          Enter a telephone number without spaces
-        </div>
-              <input class="govuk-input govuk-!-width-two-thirds" id="telephone-number" name="telephone-number" type="text" autocomplete="telephone-number"></div>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="email-address">
-                E-mail address 
-              </label>
-              <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="text" autocomplete="email-address"></div>
-
-            <br>
 
           </div>
         </div>

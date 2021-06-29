@@ -25,6 +25,15 @@
 
       <form action="/add-another" method="post" novalidate >
 
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                You have entered the details for 
+                  <span class="govuk-caption-xl">{{ data['org-name'] }}</span>
+                  <span class="govuk-caption-xl">{{ data['org-name-2'] }}</span>
+              </h1>
+            </legend>
+            <br>
+
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="company-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -36,12 +45,12 @@
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="ksAddAnother" name="ksAddAnother" type="radio" value="false">
-                <label class="govuk-label govuk-radios__label" for="ksAddAnother">Yes, I want to add another employer</label>
+                <label class="govuk-label govuk-radios__label" for="ksAddAnother">Yes</label>
               </div>
 
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="ksAddAnother" name="ksAddAnother" type="radio" value="true">
-                <label class="govuk-label govuk-radios__label" for="ksAddAnother">No, I have finished adding employers</label>
+                <label class="govuk-label govuk-radios__label" for="ksAddAnother">No</label>
               </div>
             </div>
 

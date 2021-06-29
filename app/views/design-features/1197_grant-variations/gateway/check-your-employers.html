@@ -1,0 +1,182 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+      <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Check your answers before continuing
+            </h1>
+          </legend>
+
+          <p class="govuk-body"></p>
+        <form action="provide-evidence-that-these-meet-the-criteria" method="post" novalidate>
+          <dl class="govuk-summary-list">
+
+              
+              <h3 class="govuk-heading-m">Employer one details</h3>
+          <dl class="govuk-summary-list">
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Registered business name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['org-name'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                  </a>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Companies House registration number or Charity Commission number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['co-number'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                  </a>
+                </dd>
+            </div>            
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Registered address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['address-line-1'] }}</p>
+                  <p>{{ data['address-line-2'] }}</p>
+                  <p>{{ data['address-town'] }}</p>
+                  <p>{{ data['address-county'] }}</p>
+                  <p>{{ data['address-postcode'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                    Change<span class="govuk-visually-hidden">Organisation address</span>
+                  </a>
+                </dd>
+            </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Number of jobs
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['number-jobs'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/description-of-organisation">
+                  Change<span class="govuk-visually-hidden">Brief description</span>
+                  </a>
+                </dd>
+              </div>
+
+          </dl>
+
+<br>
+
+              <h3 class="govuk-heading-m">Employer two details</h3>
+          <dl class="govuk-summary-list">
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Registered business name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['org-name-2'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                  </a>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Companies House registration number or Charity Commission number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['co-number-2'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                  </a>
+                </dd>
+            </div>            
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Registered address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['address-2-line-1'] }}</p>
+                  <p>{{ data['address-2-line-2'] }}</p>
+                  <p>{{ data['address-2-town'] }}</p>
+                  <p>{{ data['address-2-county'] }}</p>
+                  <p>{{ data['address-2-postcode'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                    Change<span class="govuk-visually-hidden">Organisation address</span>
+                  </a>
+                </dd>
+            </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Number of jobs
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['number-2-jobs'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/description-of-organisation">
+                  Change<span class="govuk-visually-hidden">Brief description</span>
+                  </a>
+                </dd>
+              </div>
+
+          </dl>
+
+            <p class="govuk-body">Some content here to say that you can add another if you have missed out or make sure you have added all your employers. Once you have pressed continue you can't add any more.</p>
+
+            </dl>            
+
+            <button class="govuk-button" data-module="govuk-button">
+            Continue with application
+          </button>
+          </form>
+
+        </div>
+      </div>
+
+    {% endblock %}

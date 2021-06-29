@@ -36,38 +36,10 @@
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Are you an employer or a Kickstart gateway?
+                  Application ID
               </dt>
               <dd class="govuk-summary-list__value">
-                  <p class="govuk-body">Kickstart gateway</p>
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="/design-features/1152-employability/kickstart-additional-info">
-                  Change<span class="govuk-visually-hidden">Jobs are for the Kickstart Scheme</span>
-                 </a>
-              </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Do you already have a Kickstart Scheme grant agreement with DWP?
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>Yes{{ data['org-name'] }}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
-                  Change<span class="govuk-visually-hidden">Organisation name</span>
-                  </a>
-                </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                  Do you have your Kickstart Scheme Application ID?
-              </dt>
-              <dd class="govuk-summary-list__value">
-                KS1234KH7D
+                  <p>{{ data['application-id'] }}</p>
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
@@ -76,16 +48,16 @@
               </dd>
             </div>
           </dl>
-              
-              <h3 class="govuk-heading-m">First employer details</h3>
+
+              <h3 class="govuk-heading-m">Gateway details</h3>
           <dl class="govuk-summary-list">
 
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Registered business name
+                  Organisation name
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  Smithson Training Limited
+                  <p>{{ data['gw-org-name'] }}</p>
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
@@ -99,11 +71,11 @@
                   Organisation address
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  <p>{{ data['address-line-1'] }}</p>
-                  <p>{{ data['address-line-2'] }}</p>
-                  <p>{{ data['address-town'] }}</p>
-                  <p>{{ data['address-county'] }}</p>
-                  <p>{{ data['address-postcode'] }}</p>
+                  <p>{{ data['gw-address-line-1'] }}</p>
+                  <p>{{ data['gw-address-line-2'] }}</p>
+                  <p>{{ data['gw-address-town'] }}</p>
+                  <p>{{ data['gw-address-county'] }}</p>
+                  <p>{{ data['gw-address-postcode'] }}</p>
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
@@ -114,70 +86,23 @@
 
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    How many paid employees are there in this organisation?
+                    Who can we contact about this addition to your grant agreement?
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  <p>20{{ data['full-name'] }}</p>
-                  <p>{{ data['telephone-number'] }}</p>
-                  <p>{{ data['email-address'] }}</p>
+                  <p>{{ data['gw-full-name'] }}</p>
+                  <p>{{ data['gw-telephone-number'] }}</p>
+                  <p>{{ data['gw-email-address'] }}</p>
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
                     Change<span class="govuk-visually-hidden">Contact details</span>
                   </a>
                 </dd>
-              </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  How many jobs is this organisation offering?
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p class="govuk-body">3</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/description-of-organisation">
-                  Change<span class="govuk-visually-hidden">Brief description</span>
-                  </a>
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Do you work with this company already?
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>Yes{{ data['full-name'] }}</p>
-                  <p>{{ data['telephone-number'] }}</p>
-                  <p>{{ data['email-address'] }}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
-                    Change<span class="govuk-visually-hidden">Contact details</span>
-                  </a>
-                </dd>
-              </div>              
-          </dl>
-
+              </div>             
+          </dl>           
+              
             <h3 class="govuk-heading-m">Employability and additionality</h3>
             <dl class="govuk-summary-list">
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-        Tell us how you, as a gateway, check how these jobs will be integrated into employers and how the young people will be supported
-      </dt>
-                <dd class="govuk-summary-list__value">
-                  <p class="govuk-body">So there you are, coasting along at your current job. You enjoy your work, and you especially like your company. </p>
-                  <p class="govuk-body">The thing is, you’re feeling a little restless lately. Perhaps you know your job so well that you could do it in your sleep. Or maybe you don’t see much opportunity for growth or movementin your department. That little voice in your head is saying it’s ready for new challenges, but the thought of leaving your awesome company is really daunting. There’s got to be a better way, right?</p>
-                  <p class="govuk-body">Before you start polishing up your resume, it’s worth thinking about how you can create your own opportunity at your current company. But how do you do this? Where do you start? How do you even get the right people to listen to you? Read on for five easy steps for creating a new job at your current company.</p>
-                  <p class="govuk-body">Also, don’t be afraid to ask your supervisor to punch holes in this idea; you’ll want to be prepared to answer challenging questions if your idea gets to the next level. If your supervisor agrees that your idea could work, then ask about the next step—i.e., the right people to talk to in order to make the job a reality. </p>
-                  <p class="govuk-body">No matter what, again you’ll want to focus on how this new role will be a great thing for the company—and why you’re exactly the right person to take it on. 241/300 words</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/type-of-roles">
-          Change<span class="govuk-visually-hidden">Types of role</span>
-                  </a>
-                </dd>
-              </div>
 
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -218,28 +143,6 @@
 
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-        What employability support will be provided for the additional Kickstart Scheme workers?
-      </dt>
-                <dd class="govuk-summary-list__value">
-                  <p class="govuk-body">The general aim for practical classes is to enhance students’ understanding of methods of scientific enquiry. This is pursued in a variety of ways where students are given the opportunity to undertake experiments; tackle problem-solving exercises; carry out survey and project work and experience at firsthand how the theory and principles of their discipline are applied. The key learning aims in practical classes (Allison, 1995) are: 
-• Consolidate subject knowledge • Introduce disciplinary methods and procedures • Develop technical skills • Develop cognitative skills • Promote teamwork skills • Increase motivation
-</p>
-                  <p class="govuk-body">Some temp roles are just that, and inevitably have an expiration date, but don’t despair. It’s not uncommon for temporary workers who perform well to be rewarded with a permanent position.</p>
-                  <p class="govuk-body">The trick is to prove your worth. Make yourself indispensable to your employer and they’ll naturally want to retain you. If you have the opportunity to gain expertise in an area vital to the business, seize it. Go above and beyond to exceed expectations on a daily basis and show that you’re worth the investment.</p>
-                  <p class="govuk-body">The benefits of hands-on learning, or practical learning, is particularly beneficial for STEM subjects as they bring complex concepts to life so they can better retain learned information. According to The Edvocate, “The processes of inquiry, reasoning and collaboration required in STEM learning are similar to any experiential activity; learning activities must be hands-on experiences.</p>
-                  <p class="govuk-body">STEM classes also demand rigor and relevance in a curriculum, and the students who take these classes must learn to think critically as they use science, technology, engineering, and mathematics to solve real world problems through direct learning experiences.</p>
-                  <p class="govuk-body">Students become more engaged and are more likely to remember the information they have learned due to their experience. Rather than just reading and memorising from a textbook, which can leave many students demotivated and cause them to lose interest, hands-on learning stimulates their senses and enables them to become more connected to their learning.</p>
-                  <p class="govuk-body">When they work on real-life projects, students can see the impact of their work, learning important skills along the way. For example, they learn collaborative and critical thinking skills during hands-on learning activities, which are essential for the workplace. It prepares them better for life after graduation, equipping them with job-ready skills and the required academic knowledge. Hands-on learning is, after all, the practical application of academic knowledge. It means students get to visualise, experience and learn by doing. 399/400 words</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/kickstart-employability-support-3">
-          Change<span class="govuk-visually-hidden">Experience and skills</span>
-                  </a>
-                </dd>
-              </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
                   Where will your Kickstart Scheme job placements be based?
                 </dt>
                 <dd class="govuk-summary-list__value">
@@ -255,57 +158,7 @@
 
             </dl>
 
-              <h3 class="govuk-heading-m">Gateway details</h3>
-          <dl class="govuk-summary-list">
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Organisation name
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  Smithson Training Limited
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
-                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
-                  </a>
-                </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Organisation address
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>2 Sparrow Way{{ data['address-line-1'] }}</p>
-                  <p>Birdland{{ data['address-line-2'] }}</p>
-                  <p>Cuckoo City{{ data['address-town'] }}</p>
-                  <p>BD12 3AA{{ data['address-county'] }}</p>
-                  <p>{{ data['address-postcode'] }}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
-                    Change<span class="govuk-visually-hidden">Organisation address</span>
-                  </a>
-                </dd>
-            </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Who can we contact about this addition to your grant agreement?
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>Jane Magpie{{ data['full-name'] }}</p>
-                  <p>07123 124578{{ data['telephone-number'] }}</p>
-                  <p>jane.cuckoo@smithsontraining.org.uk{{ data['email-address'] }}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
-                    Change<span class="govuk-visually-hidden">Contact details</span>
-                  </a>
-                </dd>
-              </div>             
-          </dl>            
+           
 
             <h3 class="govuk-heading-m">Accept and send your application</h3>
 

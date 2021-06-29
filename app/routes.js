@@ -23,7 +23,7 @@ router.post('/are-you-an-employer', function (req, res) {
 router.post('/have-a-kickstart-grant', function (req, res) {
   var KickstartGrant = req.session.data['KickstartGrant']
   if (KickstartGrant === 'true') {
-    res.redirect('design-features/1197_grant-variations/gateway/enter-your-kickstart-reference-id')
+    res.redirect('design-features/1197_grant-variations/gateway/what-is-your-kickstart-number')
   } else {
     res.redirect('design-features/1197_grant-variations/gateway/application-process-has-changed')
   }
@@ -69,7 +69,7 @@ if (metadd === 'true') {
 
 router.post('/variations-employability-support', function (req, res) {
   var ksSupport = req.session.data['ksSupport']
-  if (ksSupport === 'true') {
+if (ksSupport === 'true') {
     res.redirect('design-features/1197_grant-variations/employer/what-is-your-kickstart-number')
   } else {
     res.redirect('design-features/1152-employability/not-eligible-support-for-young-people')
@@ -91,7 +91,7 @@ router.post('/select-how-to-submit-variations', function (req, res) {
 router.post('/add-another', function (req, res) {
   var ksSupport = req.session.data['ksAddAnother']
   if (ksSupport === 'true') {
-    res.redirect('design-features/1197_grant-variations/gateway/tell-us-why-you-need-the-additional-jobs')
+    res.redirect('design-features/1197_grant-variations/gateway/check-your-employers')
   } else {
     res.redirect('design-features/1197_grant-variations/gateway/employer-details-next')
   }

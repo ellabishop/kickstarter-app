@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Add details of each organisation applying for additional jobs - Kickstart scheme application
+  Enter details of the next employer - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,25 +28,25 @@
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="company-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">Provide details of the second employer</h1>
+              <h1 class="govuk-fieldset__heading">Enter details of the next employer</h1>
             </legend>
 
             <div class="govuk-form-group">
               <label class="govuk-label" for="paidEmployees">
-                Registered business name
+                Registered organisation name
               </label>
               <input class="govuk-input govuk-!-width-two-thirds" id="paidEmployees" name="org-name-2" type="text" spellcheck="false" autocomplete="name"></div>
 
             <label class="govuk-label" for="paidEmployees">
-                Companies House registration number or Charity Commission number
+                Companies House reference number, Charity Commission number or Office of the Scottish Charity Regulator number
               </label>
             <div id="register-hint" class="govuk-hint">
-                Their company registration number (CRN) is given to them by Companies House when they register. It is a unique combination of 8 numbers, or 2 letters plus 6 numbers. Their Charity Commission number is 6 or 7 numbers, or 2 letters plus 6 numbers. Public sector organisations and exempt charities should enter ‘0’.
+                Enter the organisation’s Companies House reference number, Charity Commission number or Office of the Scottish Charity Regulator number, if they have one. <br>If they are a public sector organisation or an exempt charity enter ‘0’. 
             </div>
             <input class="govuk-input govuk-!-width-two-thirds" id="company-number" name="co-number-2" type="text" spellcheck="false" autocomplete="name"></div>
 
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h4 class="govuk-heading-s">Registered business address</h4>
+            <h4 class="govuk-heading-s">Registered organisation address</h4>
           </legend>
           <div class="govuk-form-group">
             <label class="govuk-label" for="address-line-1">

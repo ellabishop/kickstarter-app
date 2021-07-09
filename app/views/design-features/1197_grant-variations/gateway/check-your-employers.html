@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Check your answers - Kickstart scheme application
+  Check the information you have given - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,7 +26,7 @@
         <fieldset class="govuk-fieldset" aria-describedby="company-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Check your answers before continuing
+              Check the information you have given
             </h1>
           </legend>
 
@@ -35,12 +35,12 @@
           <dl class="govuk-summary-list">
 
               
-              <h3 class="govuk-heading-m">Employer one details</h3>
+              <h3 class="govuk-heading-m">Employer 1</h3>
           <dl class="govuk-summary-list">
 
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Registered business name
+                  Registered organisation name
                 </dt>
                 <dd class="govuk-summary-list__value">
                   <p>{{ data['org-name'] }}</p>
@@ -54,7 +54,7 @@
 
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Companies House registration number or Charity Commission number
+                  Organisation reference number
                 </dt>
                 <dd class="govuk-summary-list__value">
                   <p>{{ data['co-number'] }}</p>
@@ -102,12 +102,12 @@
 
 <br>
 
-              <h3 class="govuk-heading-m">Employer two details</h3>
+              <h3 class="govuk-heading-m">Employer 2</h3>
           <dl class="govuk-summary-list">
 
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Registered business name
+                  Registered organisation name
                 </dt>
                 <dd class="govuk-summary-list__value">
                   <p>{{ data['org-name-2'] }}</p>
@@ -121,7 +121,7 @@
 
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Companies House registration number or Charity Commission number
+                  Organisation reference number
                 </dt>
                 <dd class="govuk-summary-list__value">
                   <p>{{ data['co-number-2'] }}</p>
@@ -167,12 +167,12 @@
 
           </dl>
 
-            <p class="govuk-body">Some content here to say that you can add another if you have missed out or make sure you have added all your employers. Once you have pressed continue you can't add any more.</p>
+            <p class="govuk-body">Check the information you’ve entered. You can make changes or <a class="govuk-link" href="#">add another employer</a> before you submit these details and continue.</p>
 
             </dl>            
 
             <button class="govuk-button" data-module="govuk-button">
-            Continue with application
+            Submit and continue
           </button>
           </form>
 

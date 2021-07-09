@@ -26,7 +26,7 @@
         <fieldset class="govuk-fieldset" aria-describedby="company-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Check your answers before sending
+              Check your answers and accept the declaration
             </h1>
           </legend>
 
@@ -42,7 +42,7 @@
                   <p>{{ data['application-id'] }}</p>
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/gateway-details">
                   Change<span class="govuk-visually-hidden">Organisation reference number</span>
                 </a>
               </dd>
@@ -60,11 +60,25 @@
                   <p>{{ data['gw-org-name'] }}</p>
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/gateway-details">
                   Change<span class="govuk-visually-hidden">Organisation reference number</span>
                   </a>
                 </dd>
             </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Organisation reference number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['gw-co-number'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/gateway-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                  </a>
+                </dd>
+            </div>            
 
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -78,7 +92,7 @@
                   <p>{{ data['gw-address-postcode'] }}</p>
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/gateway-details">
                     Change<span class="govuk-visually-hidden">Organisation address</span>
                   </a>
                 </dd>
@@ -94,19 +108,19 @@
                   <p>{{ data['gw-email-address'] }}</p>
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/gateway-details">
                     Change<span class="govuk-visually-hidden">Contact details</span>
                   </a>
                 </dd>
               </div>             
           </dl>           
               
-            <h3 class="govuk-heading-m">Employability and additionality</h3>
+            <h3 class="govuk-heading-m">How you check employers meet the Kickstart Scheme criteria</h3>
             <dl class="govuk-summary-list">
 
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-        How do you check that these new roles have been created for the Kickstart Scheme?
+        How do you check that organisations in your gateway are helping young people with employment support?
       </dt>
                 <dd class="govuk-summary-list__value">
                   <p class="govuk-body">As an employer, one of your priorities will be making sure that your team is as productive as possible in helping you achieve your company’s goals. But sometimes an employee may develop a theme of poor timekeeping and absence.</p>
@@ -124,7 +138,7 @@
 
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-        As the gateway organisation, how do you check that additional jobs meet all the Kickstart Scheme criteria?
+        How do you check that organisations in your gateway have created these roles just for the Kickstart Scheme?
       </dt>
                 <dd class="govuk-summary-list__value">
                   <p class="govuk-body">Communication is the key to success – humans are social animals designed to thrive in collaborative circumstances. However, some of us are more adept at communicating than others and it’s the failure to share thoughts, ideas and feelings effectively which can lead to uncomfortable situations.</p>
@@ -143,7 +157,7 @@
 
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Where will your Kickstart Scheme job placements be based?
+                  Where will these jobs be based?
                 </dt>
                 <dd class="govuk-summary-list__value">
                   <p>North East{{ data['region'] }}

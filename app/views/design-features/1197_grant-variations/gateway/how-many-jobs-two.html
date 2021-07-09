@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  How many job placements are you planning to create - Kickstart scheme application
+  How many jobs is this organisation offering? - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,11 +23,11 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="add-another" method="post" novalidate>
+      <form action="add-another-two" method="post" novalidate>
 
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="event-name">How many jobs is this organisation offering?</label>
+            <label class="govuk-label govuk-label--l" for="event-name">How many jobs is {{ data['org-name-2'] }} offering?</label>
           </h1>
           <input class="govuk-input govuk-input--width-5" id="width-5" name="number-2-jobs" type="text">
         </div>

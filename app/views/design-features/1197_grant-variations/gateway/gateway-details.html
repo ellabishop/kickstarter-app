@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Organisation details - Kickstart scheme application
+Enter your gateway details - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
@@ -37,16 +37,14 @@ Organisation details - Kickstart scheme application
               <label class="govuk-label" for="full-name">
                 Organisation name
               </label>
-              <div id="register-hint" class="govuk-hint">
-          This should be your registered business name
-        </div>
+
               <input class="govuk-input govuk-!-width-two-thirds" id="full-name" name="gw-org-name" type="text" spellcheck="false" autocomplete="name"></div>
 
             <label class="govuk-label" for="full-name">
-              Companies House registration number or Charity Commission number
+                Companies House reference number, Charity Commission number or Office of the Scottish Charity Regulator number
             </label>
             <div id="register-hint" class="govuk-hint">
-                Your company registration number (CRN) is given to you by Companies House when you register. It is a unique combination of 8 numbers, or 2 letters plus 6 numbers. Your Charity Commission number is 6 or 7 numbers, or 2 letters plus 6 numbers. Public sector organisations and exempt charities should enter ‘0’.
+                Enter your Companies House reference number, Charity Commission number or Office of the Scottish Charity Regulator number, if you have one.<br>If you are a public sector organisation or an exempt charity enter ‘0’. 
             </div>
             <input class="govuk-input govuk-!-width-two-thirds" id="company-number" name="gw-co-number" type="text" spellcheck="false" autocomplete="name"></div>
 
@@ -89,11 +87,11 @@ Organisation details - Kickstart scheme application
           <fieldset class="govuk-fieldset" aria-describedby="company-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 
-              <h3 class="govuk-heading-m">Who can we contact?</h3>
+              <h3 class="govuk-heading-m">Who can we contact about this variation to your grant agreement?</h3>
             </legend>
 
             <div id="register-hint" class="govuk-hint">
-        <b>EH – CONTENT REVIEW –</b> This is the person in your organisation who will deal with queries about your Kickstart Scheme application
+        This is the person we can contact about these new jobs. It may be someone different to the contact for your initial application.
         </div>
 
             <div class="govuk-form-group">
@@ -107,13 +105,13 @@ Organisation details - Kickstart scheme application
                 Telephone number 
               </label>
               <div id="register-hint" class="govuk-hint">
-          Enter a telephone number without spaces
+          Enter their direct telephone number without spaces
         </div>
               <input class="govuk-input govuk-!-width-two-thirds" id="telephone-number" name="gw-telephone-number" type="text" autocomplete="telephone-number"></div>
 
             <div class="govuk-form-group">
               <label class="govuk-label" for="email-address">
-                E-mail address 
+                Email address 
               </label>
               <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="gw-email-address" type="text" autocomplete="email-address"></div>
 

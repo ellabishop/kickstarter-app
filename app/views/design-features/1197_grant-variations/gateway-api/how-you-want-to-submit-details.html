@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  About the employers and jobs you want to add to your grant agreement - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+      <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/select-how-to-submit-variations" method="post" novalidate >
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                About the employers and jobs you want to add to your grant agreement 
+            </h1>
+            </legend>
+            <p class="govuk-body">This service allows you to add their details one at a time.</p>
+            <p class="govuk-body">For each employer we need to know:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>their registered name and address</li>
+              <li>their Charity Commission, Companies House registration number or Office of the Scottish Charity Regulator number, if they have one</li>
+              <li>how many additional jobs they are offering</li>
+            </ul>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

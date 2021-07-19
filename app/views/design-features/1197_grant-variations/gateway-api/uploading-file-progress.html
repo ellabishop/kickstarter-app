@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Apply for a Kickstart Scheme Grant for Employers
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+      <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div id="progress-container" class="progress-container" role="region" aria-live="assertive" tabindex="-1">
+    <p id="progress" class="progress govuk-heading-m" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Uploading file</p>
+    <div class="percentage">
+      <p id="percentage"></p>
+    </div>
+
+    <a href="javascript:history.back()" class="">Cancel</a>
+  </div>
+
+  <script>
+    setTimeout(function () {
+      window.location.href = 'check-file-uploaded';
+    }, 4000);
+  </script>
+
+{% endblock %}

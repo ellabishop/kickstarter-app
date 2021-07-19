@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Confirm employer details
+{% endblock %}
+{% block beforeContent %}
+{{super()}}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+      <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+    </p>
+  </div>
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock%}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Confirm employer details</h1>
+
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Company Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data.company.company_name or "ABC LTD"}}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Company number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data.company.company_number or "1234567"}}
+
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Registered office address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data.company.registered_office_address.address_line_1 or "24 Edenhurst Ave"}}<br>
+          {% if data.company.registered_office_address.address_line_2%}
+          {{data.company.registered_office_address.address_line_2 or "Fulham"}}<br>
+          {% endif %}
+          {{data.company.registered_office_address.locality or "London"}}<br>
+          {{data.company.registered_office_address.postal_code or "SW6 3NP"}}<br>
+        </dd>
+      </div>
+    </dl>
+    <form action="/crn-result" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Are these details correct?
+          </legend>
+          <div class="govuk-radio govuk-radios--stacked" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="is_signed" name="is_signed" type="radio" value="false">
+              <label class="govuk-label govuk-radios__label" for="is_signed">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="is_signed" name="is_signed" type="radio" value="true">
+              <label class="govuk-label govuk-radios__label" for="is_signed">
+                No
+              </label>
+            </div>
+          </div>
+          <div id="fileuploaded" style="display:none;" class="govuk-body uploaded-files" tabindex="-1"><span id="file-name">my-test-document.pdf</span> <a href="#" class="delete-file govuk-link" data-file-id="agentProofofAuthority_upload"
+              data-form-id="tor-test" data-access-code="-"><span aria-hidden="true">Delete</span><span class="govuk-visually-hidden">Delete my-test-document.pdf</span></a></div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

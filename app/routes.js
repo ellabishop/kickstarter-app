@@ -65,6 +65,79 @@ if (metadd === 'true') {
 }
 })
 
+
+// <------------------------------------------------------->
+
+
+////////// companies house api
+
+  // Load helper functions
+  // ADD extra routing here if needed.
+  var RestClient = require('node-rest-client').Client;
+
+
+  var client = new RestClient();
+
+  // CHANGE VERSION each time you create a new version
+  const base_url = "features/"
+
+
+  router.post('/design-features/1197_grant-variations/gateway-api/crn-lookup/company-number', function(req, res) {
+    var args = {
+      headers: {
+        "Authorization": "zlgqkDNX156irCJYp_cdjGs5O_nHQUUhmS5w4LYF"
+      }
+    };
+    let q = req.body.crn;
+    client.get("https://api.company-information.service.gov.uk/company/" + q, args, function(data, response) {
+
+      // parse body as an object "company". This can be used in nunjucks like {{company.company_name}}
+      console.log(data)
+      req.session.data.company = data
+      if (data.company_name) {
+        res.redirect(301, '/design-features/1197_grant-variations/gateway-api/crn-lookup/crn-result');
+      } else {
+        res.redirect(301, '/design-features/1197_grant-variations/gateway-api/crn-lookup/not-found');
+      }
+
+    })
+
+  })
+
+// has a companies house registration number
+
+  router.post('/has-company-number', function (req, res) {
+    var ksSupport = req.session.data['has-registration-number']
+  if (ksSupport === 'true') {
+      res.redirect('design-features/1197_grant-variations/gateway-api/who-registered-with')
+    } else {
+      res.redirect('design-features/1197_grant-variations/gateway-api/crn-lookup/company-number')
+    }
+  });
+
+
+  // confirm employer details
+
+  router.post('/crn-result', function (req, res) {
+    var ksSupport = req.session.data['is_signed']
+  if (ksSupport === 'true') {
+      res.redirect('design-features/1197_grant-variations/gateway-api/crn-lookup/has-company-number')
+    } else {
+      res.redirect('design-features/1197_grant-variations/gateway-api/how-many-jobs')
+    }
+  });
+
+
+// next we choose to add another in the ch api 
+router.post('/add-another-api', function (req, res) {
+  var ksSupport = req.session.data['ksAddAnother']
+  if (ksSupport === 'true') {
+    res.redirect('design-features/1197_grant-variations/gateway-api/check-your-employers')
+  } else {
+    res.redirect('design-features/1197_grant-variations/gateway-api/crn-lookup/has-company-number')
+  }
+});
+
 // next we do employability support
 
 router.post('/variations-employability-support', function (req, res) {

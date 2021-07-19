@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+What is their company registration number?
+{% endblock %}
+{% block beforeContent %}
+{{super()}}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+      <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+    </p>
+  </div>
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock%}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      What is their company registration number?
+    </h1>
+    <p class="govuk-body">You can <a class="govuk-link" href="https://find-and-update.company-information.service.gov.uk/" rel="noreferrer noopener" target="_blank">search Companies House for your company registration number (opens in a new tab)</a>.
+    </p>
+    <form method="post" novalidate>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-visually-hidden" for="company-registration-number">
+          What is your company registration number?
+        </label>
+        <span class="govuk-hint" id="crn-hint">It is 8 characters. For example, 10521625 or SC123456</span>
+        <input class="govuk-input govuk-input--width-10" id="crn" name="crn" type="text" aria-describedby="crn-hint">
+      </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

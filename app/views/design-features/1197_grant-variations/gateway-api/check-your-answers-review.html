@@ -1,0 +1,206 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+      <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Check your answers and accept the declaration
+            </h1>
+          </legend>
+
+          <p class="govuk-body"></p>
+        <form action="application-complete" method="post" novalidate>
+          <dl class="govuk-summary-list">
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Application ID
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  <p>{{ data['application-id'] }}</p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/gateway-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                </a>
+              </dd>
+            </div>
+          </dl>
+
+              <h3 class="govuk-heading-m">Gateway details</h3>
+          <dl class="govuk-summary-list">
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Organisation name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['gw-org-name'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/gateway-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                  </a>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Organisation reference number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['gw-co-number'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/gateway-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                  </a>
+                </dd>
+            </div>            
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Organisation address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['gw-address-line-1'] }}</p>
+                  <p>{{ data['gw-address-line-2'] }}</p>
+                  <p>{{ data['gw-address-town'] }}</p>
+                  <p>{{ data['gw-address-county'] }}</p>
+                  <p>{{ data['gw-address-postcode'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/gateway-details">
+                    Change<span class="govuk-visually-hidden">Organisation address</span>
+                  </a>
+                </dd>
+            </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Who can we contact about this addition to your grant agreement?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>{{ data['gw-full-name'] }}</p>
+                  <p>{{ data['gw-telephone-number'] }}</p>
+                  <p>{{ data['gw-email-address'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/gateway-details">
+                    Change<span class="govuk-visually-hidden">Contact details</span>
+                  </a>
+                </dd>
+              </div>             
+          </dl>           
+              
+            <h3 class="govuk-heading-m">How you check employers meet the Kickstart Scheme criteria</h3>
+            <dl class="govuk-summary-list">
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        How do you check that organisations in your gateway are helping young people with employment support?
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">As an employer, one of your priorities will be making sure that your team is as productive as possible in helping you achieve your company’s goals. But sometimes an employee may develop a theme of poor timekeeping and absence.</p>
+                  <p class="govuk-body">While there may be many justifiable reasons for poor punctuality and excessive sick days, it’s down to you and your employee to resolve any underlying issues to ensure that the business doesn’t take a hit over the lack of productivity that tardiness leads to.</p>
+                  <p class="govuk-body">The importance of punctuality is even more imperative in customer-facing businesses, where workers need to be present to serve shoppers in specific timeframes or else the customer experience will suffer.</p>
+                  <p class="govuk-body">While the 21st Century has seen something of a shift towards more flexible working hours in many offices, there are still countless environments where it’s impossible to be so lax with timing – and in these cases, the offending employee would need to be approached about their behavior accordingly.</p>
+                  <p class="govuk-body">Remember that your employee is human, and as such will have innumerable concerns, distractions and motivations at play under the skin. Perhaps their absenteeism is down to relationship troubles or a long-term family illness? Plenty of companies encourage their workers to leave their problems at the door when they enter the workplace, but sometimes a member of staff will feel overawed and unable to maintain their focus. 228/400 words</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/kickstart-employability-support-1">
+          Change<span class="govuk-visually-hidden">Types of support</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+        How do you check that organisations in your gateway have created these roles just for the Kickstart Scheme?
+      </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">Communication is the key to success – humans are social animals designed to thrive in collaborative circumstances. However, some of us are more adept at communicating than others and it’s the failure to share thoughts, ideas and feelings effectively which can lead to uncomfortable situations.</p>
+                  <p class="govuk-body">Creating and maintaining teams within a working situation can be key to the success of a business. Bringing a diverse group of people together to work towards a common goal, for example increasing sales outcomes, ensures that different ideas and approaches to reaching the desired outcome can be evaluated and implemented. At least that’s the idea!</p>
+                  <p class="govuk-body">The reality can be that often one or two individuals can dominate a group and effectively override everyone else, so it’s beholden on those managing teams to ensure this is not allowed to happen.</p>
+                  <p class="govuk-body">Is it a good idea to have people of varying temperaments, abilities and views in one team? Of course it is, because without disagreements there’d be no discussions and without discussions nothing could ever change.</p>
+                  <p class="govuk-body">Taking extremes of homogenised teams: a team comprised solely of risk takers could potentially gamble the future success of the business by always insisting the riskiest approaches are best.</p>
+                  <p class="govuk-body">Conversely a conservatively focused team would never stray away from the straight and narrow, the tried and tested. 216/400 words</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/kickstart-employability-support-2">
+          Change<span class="govuk-visually-hidden">Teamwork and communication</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Where will these jobs be based?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>North East{{ data['region'] }}
+                  </p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/where-placements-based">
+          Change<span class="govuk-visually-hidden">Employability support</span>
+                  </a>
+                </dd>
+              </div>
+
+            </dl>
+
+           
+
+            <h3 class="govuk-heading-m">Accept and send your application</h3>
+
+            <p class="govuk-body">By submitting this application you confirm you have the authority to represent the organisation stated in ‘Organisation name’.</p>
+
+            <p class="govuk-body">You confirm that:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>the information in this application is correct and complete</li>
+              <li>the organisation meets and will continue to meet all Kickstart Scheme qualifying criteria</li>
+              <li>the organisation has the legal authority to participate in the Kickstart Scheme, is financially solvent and has not been the subject of any judgement for fraud, corruption or illegal activity</li>
+              <li>you understand an application does not in any way signify eligibility for Kickstart Scheme funding or confirm that a grant will be approved or provided</li>
+            </ul>
+
+            <p class="govuk-body">We may be in touch to ask for more information about your application.</p>
+
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+    If your organisation gives false or incomplete information to obtain a grant or uses funds for a purpose not outlined in this application, you risk prosecution and any funding provided may be repayable and future payments stopped.
+  </strong>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+            Accept and send application
+          </button>
+          </form>
+
+        </div>
+      </div>
+
+    {% endblock %}

@@ -93,6 +93,8 @@ if (metadd === 'true') {
 
       // parse body as an object "company". This can be used in nunjucks like {{company.company_name}}
       console.log(data)
+
+      //req.session.data.company is the current search result
       req.session.data.company = data
       if (data.company_name) {
         res.redirect(301, '/design-features/1197_grant-variations/gateway-api/crn-lookup/crn-result');
@@ -123,12 +125,23 @@ if (metadd === 'true') {
   if (ksSupport === 'true') {
       res.redirect('design-features/1197_grant-variations/gateway-api/crn-lookup/has-company-number')
     } else {
+    if(!req.session.data.companies) {
+      req.session.data.companies = []
+    }
+    req.session.data.companies.push(req.session.data.company)
+    // req.session.data.companies.push({
+    //   company_name: "whatever the field name is",
+    //   company_number: 1234567,
+    //   registered_office_address: {
+    //     address_line_1: '',
+    //   }
+    // })
       res.redirect('design-features/1197_grant-variations/gateway-api/how-many-jobs')
     }
   });
 
 
-// next we choose to add another in the ch api 
+// next we choose to add another in the ch api
 router.post('/add-another-api', function (req, res) {
   var ksSupport = req.session.data['ksAddAnother']
   if (ksSupport === 'true') {
@@ -160,7 +173,7 @@ router.post('/select-how-to-submit-variations', function (req, res) {
   }
 });
 
-// next we choose to add another 
+// next we choose to add another
 router.post('/add-another', function (req, res) {
   var ksSupport = req.session.data['ksAddAnother']
   if (ksSupport === 'true') {
@@ -170,7 +183,7 @@ router.post('/add-another', function (req, res) {
   }
 });
 
-// uploading file – check your file 
+// uploading file – check your file
 router.post('/check-file-uploaded', function (req, res) {
   var ksSupport = req.session.data['ksVariations']
   if (ksSupport === 'true') {

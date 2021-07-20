@@ -34,143 +34,82 @@
         <form action="provide-evidence-that-these-meet-the-criteria" method="post" novalidate>
           <dl class="govuk-summary-list">
 
-              
-              <h3 class="govuk-heading-m">Employer 1</h3>
-          <dl class="govuk-summary-list">
+              {% for company in data.companies %}
 
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Registered organisation name
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>{{data.company.company_name or "ABC LTD"}}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api/crn-lookup/company-number">
-                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
-                  </a>
-                </dd>
-            </div>
+              <h3 class="govuk-heading-m">Employer {{loop.index}}</h3>
+              <dl class="govuk-summary-list">
 
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Organisation reference number
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>{{data.company.company_number or "1234567"}}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api/crn-lookup/company-number">
-                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
-                  </a>
-                </dd>
-            </div>            
+                  <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                          Registered organisation name
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          <p>{{company.company_name or "ABC LTD"}}</p>
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api/crn-lookup/company-number">
+                              Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                          </a>
+                      </dd>
+                  </div>
 
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Registered address
-                </dt>
-                <dd class="govuk-summary-list__value">
-          {{data.company.registered_office_address.address_line_1 or "24 Edenhurst Ave"}}<br>
-          {% if data.company.registered_office_address.address_line_2%}
-          {{data.company.registered_office_address.address_line_2 or "Fulham"}}<br>
-          {% endif %}
-          {{data.company.registered_office_address.locality or "London"}}<br>
-          {{data.company.registered_office_address.postal_code or "SW6 3NP"}}<br>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api/crn-lookup/company-number">
-                    Change<span class="govuk-visually-hidden">Organisation address</span>
-                  </a>
-                </dd>
-            </div>
+                  <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                          Organisation reference number
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          <p>{{company.company_number or "1234567"}}</p>
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api/crn-lookup/company-number">
+                              Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                          </a>
+                      </dd>
+                  </div>
 
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Number of jobs
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>{{ data['number-jobs'] }}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api/how-many-jobs">
-                  Change<span class="govuk-visually-hidden">Brief description</span>
-                  </a>
-                </dd>
-              </div>
+                  <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                          Registered address
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          {{company.registered_office_address.address_line_1 or "24 Edenhurst Ave"}}<br>
+                          {% if data.company.registered_office_address.address_line_2%}
+                          {{company.registered_office_address.address_line_2 or "Fulham"}}<br>
+                          {% endif %}
+                          {{company.registered_office_address.locality or "London"}}<br>
+                          {{company.registered_office_address.postal_code or "SW6 3NP"}}<br>
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api/crn-lookup/company-number">
+                              Change<span class="govuk-visually-hidden">Organisation address</span>
+                          </a>
+                      </dd>
+                  </div>
 
-          </dl>
+                  <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                          Number of jobs
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          <p>{{ data['number-jobs'] }}</p>
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api/how-many-jobs">
+                              Change<span class="govuk-visually-hidden">Brief description</span>
+                          </a>
+                      </dd>
+                  </div>
 
-<br>
+              </dl>
 
-              <h3 class="govuk-heading-m">Employer 2</h3>
-          <dl class="govuk-summary-list">
+              <br>
 
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Registered organisation name
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>{{ data['org-name-2'] }}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api/crn-lookup/company-number">
-                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
-                  </a>
-                </dd>
-            </div>
 
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Organisation reference number
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>{{ data['co-number-2'] }}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api/crn-lookup/company-number">
-                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
-                  </a>
-                </dd>
-            </div>            
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Registered address
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>{{ data['address-2-line-1'] }}</p>
-                  <p>{{ data['address-2-line-2'] }}</p>
-                  <p>{{ data['address-2-town'] }}</p>
-                  <p>{{ data['address-2-county'] }}</p>
-                  <p>{{ data['address-2-postcode'] }}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api/crn-lookup/company-number">
-                    Change<span class="govuk-visually-hidden">Organisation address</span>
-                  </a>
-                </dd>
-            </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Number of jobs
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p>{{ data['number-2-jobs'] }}</p>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api/how-many-jobs">
-                  Change<span class="govuk-visually-hidden">Brief description</span>
-                  </a>
-                </dd>
-              </div>
-
-          </dl>
+              {% endfor %}
 
             <p class="govuk-body">Check the information you’ve entered. You can make changes or <a class="govuk-link" href="#">add another employer</a> before you submit these details and continue.</p>
 
-            </dl>            
+            </dl>
 
             <button class="govuk-button" data-module="govuk-button">
             Submit and continue

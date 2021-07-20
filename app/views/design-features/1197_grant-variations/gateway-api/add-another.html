@@ -27,9 +27,11 @@
 
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                You have entered the details for 
-                  <span class="govuk-caption-xl"> <strong style="color: black">1</strong> {{data.company.company_name or "ABC LTD"}}</span>
-                  <span class="govuk-caption-xl">{{ data['org-name-2'] }}</span>
+                You have entered the details for
+                {% for company in data.companies %}
+                  <span class="govuk-caption-xl"> <strong style="color: black">{{loop.index}}</strong> {{company.company_name or "ABC LTD"}}</span>
+                {% endfor %}
+
               </h1>
             </legend>
             <br>
@@ -37,7 +39,7 @@
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="company-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                Do you want to add another employer? 
+                Do you want to add another employer?
             </legend>
 
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">

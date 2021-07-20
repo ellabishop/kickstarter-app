@@ -71,6 +71,27 @@ if (metadd === 'true') {
 
 ////////// companies house api
 
+
+// are you an employer ch api route
+router.post('/are-you-an-employer-api', function (req, res) {
+  var kstype = req.session.data['kstype']
+  if (kstype === 'true') {
+    res.redirect('design-features/1197_grant-variations/gateway-api/do-you-have-a-kickstart-grant-agreement')
+  } else {
+    res.redirect('design-features/1197_grant-variations/employer/do-you-have-a-kickstart-grant-agreement-employer')
+  }
+});
+
+// after employer we do KS grant – gateway
+router.post('/have-a-kickstart-grant-api', function (req, res) {
+  var KickstartGrant = req.session.data['KickstartGrant']
+  if (KickstartGrant === 'true') {
+    res.redirect('design-features/1197_grant-variations/gateway-api/what-is-your-kickstart-number')
+  } else {
+    res.redirect('design-features/1197_grant-variations/gateway/application-process-has-changed')
+  }
+});
+
   // Load helper functions
   // ADD extra routing here if needed.
   var RestClient = require('node-rest-client').Client;
@@ -117,6 +138,17 @@ if (metadd === 'true') {
     }
   });
 
+  // no – who registered with
+
+  router.post('employer-details', function (req, res) {
+    var ksSupport = req.session.data['reg-number']
+  if (ksSupport === 'true') {
+      res.redirect('design-features/1197_grant-variations/gateway-api/employer-details')
+    } else {
+      res.redirect('design-features/1197_grant-variations/gateway-api/employer-details')
+    }
+  });
+
 
   // confirm employer details
 
@@ -129,13 +161,13 @@ if (metadd === 'true') {
       req.session.data.companies = []
     }
     req.session.data.companies.push(req.session.data.company)
-    // req.session.data.companies.push({
-    //   company_name: "whatever the field name is",
-    //   company_number: 1234567,
-    //   registered_office_address: {
-    //     address_line_1: '',
-    //   }
-    // })
+    req.session.data.companies.push({
+    company_name: data.company.company_name,
+    company_number: reg-number,
+    registered_office_address: {
+    address_line_1: '',
+    }
+    })
       res.redirect('design-features/1197_grant-variations/gateway-api/how-many-jobs')
     }
   });

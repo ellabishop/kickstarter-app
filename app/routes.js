@@ -161,14 +161,7 @@ router.post('/have-a-kickstart-grant-api', function (req, res) {
       req.session.data.companies = []
     }
     req.session.data.companies.push(req.session.data.company)
-    req.session.data.companies.push({
-    company_name: data.company.company_name,
-    company_number: reg-number,
-    registered_office_address: {
-    address_line_1: '',
-    }
-    })
-      res.redirect('design-features/1197_grant-variations/gateway-api/how-many-jobs')
+    res.redirect('design-features/1197_grant-variations/gateway-api/how-many-jobs')
     }
   });
 

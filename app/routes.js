@@ -138,16 +138,49 @@ router.post('/have-a-kickstart-grant-api', function (req, res) {
     }
   });
 
+router.post('/who-registered-with', function (req, res) {
+  if(!req.session.data.company) {
+    req.session.data.company = {}
+  }
+  req.session.data.company.company_number = req.session.data['reg-number'] ||
+    req.session.data['contact-by-scot-number'] ||
+    req.session.data['contact-public-sector'] ||
+    req.session.data['contact-other']
+
+  res.redirect('design-features/1197_grant-variations/gateway-api/employer-details')
+});
+
+router.post('/employer-details', function (req, res) {
+  console.log(req.session.data)
+  if(!req.session.data.company) {
+    req.session.data.company = {}
+  }
+  req.session.data.company.company_name = req.session.data['company_name'];
+  req.session.data.company.registered_office_address = {};
+  req.session.data.company.registered_office_address.address_line_1 = req.session.data['address-line-1'];
+  req.session.data.company.registered_office_address.address_line_2 = req.session.data['address-line-2'];
+  req.session.data.company.registered_office_address.locality = req.session.data['address-town'];
+  req.session.data.company.registered_office_address.postal_code = req.session.data['address-postcode'];
+  if(!req.session.data.companies) {
+    req.session.data.companies = []
+  }
+  req.session.data.companies.push(req.session.data.company);
+
+  console.log(req.session.data.company.company_number)
+  res.redirect('design-features/1197_grant-variations/gateway-api/how-many-jobs')
+});
+
   // no – who registered with
 
-  router.post('employer-details', function (req, res) {
-    var ksSupport = req.session.data['reg-number']
-  if (ksSupport === 'true') {
-      res.redirect('design-features/1197_grant-variations/gateway-api/employer-details')
-    } else {
-      res.redirect('design-features/1197_grant-variations/gateway-api/employer-details')
-    }
-  });
+  // router.post('/employer-details', function (req, res) {
+  //   var ksSupport = req.session.data['reg-number']
+  //   console.log('employer-details')
+  // if (ksSupport === 'true') {
+  //     res.redirect('design-features/1197_grant-variations/gateway-api/employer-details')
+  //   } else {
+  //     res.redirect('design-features/1197_grant-variations/gateway-api/employer-details')
+  //   }
+  // });
 
 
   // confirm employer details

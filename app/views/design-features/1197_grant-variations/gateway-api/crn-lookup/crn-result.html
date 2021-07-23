@@ -36,7 +36,7 @@ Confirm employer details – Kickstart scheme application
           Company number
         </dt>
         <dd class="govuk-summary-list__value">
-          {{data.company.company_number or "1234567"}}
+          {{data.company.company_number or ""}}
 
         </dd>
       </div>
@@ -45,12 +45,12 @@ Confirm employer details – Kickstart scheme application
           Registered office address
         </dt>
         <dd class="govuk-summary-list__value">
-          {{data.company.registered_office_address.address_line_1 or "24 Edenhurst Ave"}}<br>
+          {{data.company.registered_office_address.address_line_1 or ""}}<br>
           {% if data.company.registered_office_address.address_line_2%}
-          {{data.company.registered_office_address.address_line_2 or "Fulham"}}<br>
+          {{data.company.registered_office_address.address_line_2 or ""}}<br>
           {% endif %}
-          {{data.company.registered_office_address.locality or "London"}}<br>
-          {{data.company.registered_office_address.postal_code or "SW6 3NP"}}<br>
+          {{data.company.registered_office_address.locality or ""}}<br>
+          {{data.company.registered_office_address.postal_code or " "}}<br>
         </dd>
       </div>
     </dl>

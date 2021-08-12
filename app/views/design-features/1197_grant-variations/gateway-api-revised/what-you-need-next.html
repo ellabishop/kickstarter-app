@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What is your Kickstart Scheme Application ID? - Kickstart scheme application
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+      <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="crn-lookup/has-company-number" method="post" novalidate>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What you need next – placeholder text
+              </h1>
+            </legend>
+
+            <p class="govuk-body">
+              We will now ask you to enter details of each employer and the Kickstart jobs they are offering. 
+            </p>
+            <p class="govuk-body">
+Give the Companies House registration number, if there is one, to assist and speed up the assessment process within DWP. 
+            </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>placeholder bullets</li>          
+          <li>the organisation's registered name, address and contact details</li>
+          <li>the Companies House reference number, Charity Commission number or Office of the Scottish Charity Regulator number, if there is one. Gateways also need to enter any reference number for employers, if there is one</li>
+          <li>details of the Kickstart Scheme jobs, employers and their location</li>
+          <li>supporting information to show that they are new jobs and meet the <a class="govuk-link" href="#">Kickstart Scheme criteria</a>. Gateways must tell us how they check this type of information with employers</li>
+          <li>how the long-term employability skills of young people will be developed. Gateways must tell us how they check this type of information with employers</li>
+        </ul>
+
+        <p class="govuk-body">When you have gathered all of the information together select continue.</p>
+
+
+        <button class="govuk-button" data-module="govuk-button">
+            Continue
+        </button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

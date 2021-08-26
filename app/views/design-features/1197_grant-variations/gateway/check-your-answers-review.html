@@ -33,20 +33,6 @@
           <p class="govuk-body"></p>
         <form action="application-complete" method="post" novalidate>
           <dl class="govuk-summary-list">
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                  Application ID
-              </dt>
-              <dd class="govuk-summary-list__value">
-                  <p>{{ data['application-id'] }}</p>
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/gateway-details">
-                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
-                </a>
-              </dd>
-            </div>
           </dl>
 
               <h3 class="govuk-heading-m">Gateway details</h3>
@@ -68,7 +54,7 @@
 
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Organisation reference number
+                  Companies House reference number, Charity Commision number or Office of the Scottish Charity Regulator number
                 </dt>
                 <dd class="govuk-summary-list__value">
                   <p>{{ data['gw-co-number'] }}</p>
@@ -100,10 +86,23 @@
 
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    Who can we contact about this addition to your grant agreement?
+                    Contact name
                 </dt>
                 <dd class="govuk-summary-list__value">
                   <p>{{ data['gw-full-name'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/gateway-details">
+                    Change<span class="govuk-visually-hidden">Contact details</span>
+                  </a>
+                </dd>
+              </div> 
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Contact details
+                </dt>
+                <dd class="govuk-summary-list__value">
                   <p>{{ data['gw-telephone-number'] }}</p>
                   <p>{{ data['gw-email-address'] }}</p>
                 </dd>
@@ -112,7 +111,21 @@
                     Change<span class="govuk-visually-hidden">Contact details</span>
                   </a>
                 </dd>
-              </div>             
+              </div>   
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Application ID
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  <p>{{ data['application-id'] }}</p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/gateway-details">
+                  Change<span class="govuk-visually-hidden">Organisation reference number</span>
+                </a>
+              </dd>
+            </div>                        
           </dl>           
               
             <h3 class="govuk-heading-m">How you check employers meet the Kickstart Scheme criteria</h3>

@@ -27,14 +27,14 @@
 
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                You have entered the details for
+                You have entered details for
                 {% for company in data.companies %}
                   <span class="govuk-caption-xl"> <strong style="color: black">{{loop.index}}</strong> {{company.company_name or "ABC LTD"}}</span>
                 {% endfor %}
-
               </h1>
+              <br>
+              <p class="govuk-body"><strong>EH</strong> to supply short content to explain they will have the opportunity to remove/change any employers later – next page (but will onlly be the next page if they don't add any more employers).</p>          
             </legend>
-            <br>
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="company-hint">

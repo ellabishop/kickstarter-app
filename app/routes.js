@@ -5,11 +5,122 @@ const router = express.Router()
 // Add your routes here - above the module.exports line
 
 
-// <------------------------------------------------------->
+// <-----------------------KICK-1657----------------------->
+
+//////////////// KICK-1657-stop-GOEs-using-KS-ID – ROUTE-1 ////////////////
+
+// are you an employer
+router.post('/1657-are-you-an-employer', function (req, res) {
+  var kstype = req.session.data['kstype']
+  if (kstype === 'true') {
+    res.redirect('design-features/1197_grant-variations/gateway/do-you-have-a-kickstart-grant-agreement')
+  } else {
+    res.redirect('design-features/1657-stop-goes-using-ks-id/route-1/employer/do-you-have-a-kickstart-grant-agreement-employer')
+  }
+});
+
+// Next we do KS grant - employer
+router.post('/1657-have-a-kickstart-grant-employer', function (req, res) {
+  var KickstartGrant = req.session.data['KickstartGrant']
+  if (KickstartGrant === 'true') {
+    res.redirect('design-features/1657-stop-goes-using-ks-id/route-1/employer/kickstart-criteria')
+  } else {
+    res.redirect('design-features/1152-employability/kickstart-criteria')
+  }
+});
+
+//after KS grant we do criteria
+
+router.post('/1657-variations-criteria', function (req, res) {
+
+  var metcrit = req.session.data['metcrit']
+
+if (metcrit === 'true') {
+  res.redirect('design-features/1657-stop-goes-using-ks-id/route-1/employer/kickstart-additional')
+} else {
+  res.redirect('design-features/1152-employability/not-eligible-kickstart-criteria')
+}
+});
+
+//after criteria we do additional
+
+router.post('/1657-variations-additional', function (req, res) {
+
+  var metadd = req.session.data['metadd']
+
+if (metadd === 'true') {
+  res.redirect('design-features/1657-stop-goes-using-ks-id/route-1/employer/employability-support')
+} else {
+  res.redirect('design-features/1152-employability/not-eligible-vacancy-just-for-kickstart')
+}
+});
+
+router.post('/1657-variations-employability-support', function (req, res) {
+  var ksSupport = req.session.data['ksSupport']
+if (ksSupport === 'true') {
+    res.redirect('design-features/1657-stop-goes-using-ks-id/route-1/employer/what-is-your-kickstart-number')
+  } else {
+    res.redirect('design-features/1152-employability/not-eligible-support-for-young-people')
+  }
+})
 
 
+//////////////// KICK-1657-stop-GOEs-using-KS-ID – ROUTE-2 ////////////////
 
+// are you an employer
+router.post('/1657-2-are-you-an-employer', function (req, res) {
+  var kstype = req.session.data['kstype']
+  if (kstype === 'true') {
+    res.redirect('design-features/1197_grant-variations/gateway/do-you-have-a-kickstart-grant-agreement')
+  } else {
+    res.redirect('design-features/1657-stop-goes-using-ks-id/route-2/employer/do-you-have-a-kickstart-grant-agreement-employer')
+  }
+});
 
+// Next we do KS grant - employer
+router.post('/1657-2-have-a-kickstart-grant-employer', function (req, res) {
+  var KickstartGrant = req.session.data['KickstartGrant']
+  if (KickstartGrant === 'true') {
+    res.redirect('design-features/1657-stop-goes-using-ks-id/route-2/employer/kickstart-criteria')
+  } else {
+    res.redirect('design-features/1152-employability/kickstart-criteria')
+  }
+});
+
+//after KS grant we do criteria
+
+router.post('/1657-2-variations-criteria', function (req, res) {
+
+  var metcrit = req.session.data['metcrit']
+
+if (metcrit === 'true') {
+  res.redirect('design-features/1657-stop-goes-using-ks-id/route-2/employer/kickstart-additional')
+} else {
+  res.redirect('design-features/1152-employability/not-eligible-kickstart-criteria')
+}
+});
+
+//after criteria we do additional
+
+router.post('/1657-2-variations-additional', function (req, res) {
+
+  var metadd = req.session.data['metadd']
+
+if (metadd === 'true') {
+  res.redirect('design-features/1657-stop-goes-using-ks-id/route-2/employer/employability-support')
+} else {
+  res.redirect('design-features/1152-employability/not-eligible-vacancy-just-for-kickstart')
+}
+});
+
+router.post('/1657-2-variations-employability-support', function (req, res) {
+  var ksSupport = req.session.data['ksSupport']
+if (ksSupport === 'true') {
+    res.redirect('design-features/1657-stop-goes-using-ks-id/route-2/employer/what-is-your-kickstart-number')
+  } else {
+    res.redirect('design-features/1152-employability/not-eligible-support-for-young-people')
+  }
+})
 
 ///////////////////////////////////////////////////
 
@@ -56,7 +167,7 @@ if (metcrit === 'true') {
 } else {
   res.redirect('design-features/1152-employability/not-eligible-kickstart-criteria')
 }
-})
+});
 
 //after criteria we do additional
 

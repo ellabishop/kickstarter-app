@@ -98,7 +98,7 @@ if (metcrit === 'true') {
 } else {
   res.redirect('design-features/1152-employability/not-eligible-kickstart-criteria')
 }
-});
+})
 
 //after criteria we do additional
 
@@ -366,7 +366,7 @@ router.post('/check-file-uploaded', function (req, res) {
   } else {
     res.redirect('design-features/1197_grant-variations/gateway/tell-us-why-you-need-the-additional-jobs')
   }
-});
+})
 
 // <------------------------------------------------------->
 
@@ -403,7 +403,7 @@ if (metcrit === 'true') {
 } else {
   res.redirect('design-features/1152-employability/not-eligible-kickstart-criteria')
 }
-})
+});
 
 //after criteria we do additional
 
@@ -416,7 +416,7 @@ if (metadd === 'true') {
 } else {
   res.redirect('design-features/1152-employability/not-eligible-vacancy-just-for-kickstart')
 }
-})
+});
 
 //after additional we do support
 
@@ -429,7 +429,7 @@ if (metsup === 'true') {
 } else {
   res.redirect('design-features/1152-employability/not-eligible-support-for-young-people')
 }
-})
+});
 
 //after support we do details
 
@@ -551,6 +551,7 @@ router.post('/companies-details', function (req, res) {
 
 })
 
+
 module.exports = router
 
 // option 2
@@ -564,7 +565,6 @@ if (over30 === 'true') {
   res.redirect('option2/need-30-placements')
 }
 })
-
 
 
 router.post('/criteria', function (req, res) {
@@ -601,11 +601,6 @@ if (metsup === 'true') {
   res.redirect('option2/not-eligible-support-for-young-people')
 }
 })
-
-
-
-
-
 
 
 router.post('/companies-house-answer', function (req, res) {

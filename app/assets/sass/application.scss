@@ -545,3 +545,7 @@ $govuk-assets-path: '/govuk/assets/';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.govuk-body-override {
+  margin-bottom: 0px;
+}

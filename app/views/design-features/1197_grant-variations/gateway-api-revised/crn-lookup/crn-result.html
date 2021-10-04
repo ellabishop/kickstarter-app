@@ -2,27 +2,12 @@
 {% block pageTitle %}
 Confirm employer details – Kickstart scheme application
 {% endblock %}
-{% block beforeContent %}
-{{super()}}
-<div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-      beta
-    </strong>
-      <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-    </p>
-  </div>
-  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-{% endblock%}
 
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">Confirm employer details</h1>
-
-    <p class="govuk-body">These are the details held by Companies House. If they are incomplete or do not match your records you must check with the employer or enter them manually. We use Companies House records to assess your variation. If the details do not match the employer could be rejected or the process may be delayed.</p>    
+ 
 
     <dl class="govuk-summary-list govuk-summary-list--no-border">
       <div class="govuk-summary-list__row">
@@ -62,23 +47,26 @@ Confirm employer details – Kickstart scheme application
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             Are these details correct?
           </legend>
+            <div id="more-detail-hint" class="govuk-hint">
+              If the details entered do not match Companies House records the employer could be rejected or the process may be delayed.
+            </div>
           <div class="govuk-radio govuk-radios--stacked" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="is_signed" name="is_signed" type="radio" value="false">
               <label class="govuk-label govuk-radios__label" for="is_signed">
-                These details are correct. I want to use them in this variation
+                Yes, these details are correct
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="is_signed" name="is_signed" type="radio" value="true">
               <label class="govuk-label govuk-radios__label" for="is_signed">
-                I want to enter a different registration number
+                No, I want to enter a different Companies House registration number
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="is_signed" name="is_signed" type="radio" value="manual">
               <label class="govuk-label govuk-radios__label" for="is_signed">
-                I want to enter the employer’s details manually
+                No, I want to enter this employer’s details myself
               </label>
             </div>            
           </div>

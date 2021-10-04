@@ -4,14 +4,13 @@ The details you entered did not match our records – Kickstart scheme applicat
 {% endblock %}
 {% block beforeContent %}
 {{super()}}
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock%}
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">The number entered does not match any record held by Companies House.</h1>
-    <p class="govuk-body">You can <a class="govuk-link" href="company-number">try again using a different registration number</a>.</p>
-    <p class="govuk-body">Or you can <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api-revised/employer-details">enter them manually</a>.</p>
+    <h1 class="govuk-heading-l">No results found for {{ data['crn'] }}</h1>
+    <p class="govuk-body">You can <a class="govuk-link" href="company-number">try again using a different Companies House registration number</a>.</p>
+    <p class="govuk-body">Or you can <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api-revised/employer-details">enter the employer's details yourself</a>.</p>
   </div>
 </div>
 {% endblock %}

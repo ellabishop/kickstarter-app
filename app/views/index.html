@@ -14,8 +14,12 @@
       <!-- FEATURE IDEAS -->
 
       <h2 class="govuk-heading-l">Feature designs</h2>
+      
+      <p class="govuk-body-l">The feature designs represent the changes made to the Apply service as the Kickstart Scheme evolved. Some of the prototypes have been built to work in a specific way and so may not cover all variables within. </p>
+
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
 
       <h3 class="govuk-heading-m">Sprint 28 – Kickstart Scheme closure</h3>
 
@@ -31,20 +35,22 @@
       <h3 class="govuk-heading-m">Sprint 26 – KICK-1657 Prevent GOEs applying using a gateway's Kickstart Scheme ID</h3>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li><a href="design-features/1657-stop-goes-using-ks-id/route-1/start">This is the route that went into development</a>.</li>
+        <li><a href="design-features/1657-stop-goes-using-ks-id/route-1/start">The route that went into development</a></li>
       </ul>
  
       <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
-      Previous versions for UR and links to Mural boards
+      Notes and previous versions for UR and links to Mural boards
         </span>
       </summary>
       <ul class="govuk-list govuk-list--bullet">
+        <li>
+          There was an issue whereby employers who had previously applied under a gateway organisation were applying for additional jobs (called a variation) but using their gateway's Kickstart ID in the application process, instead of either going through their gateway or, submitting a new application themselves. This work discourages them from going down this route. Note that we don't have any validation on the service so we can't wholly prevent this from happening. </li>       
         <li>The start page has been updated following a UR session. The <a href="design-features/1657-stop-goes-using-ks-id/route-1/start-redundant">alternative version can be found here</a>. This was the original route 1 for A/B testing.</li>
         <li><a href="design-features/1657-stop-goes-using-ks-id/route-2/start">Origial route 2</a> – part of A/B testing
         </li>
-        <li> <a href="gov-guidance">Copy of Gov guidance page</a>. Note that since creating this page, the live version has changed.</li>
+        <li> <a href="gov-guidance">Copy of Gov guidance page</a>. Note that since creating this page, the live version has changed. We replicated this page in case we wanted to add any further guidance here.</li>
         <li>
           <a href="https://app.mural.co/t/universalcredit7056/m/universalcredit7056/1630674707769/a4b577292ba2bbd95c69dc7e969a0ff6ec7a7e71?sender=ucb6f993c888457ef62fb0717">Mural board where we discussed the options available</a>
         </li>
@@ -56,86 +62,109 @@
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-      <h3 class="govuk-heading-m">Sprint 24 and content updates on Sprint 28 – Revised Companies House API journey</h3>
+      <h3 class="govuk-heading-m">Sprint 24 and further content updates during Sprint 28 – Revised Companies House API journey</h3>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <strong>4th October 2021</strong> <br>This has been put on the backlog as we approach the end of the development work for the Kickstart Apply service. The latest prototype is where we got to before we stopped working on it. There are other iterations and ideas that were explored but did not make it this far – either because it meant more development time generally or unknowns around the API functionality.</li>
-        <li>
-          <a href="design-features/1197_grant-variations/start-api-revised">Gateway grant variations applications using Companies House API</a></li>
           <li>
-            <a href="design-features/1197_grant-variations/gateway-api-revised/api-not-responding">API not responding page</a> and its subsequent linked page in the journey</li>       
+          <a href="design-features/1197_grant-variations/start-api-revised">Gateway grant variations applications using Companies House API</a>. This version of the prototype is for gateways who want to add more employers and jobs and have an existing Kickstart grant agreement with DWP.</li>
           <li>
-            <a href="design-features/1197_grant-variations/gateway-api-revised/employer-details-partial-match">Employer partial match page</a></li>
+            <strong>The below pages are part of the prototype but do not appear directly in the prototype journey.</strong> </li>
+            <li><a href="design-features/1197_grant-variations/gateway-api-revised/api-not-responding">API not responding page</a> and its subsequent linked page in the journey.</li>       
+          <li>
+            <a href="design-features/1197_grant-variations/gateway-api-revised/employer-details-partial-match">Employer partial match page</a>. This means a partial match to the CH API. Note that some charities and other organisations have a CH number but nothing else as they may be more properly registered elsewhere.</li>
       </ul>
 
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
-        Links to Mural boards
+        Notes and links to Mural boards
           </span>
         </summary>
         <ul class="govuk-list govuk-list--bullet">
-
-          <li>
+        <li>
+          <strong>4th October 2021</strong> <br>This has been put on the backlog as we approach the end of the development work for the Kickstart Apply service. The latest prototype is where we got to before we stopped working on it. There are other iterations and ideas that were explored but did not make it this far – either because it meant more development time generally or unknowns around the API functionality.</li> 
+        <li>
             <a href="https://app.mural.co/t/universalcredit7056/m/universalcredit7056/1626251323887/b65ea96bfcfa8139db9c2ff370f44a7a47e4fcdd?sender=ucb6f993c888457ef62fb0717">Discovery work for Companies House API</a>
           </li>
           <li>Neil Holroyd (IxD), Elizabeth Hughes (content designer) and Annie Nofer (user research). (August 2021)</li>
         </ul>
       </details>
 
+
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
 
       <h3 class="govuk-heading-m">Sprint 22 – Companies House API</h3>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>
-          Original <a href="design-features/1197_grant-variations/start-api">prototype for gateway grant variations applications using Companies House API </a>
+          <a href="design-features/1197_grant-variations/start-api">Original prototype for gateway grant variations applications using the Companies House API</a>.
         </li>
-        <li>
-          <a href="https://app.mural.co/t/universalcredit7056/m/universalcredit7056/1626251323887/b65ea96bfcfa8139db9c2ff370f44a7a47e4fcdd?sender=ucb6f993c888457ef62fb0717">Discovery work for Companies House API</a>
-        </li>
-        <li>Neil Holroyd (IxD), Elizabeth Hughes (content designer) and Annie Nofer (user research). (July 2021)</li>
       </ul>
 
+            <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+        Notes and links to Mural boards
+          </span>
+        </summary>
+        <ul class="govuk-list govuk-list--bullet">
+        <li>
+            <a href="https://app.mural.co/t/universalcredit7056/m/universalcredit7056/1626251323887/b65ea96bfcfa8139db9c2ff370f44a7a47e4fcdd?sender=ucb6f993c888457ef62fb0717">Discovery work for Companies House API</a>
+          </li>
+          <li>Neil Holroyd (IxD), Elizabeth Hughes (content designer) and Annie Nofer (user research). (August 2021)</li>
+        </ul>
+      </details>
+
+
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
 
       <h3 class="govuk-heading-m">Sprint 18-21 – Variations for employers and gateways</h3>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>
-          <a href="design-features/1197_grant-variations/start">Prototype for grant variations for employers and gateways</a>. Use this prototype to test the features for employer and gateway variation applications</li>
-        <li>
-          <a href="https://app.mural.co/t/universalcredit7056/m/universalcredit7056/1616747862548/e1e0d4d4d445ce89ebda9886e5d3b900e9f70966?sender=ucb6f993c888457ef62fb0717">Discovery work for grant variations</a>
-        </li>
-        <li>Neil Holroyd (IxD), Elizabeth Hughes (content designer), Mike Norrington (service designer) and Annie Nofer (user research). (April-June 2021)</li>
+          <a href="design-features/1197_grant-variations/start">Prototype for grant variations for employers and gateways</a></li>
       </ul>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+        Notes and links to Mural boards
+          </span>
+        </summary>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Use this prototype to test the features for employer and gateway variation applications.</li>
+          <li>This work has been superseded by the Companies House API for the prototype, although the API hasn't gone into production.</li>
+          <li>
+            <a href="https://app.mural.co/t/universalcredit7056/m/universalcredit7056/1616747862548/e1e0d4d4d445ce89ebda9886e5d3b900e9f70966?sender=ucb6f993c888457ef62fb0717">Discovery work for grant variations</a>
+          </li>
+          <li>Neil Holroyd (IxD), Elizabeth Hughes (content designer) and Annie Nofer (user research). (August 2021)</li>
+        </ul>
+      </details>
+
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
+
       <h3 class="govuk-heading-m">Previous sprints</h3>
 
-      <p>
-        <a href="design-features/1152-employability/start">KICK-1152 (epic): Improve employability questions</a>
-      </p>
-
       <ul class="govuk-list govuk-list--bullet">
-        <li>Use this prototype to test the features introduced for this ticket number</li>
-        <li>Neil Holroyd (IxD) and Elizabeth Hughes (Content Designer) (February 2021)</li>
-      </ul>
-
-      <p>Pages for A-B testing</p>
-
-      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="design-features/1152-employability/start">KICK-1152 (epic): Improve employability questions</a></li>
+        <li><strong>Pages for A-B testing:</strong></li>
         <li>
           <a href="design-features/1152-employability/check-your-answers-review-full-width">Alternative check your anwers page</a>
         </li>
         <li>
           <a href="design-features/1152-employability/type-of-roles-alternative">Alternative roles you plan to create page</a>
         </li>
+        <li>Use this prototype to test the features introduced for this ticket number</li>
+        <li>Neil Holroyd (IxD) and Elizabeth Hughes (Content Designer) (February 2021)</li>
       </ul>
 
+
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
 
       <h2 class="govuk-heading-m">Kickstart Scheme previous prototypes</h2>
 

@@ -9,8 +9,9 @@ The details you entered did not match our records – Kickstart scheme applicat
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">No results found for {{ data['crn'] }}</h1>
-    <p class="govuk-body">You can <a class="govuk-link" href="company-number">try again using a different Companies House registration number</a>.</p>
-    <p class="govuk-body">Or you can <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api-revised/employer-details">enter the employer's details yourself</a>.</p>
+    <p class="govuk-body">You can <a class="govuk-link" href="company-number">try again</a> using a different Companies House registration number, or you can <a class="govuk-link" href="/design-features/1197_grant-variations/gateway-api-revised/employer-details">enter the employer's details yourself</a>.</p>
+    
+    <p class="govuk-hint" id="crn-hint">Companies House numbers are 8 characters long. For example, 01234567 or SC345678.</p>
   </div>
 </div>
 {% endblock %}

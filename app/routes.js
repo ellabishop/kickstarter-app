@@ -10,6 +10,7 @@ const router = express.Router()
 //////////////// KICK-1657-stop-GOEs-using-KS-ID – ROUTE-1 ////////////////
 
 // are you an employer
+
 router.post('/1657-are-you-an-employer', function (req, res) {
   var kstype = req.session.data['kstype']
   if (kstype === 'true') {
@@ -20,6 +21,7 @@ router.post('/1657-are-you-an-employer', function (req, res) {
 });
 
 // Next we do KS grant - employer
+
 router.post('/1657-have-a-kickstart-grant-employer', function (req, res) {
   var KickstartGrant = req.session.data['KickstartGrant']
   if (KickstartGrant === 'true') {
@@ -68,6 +70,7 @@ if (ksSupport === 'true') {
 //////////////// KICK-1657-stop-GOEs-using-KS-ID – ROUTE-2 ////////////////
 
 // are you an employer
+
 router.post('/1657-2-are-you-an-employer', function (req, res) {
   var kstype = req.session.data['kstype']
   if (kstype === 'true') {
@@ -78,6 +81,7 @@ router.post('/1657-2-are-you-an-employer', function (req, res) {
 });
 
 // Next we do KS grant - employer
+
 router.post('/1657-2-have-a-kickstart-grant-employer', function (req, res) {
   var KickstartGrant = req.session.data['KickstartGrant']
   if (KickstartGrant === 'true') {
@@ -127,6 +131,7 @@ if (ksSupport === 'true') {
 // Grant variations – Employers and Gateways
 
 // are you an employer
+
 router.post('/are-you-an-employer', function (req, res) {
   var kstype = req.session.data['kstype']
   if (kstype === 'true') {
@@ -137,6 +142,7 @@ router.post('/are-you-an-employer', function (req, res) {
 });
 
 // after employer we do KS grant – gateway
+
 router.post('/have-a-kickstart-grant', function (req, res) {
   var KickstartGrant = req.session.data['KickstartGrant']
   if (KickstartGrant === 'true') {
@@ -147,6 +153,7 @@ router.post('/have-a-kickstart-grant', function (req, res) {
 });
 
 // after employer we do KS grant - employer
+
 router.post('/have-a-kickstart-grant-employer', function (req, res) {
   var KickstartGrant = req.session.data['KickstartGrant']
   if (KickstartGrant === 'true') {
@@ -190,6 +197,7 @@ if (metadd === 'true') {
 
 
 // are you an employer ch api route
+
 router.post('/are-you-an-employer-api', function (req, res) {
   var kstype = req.session.data['kstype']
   if (kstype === 'true') {
@@ -200,6 +208,7 @@ router.post('/are-you-an-employer-api', function (req, res) {
 });
 
 // after employer we do KS grant – gateway
+
 router.post('/have-a-kickstart-grant-api', function (req, res) {
   var KickstartGrant = req.session.data['KickstartGrant']
   if (KickstartGrant === 'true') {
@@ -211,6 +220,7 @@ router.post('/have-a-kickstart-grant-api', function (req, res) {
 
   // Load helper functions
   // ADD extra routing here if needed.
+
   var RestClient = require('node-rest-client').Client;
 
 
@@ -317,6 +327,7 @@ router.post('/employer-details', function (req, res) {
 
 
 // next we choose to add another in the ch api
+
 router.post('/add-another-api', function (req, res) {
   var ksSupport = req.session.data['ksAddAnother']
   if (ksSupport === 'true') {
@@ -339,6 +350,7 @@ if (ksSupport === 'true') {
 
 
 // submitting variations options
+
 router.post('/select-how-to-submit-variations', function (req, res) {
   var ksSupport = req.session.data['ksVariations']
   if (ksSupport === 'true') {
@@ -349,6 +361,7 @@ router.post('/select-how-to-submit-variations', function (req, res) {
 });
 
 // next we choose to add another
+
 router.post('/add-another', function (req, res) {
   var ksSupport = req.session.data['ksAddAnother']
   if (ksSupport === 'true') {
@@ -359,6 +372,7 @@ router.post('/add-another', function (req, res) {
 });
 
 // uploading file – check your file
+
 router.post('/check-file-uploaded', function (req, res) {
   var ksSupport = req.session.data['ksVariations']
   if (ksSupport === 'true') {
@@ -373,6 +387,7 @@ router.post('/check-file-uploaded', function (req, res) {
 // KICK-1152 improve employability questions
 
 // are you an employer
+
 router.post('/are-you-an-employer', function (req, res) {
   var kstype = req.session.data['kstype']
   if (kstype === 'true') {
@@ -383,6 +398,7 @@ router.post('/are-you-an-employer', function (req, res) {
 });
 
 // after employer we do KS grant
+
 router.post('/kickstart-grant', function (req, res) {
   var ksGrant = req.session.data['ksGrant']
   if (ksGrant === 'true') {
@@ -567,7 +583,7 @@ if (over30 === 'true') {
 })
 
 
-router.post('/criteria', function (req, res) {
+router.post('/criteria-2', function (req, res) {
 
   var metcrit = req.session.data['metcrit']
 
@@ -579,7 +595,7 @@ if (metcrit === 'true') {
 })
 
 
-router.post('/additional', function (req, res) {
+router.post('/additional-2', function (req, res) {
 
   var metadd = req.session.data['metadd']
 
@@ -591,7 +607,7 @@ if (metadd === 'true') {
 })
 
 
-router.post('/support', function (req, res) {
+router.post('/support-2', function (req, res) {
 
   var metsup = req.session.data['metsup']
 

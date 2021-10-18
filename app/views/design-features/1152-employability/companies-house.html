@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Is your organisation registered with Companies House? - Kickstart scheme application
+Is your organisation registered with Companies House? - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,55 +19,58 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <form action="/companies-house-answer" method="post" novalidate>
+    <form action="/companies-house-answer" method="post" novalidate>
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="company-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">
-          Is your organisation registered with Companies House?
-        </h1>
-      </legend>
-      <div id="company-hint" class="govuk-hint">
-        Select one option.
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Is your organisation registered with Companies House?
+            </h1>
+          </legend>
+          <div id="company-hint" class="govuk-hint">
+            Select one option.
+          </div>
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="company" name="company" type="radio" value="true"
+                data-aria-controls="conditional-company">
+              <label class="govuk-label govuk-radios__label" for="company">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-company">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="company-number">
+                  Enter your Companies House number
+                </label>
+                <input class="govuk-input govuk-input--width-20" id="company-number" name="company-number" type="email"
+                  spellcheck="false"></div>
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="company-2" name="company" type="radio" value="false"
+                data-aria-controls="conditional-company-2">
+              <label class="govuk-label govuk-radios__label" for="company-2">
+                No
+              </label>
+
+            </div>
+
+          </div>
+
+        </fieldset>
       </div>
-      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="company" name="company" type="radio" value="true" data-aria-controls="conditional-company">
-          <label class="govuk-label govuk-radios__label" for="company">
-            Yes
-          </label>
-        </div>
-        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-company">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="company-number">
-              Enter your Companies House number
-            </label>
-            <input class="govuk-input govuk-input--width-20" id="company-number" name="company-number" type="email" spellcheck="false"></div>
 
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="company-2" name="company" type="radio" value="false" data-aria-controls="conditional-company-2">
-          <label class="govuk-label govuk-radios__label" for="company-2">
-            No
-          </label>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
 
-        </div>
-
-        </div>
-
-    </fieldset>
-</div>
-
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-        </form>
-
-    </div>
   </div>
+</div>
 
 {% endblock %}

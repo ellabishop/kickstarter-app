@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  How many Kickstart Scheme job placements can you offer? - Kickstart scheme application
+How many Kickstart Scheme job placements can you offer? - Kickstart scheme application
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,58 +15,58 @@
     </span>
   </p>
 </div>
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
 
-        <form action="/howmanyvacs" method="post" novalidate>
+    <form action="/howmanyvacs" method="post" novalidate>
 
 
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="company-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">
-          How many Kickstart Scheme job placements can you offer?
-        </h1>
-      </legend>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              How many Kickstart Scheme job placements can you offer?
+            </h1>
+          </legend>
 
 
-      <div class="govuk-radios">
-      <div class="govuk-radios__item">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
 
 
-<input class="govuk-radios__input" id="over-30-yes" name="over-30" type="radio" value="true">
-<label class="govuk-label govuk-radios__label" for="over-30-yes">
-          30 or more
-        </label>
+              <input class="govuk-radios__input" id="over-30-yes" name="over-30" type="radio" value="true">
+              <label class="govuk-label govuk-radios__label" for="over-30-yes">
+                30 or more
+              </label>
+            </div>
+
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+
+                <input class="govuk-radios__input" id="over-30-no" name="over-30" type="radio" value="false">
+                <label class="govuk-label govuk-radios__label" for="over-30-no">
+                  29 or less
+                </label>
+              </div>
+
+            </div>
+
+        </fieldset>
       </div>
 
-      <div class="govuk-radios">
-      <div class="govuk-radios__item">
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
 
-          <input class="govuk-radios__input" id="over-30-no" name="over-30" type="radio" value="false">
-              <label class="govuk-label govuk-radios__label" for="over-30-no">
-            29 or less
-          </label>
-        </div>
-
-    </div>
-
-    </fieldset>
-</div>
-
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-        </form>
-
-    </div>
   </div>
+</div>
 
 {% endblock %}

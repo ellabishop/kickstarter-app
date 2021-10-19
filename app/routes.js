@@ -388,7 +388,7 @@ router.post('/check-file-uploaded', function (req, res) {
 
 // are you an employer
 
-router.post('/are-you-an-employer', function (req, res) {
+router.post('/are-you-an-employer-11', function (req, res) {
   var kstype = req.session.data['kstype']
   if (kstype === 'true') {
     res.redirect('design-features/1152-employability/application-process-has-changed')

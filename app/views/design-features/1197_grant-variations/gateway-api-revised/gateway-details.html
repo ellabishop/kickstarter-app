@@ -4,115 +4,129 @@
 Enter your gateway details - Kickstart scheme application
 {% endblock %}
 
-
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <form action="check-your-answers-review" method="post" novalidate>
+    <form action="check-your-answers-review" method="post" novalidate>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">Enter your gateway details</h1>
+          </legend>
+
+          <p class="govuk-body">We collect this to check your Kickstart reference number and in case any contacts or
+            other details have changed.</p>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="org-name">
+              Organisation name
+            </label>
+
+            <input class="govuk-input govuk-!-width-two-thirds" id="org-name" name="gw-org-name" type="text"
+              spellcheck="false" autocomplete="name"></div>
+
+          <label class="govuk-label" for="company-number">
+            Companies House reference number, Charity Commission number or Office of the Scottish Charity Regulator
+            number
+          </label>
+          <div id="register-hint" class="govuk-hint">
+            Enter your Companies House reference number, Charity Commission number or Office of the Scottish Charity
+            Regulator number, if you have one.<br>If you are a public sector organisation or an exempt charity enter
+            ‘0’.
+          </div>
+          <input class="govuk-input govuk-!-width-two-thirds" id="company-number" name="gw-co-number" type="text"
+            spellcheck="false" autocomplete="name">
+      </div>
+
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h4 class="govuk-heading-s">Organisation address</h4>
+      </legend>
+      <div id="register-hint" class="govuk-hint">
+        This should be your registered business address
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-1">
+          Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+        </label>
+        <input class="govuk-input" id="address-line-1" name="gw-address-line-1" type="text"
+          autocomplete="address-line1"></div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-2">
+          <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+        </label>
+        <input class="govuk-input" id="address-line-2" name="gw-address-line-2" type="text"
+          autocomplete="address-line2"></div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-town">
+          Town or city
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="gw-address-town" type="text"
+          autocomplete="address-level2"></div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-county">
+          County
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="gw-address-county" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-postcode">
+          Postcode
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="gw-address-postcode" type="text"
+          autocomplete="postal-code"></div>
+
+      <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+          <h3 class="govuk-heading-m">Who can we contact about this variation to your grant agreement?</h3>
+        </legend>
+
+        <div id="register-hint" class="govuk-hint">
+          This is the person we can contact about these new jobs. It may be someone different to the contact for your
+          initial application.
+        </div>
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">Enter your gateway details</h1>
-            </legend>
+          <label class="govuk-label" for="full-name">
+            Full name
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="full-name" name="gw-full-name" type="text"
+            autocomplete="given-name"></div>
 
-             <p class="govuk-body">We collect this to check your Kickstart reference number and in case any contacts or other details have changed.</p>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="full-name">
-                Organisation name
-              </label>
-
-              <input class="govuk-input govuk-!-width-two-thirds" id="full-name" name="gw-org-name" type="text" spellcheck="false" autocomplete="name"></div>
-
-            <label class="govuk-label" for="full-name">
-                Companies House reference number, Charity Commission number or Office of the Scottish Charity Regulator number
-            </label>
-            <div id="register-hint" class="govuk-hint">
-                Enter your Companies House reference number, Charity Commission number or Office of the Scottish Charity Regulator number, if you have one.<br>If you are a public sector organisation or an exempt charity enter ‘0’. 
-            </div>
-            <input class="govuk-input govuk-!-width-two-thirds" id="company-number" name="gw-co-number" type="text" spellcheck="false" autocomplete="name"></div>
-
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h4 class="govuk-heading-s">Organisation address</h4>
-          </legend>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="telephone-number">
+            Telephone number
+          </label>
           <div id="register-hint" class="govuk-hint">
-        This should be your registered business address
-        </div>
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-line-1">
-        Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
-            </label>
-            <input class="govuk-input" id="address-line-1" name="gw-address-line-1" type="text" autocomplete="address-line1"></div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-line-2">
-              <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
-            </label>
-            <input class="govuk-input" id="address-line-2" name="gw-address-line-2" type="text" autocomplete="address-line2"></div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-town">
-        Town or city
-        </label>
-            <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="gw-address-town" type="text" autocomplete="address-level2"></div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-county">
-        County
-        </label>
-            <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="gw-address-county" type="text"></div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-postcode">
-        Postcode
-        </label>
-            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="gw-address-postcode" type="text" autocomplete="postal-code"></div>
-
-          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-
-              <h3 class="govuk-heading-m">Who can we contact about this variation to your grant agreement?</h3>
-            </legend>
-
-            <div id="register-hint" class="govuk-hint">
-        This is the person we can contact about these new jobs. It may be someone different to the contact for your initial application.
-        </div>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="full-name">
-                Full name 
-              </label>
-              <input class="govuk-input govuk-!-width-two-thirds" id="full-name" name="gw-full-name" type="text" autocomplete="full-name"></div>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="telephone-number">
-                Telephone number 
-              </label>
-              <div id="register-hint" class="govuk-hint">
-          Enter their direct telephone number without spaces
-        </div>
-              <input class="govuk-input govuk-!-width-two-thirds" id="telephone-number" name="gw-telephone-number" type="text" autocomplete="telephone-number"></div>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="email-address">
-                Email address 
-              </label>
-              <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="gw-email-address" type="text" autocomplete="email-address"></div>
-
-            <br>
-
+            Enter their direct telephone number without spaces
           </div>
+          <input class="govuk-input govuk-!-width-two-thirds" id="telephone-number" name="gw-telephone-number"
+            type="text" autocomplete="tel-local">
         </div>
 
-        <button class="govuk-button" data-module="govuk-button">
-          Continue 
-        </button>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="email-address">
+            Email address
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="gw-email-address" type="text"
+            autocomplete="email"></div>
 
-      </form>
-    </div>
   </div>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+</form>
+</div>
+</div>
 
 {% endblock %}

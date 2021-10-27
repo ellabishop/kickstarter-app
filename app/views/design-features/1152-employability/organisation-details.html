@@ -1,21 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Organisation details - Kickstart scheme application
-{% endblock %}
-
-{% block beforeContent %}
-  <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-      beta
-    </strong>
-      <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-    </p>
-  </div>
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+Enter employer details - Kickstart scheme application
 {% endblock %}
 
 {% block content %}
@@ -32,21 +18,21 @@ Organisation details - Kickstart scheme application
             </legend>
 
             <div class="govuk-form-group">
-              <label class="govuk-label" for="full-name">
+              <label class="govuk-label" for="org-name">
                 Organisation name
               </label>
               <div id="register-hint" class="govuk-hint">
           This should be your registered business name
         </div>
-              <input class="govuk-input govuk-!-width-two-thirds" id="full-name" name="org-name" type="text" spellcheck="false" autocomplete="name"></div>
+              <input class="govuk-input govuk-!-width-two-thirds" id="org-name" name="org-name" type="text" spellcheck="false" autocomplete="organization"></div>
 
-            <label class="govuk-label" for="full-name">
+            <label class="govuk-label" for="co-number">
               Companies House registration number or Charity Commission number
             </label>
             <div id="register-hint" class="govuk-hint">
                 Your company registration number (CRN) is given to you by Companies House when you register. It is a unique combination of 8 numbers, or 2 letters plus 6 numbers. Your Charity Commission number is 6 or 7 numbers, or 2 letters plus 6 numbers. Public sector organisations and exempt charities should enter ‘0’.
             </div>
-            <input class="govuk-input govuk-!-width-two-thirds" id="company-number" name="co-number" type="text" spellcheck="false" autocomplete="name"></div>
+            <input class="govuk-input govuk-!-width-two-thirds" id="co-number" name="co-number" type="text" spellcheck="false" autocomplete="name"></div>
 
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h4 class="govuk-heading-s">Organisation address</h4>
@@ -98,7 +84,7 @@ Organisation details - Kickstart scheme application
               <label class="govuk-label" for="full-name">
                 Full name 
               </label>
-              <input class="govuk-input govuk-!-width-two-thirds" id="full-name" name="full-name" type="text" autocomplete="full-name"></div>
+              <input class="govuk-input govuk-!-width-two-thirds" id="full-name" name="full-name" type="text" autocomplete="name"></div>
 
             <div class="govuk-form-group">
               <label class="govuk-label" for="telephone-number">
@@ -107,13 +93,13 @@ Organisation details - Kickstart scheme application
               <div id="register-hint" class="govuk-hint">
           Enter a telephone number without spaces
         </div>
-              <input class="govuk-input govuk-!-width-two-thirds" id="telephone-number" name="telephone-number" type="text" autocomplete="telephone-number"></div>
+              <input class="govuk-input govuk-!-width-two-thirds" id="telephone-number" name="telephone-number" type="text" autocomplete="tel-local"></div>
 
             <div class="govuk-form-group">
               <label class="govuk-label" for="email-address">
                 E-mail address 
               </label>
-              <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="text" autocomplete="email-address"></div>
+              <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="text" autocomplete="email"></div>
 
             <br>
 

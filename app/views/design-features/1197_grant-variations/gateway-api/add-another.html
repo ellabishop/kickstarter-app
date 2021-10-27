@@ -1,55 +1,56 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Do you want to add another employer? - Kickstart scheme application
+Do you want to add another employer? - Kickstart scheme application
 {% endblock %}
-
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <form action="/add-another-api" method="post" novalidate >
+    <form action="/add-another-api" method="post" novalidate>
 
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                You have entered the details for
-                {% for company in data.companies %}
-                  <span class="govuk-caption-xl"> <strong style="color: black">{{loop.index}}</strong> {{company.company_name or "ABC LTD"}}</span>
-                {% endfor %}
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          You have entered the details for
+          {% for company in data.companies %}
+          <span class="govuk-caption-xl">
+            <strong style="color: black">{{loop.index}}</strong>
+            {{company.company_name or "ABC LTD"}}</span>
+          {% endfor %}
 
-              </h1>
-            </legend>
-            <br>
+        </h1>
+      </legend>
+      <br>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="company-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                Do you want to add another employer?
-            </legend>
+            Do you want to add another employer?
+          </legend>
 
-            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="ksAddAnother" name="ksAddAnother" type="radio" value="false">
-                <label class="govuk-label govuk-radios__label" for="ksAddAnother">Yes</label>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="ksAddAnother" name="ksAddAnother" type="radio" value="true">
-                <label class="govuk-label govuk-radios__label" for="ksAddAnother">No</label>
-              </div>
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ksAddAnother" name="ksAddAnother" type="radio" value="false">
+              <label class="govuk-label govuk-radios__label" for="ksAddAnother">Yes</label>
             </div>
 
-          </fieldset>
-        </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ksAddAnother-1" name="ksAddAnother" type="radio" value="true">
+              <label class="govuk-label govuk-radios__label" for="ksAddAnother-1">No</label>
+            </div>
+          </div>
 
-        <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-      </form>
+        </fieldset>
+      </div>
 
-    </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+
   </div>
+</div>
 
 {% endblock %}

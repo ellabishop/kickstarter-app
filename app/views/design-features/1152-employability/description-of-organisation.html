@@ -4,20 +4,6 @@
   Give a brief description of your organisation and the type of work it does - Kickstart scheme application
 {% endblock %}
 
-{% block beforeContent %}
-  <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-      beta
-    </strong>
-      <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-    </p>
-  </div>
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
-{% endblock %}
-
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -27,7 +13,7 @@
 
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="event-name">
+            <label class="govuk-label govuk-label--l" for="company-description">
               Give a brief description of your organisation and the type of work it does
             </label>
           </h1>
@@ -38,7 +24,7 @@
 
           <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="400">
             <div class="govuk-form-group">
-              <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10" aria-describedby="word-count-info"></textarea>
+              <textarea class="govuk-textarea govuk-js-character-count" id="company-description" name="company-description" rows="10" aria-describedby="word-count-info"></textarea>
             </div>
             <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
               You can enter up to 400 words

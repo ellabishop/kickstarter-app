@@ -1,50 +1,54 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What you need next - Kickstart scheme application
+What you need to do next - Kickstart scheme application
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <form action="crn-lookup/has-company-number" method="post" novalidate>
+    <form action="crn-lookup/has-company-number" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                What you need to do next
-              </h1>
-            </legend>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What you need to do next
+            </h1>
+          </legend>
 
-            <p class="govuk-body">
-              Gather all the information listed here then enter details of each employer and the jobs they want to add. 
-            </p>
-            <p class="govuk-body">
-            We use Companies House records to assess your variation. We can pull information held by Companies House to help complete the online application and save you time. 
-            </p>
-            <p class="govuk-body">
-            If the employer is a charity without a Companies House number tell us their Charity Commission or Office of the Scottish Charity Regulator number, if they have one. 
-            </p>            
+          <p class="govuk-body">
+            Gather all the information listed here then enter details of each employer and the jobs they want to add. 
+          </p>
+          <p class="govuk-body">
+            We use Companies House records to assess your variation. We can pull information held by Companies House to
+            help complete the online application and save you time.
+          </p>
+          <p class="govuk-body">
+            If the employer is a charity without a Companies House number tell us their Charity Commission or Office of
+            the Scottish Charity Regulator number, if they have one.
+          </p>
 
-            <p class="govuk-body">We will ask for:</p>  
-            <ul class="govuk-list govuk-list--bullet">
-              <li>each employer’s registered name and registered address</li>
-              <li>each employer’s Companies House registration number, if they have one</li>
-              <li>their Charity Commission or Office of the Scottish Charity Regulator number, if they have one but no Companies House number</li>
-              <li>the number of jobs each employer is offering as part of this variation and where they are based</li>
-              <li>details about how you, as a gateway, check that all jobs offered meet the Kickstart Scheme criteria</li>
-            </ul>
+          <p class="govuk-body">We will ask for:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>each employer’s registered name and registered address</li>
+            <li>each employer’s Companies House registration number, if they have one</li>
+            <li>their Charity Commission or Office of the Scottish Charity Regulator number, if they have one but no
+              Companies House number</li>
+            <li>the number of jobs each employer is offering as part of this variation and where they are based</li>
+            <li>details about how you, as a gateway, check that all jobs offered meet the Kickstart Scheme criteria</li>
+          </ul>
 
-            <p class="govuk-body">If you wish to offer Kickstart Scheme jobs within your gateway organisation add your details in the same way as for other employers.</p>
+          <p class="govuk-body">If you wish to offer Kickstart Scheme jobs within your gateway organisation add your
+            details in the same way as for other employers.</p>
 
-            <button class="govuk-button" data-module="govuk-button">
+          <button class="govuk-button" data-module="govuk-button">
             Continue
-        </button>
-          </form>
-        </div>
-      </div>
+          </button>
+    </form>
+  </div>
+</div>
 
-    {% endblock %}
+{% endblock %}

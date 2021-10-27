@@ -1,43 +1,41 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What is your Kickstart Scheme Application ID? - Kickstart scheme application
+What is your Kickstart Scheme Application ID? - Kickstart scheme application
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <form action="what-you-need-next" method="post" novalidate>
+    <form action="what-you-need-next" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                What is your Kickstart Scheme Application ID?
-              </h1>
-            </legend>
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="application-id">
+          What is your Kickstart Scheme Application ID?
+        </label>
+      </h1>
 
-            <p class="govuk-body">
-              You can find your Kickstart Scheme Application ID on your grant agreement or on payment remittance documents.
-            </p>
+      <div class="govuk-form-group">
+        <p class="govuk-body">
+          You can find your Kickstart Scheme Application ID on your grant agreement or on payment remittance documents.
+        </p>
 
-            <div id="with-hint-hint" class="govuk-hint">
-             It starts with KS followed by 8 characters. For example: KS123ABC78.
-            </div>
-
-            <div class="govuk-form-group">
-              <input class="govuk-input govuk-input--width-20" id="application-id" name="application-id" type="text">
-            </div>
-          </fieldset>
+        <div id="with-hint-hint" class="govuk-hint">
+          It starts with KS followed by 8 characters. For example: KS123ABC78.
         </div>
 
-        <button class="govuk-button" data-module="govuk-button">
-            Continue
-        </button>
-      </form>
-    </div>
+        <div class="govuk-form-group">
+          <input class="govuk-input govuk-input--width-20" id="application-id" name="application-id" type="text">
+        </div>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
   </div>
+</div>
 
 {% endblock %}

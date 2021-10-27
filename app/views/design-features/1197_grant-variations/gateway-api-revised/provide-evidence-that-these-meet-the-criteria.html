@@ -1,44 +1,49 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  How do you check that organisations in your gateway are helping young people with employment support? - Kickstart scheme application
+How do you check that organisations in your gateway are helping young people with employment support? - Kickstart scheme
+application
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <form action="just-for-the-kickstart-scheme" method="post" novalidate>
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="event-name">How do you check that organisations in your gateway are helping young people with employment support?</label>
-          </h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="just-for-the-kickstart-scheme" method="post" novalidate>
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="employment-support">How do you check that organisations in your
+            gateway
+            are helping young people with employment support?</label>
+        </h1>
 
-          <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
-            <div class="govuk-form-group">
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+          <div class="govuk-form-group">
 
-              <div id="register-hint" class="govuk-hint">
-                <p class="govuk-body">The employers must help the young person become ready for work in the long term. This support could include:</p>
-                <ul class="govuk-list govuk-list--bullet">
-                  <li>help with looking for long-term work, including career advice and setting goals</li>
-                  <li>support with CV and interview preparations</li>
-                  <li>developing their skills in the workplace</li>
-                </ul>
-              </div>
-              <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10" aria-describedby="word-count-info"></textarea>
+            <div id="register-hint" class="govuk-hint">
+              <p class="govuk-body">The employers must help the young person become ready for work in the long term.
+                This support could include:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>help with looking for long-term work, including career advice and setting goals</li>
+                <li>support with CV and interview preparations</li>
+                <li>developing their skills in the workplace</li>
+              </ul>
             </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="employment-support" name="employment-support"
+              rows="10" aria-describedby="word-count-info"></textarea>
+          </div>
 
-            <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-              You can enter up to 500 words
-            </div>
+          <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+            You can enter up to 500 words
           </div>
         </div>
+      </div>
 
-        <button class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-      </form>
-    </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
   </div>
+</div>
 
 {% endblock %}

@@ -7,7 +7,7 @@ Confirm employer details – Kickstart scheme application
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">Confirm employer details</h1>
- 
+
 
     <dl class="govuk-summary-list govuk-summary-list--no-border">
       <div class="govuk-summary-list__row">
@@ -47,19 +47,20 @@ Confirm employer details – Kickstart scheme application
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             Are these details correct?
           </legend>
-            <div id="more-detail-hint" class="govuk-hint">
-              If the details entered do not match Companies House records the employer could be rejected or the process may be delayed.
-            </div>
+          <div id="more-detail-hint" class="govuk-hint">
+            If the details entered do not match Companies House records the employer could be rejected or the process
+            may be delayed.
+          </div>
           <div class="govuk-radio govuk-radios--stacked" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="is_signed" name="is_signed" type="radio" value="false">
-              <label class="govuk-label govuk-radios__label" for="is_signed">
+              <input class="govuk-radios__input" id="is_correct" name="is_signed" type="radio" value="false">
+              <label class="govuk-label govuk-radios__label" for="is_correct">
                 Yes, these details are correct
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="is_signed" name="is_signed" type="radio" value="true">
-              <label class="govuk-label govuk-radios__label" for="is_signed">
+              <input class="govuk-radios__input" id="try_again" name="is_signed" type="radio" value="true">
+              <label class="govuk-label govuk-radios__label" for="try_again">
                 No, I want to enter a different Companies House registration number
               </label>
             </div>
@@ -68,10 +69,13 @@ Confirm employer details – Kickstart scheme application
               <label class="govuk-label govuk-radios__label" for="is_signed">
                 No, I want to enter this employer’s details myself
               </label>
-            </div>            
+            </div>
           </div>
-          <div id="fileuploaded" style="display:none;" class="govuk-body uploaded-files" tabindex="-1"><span id="file-name">my-test-document.pdf</span> <a href="#" class="delete-file govuk-link" data-file-id="agentProofofAuthority_upload"
-              data-form-id="tor-test" data-access-code="-"><span aria-hidden="true">Delete</span><span class="govuk-visually-hidden">Delete my-test-document.pdf</span></a></div>
+          <div id="fileuploaded" style="display:none;" class="govuk-body uploaded-files" tabindex="-1"><span
+              id="file-name">my-test-document.pdf</span> <a href="#" class="delete-file govuk-link"
+              data-file-id="agentProofofAuthority_upload" data-form-id="tor-test" data-access-code="-"><span
+                aria-hidden="true">Delete</span><span class="govuk-visually-hidden">Delete
+                my-test-document.pdf</span></a></div>
         </fieldset>
       </div>
       <button class="govuk-button" data-module="govuk-button">

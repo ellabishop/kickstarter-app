@@ -1,87 +1,94 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Enter details of the employer - Kickstart scheme application
+Enter details of the employer - Kickstart scheme application
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <form action="/employer-details-revised" method="post" novalidate>
+    <form action="/employer-details-revised" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">Enter details of the employer</h1>
-            </legend>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="paidEmployees">
-                Registered organisation name
-              </label>
-              <input class="govuk-input govuk-!-width-two-thirds" id="company_name" name="company_name" type="text" spellcheck="false" autocomplete="name">
-            </div>
-            </div>
-            
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="contact_type">
-        Who is the employer registered with?<span class="govuk-visually-hidden">line 1 of 2</span>
-            </label>
-            <div id="register-hint" class="govuk-hint">
-                For example, Companies House, Charity Commission for England and Wales, Office of the Scottish Charity Regulator, public sector organisation. If they are not recorded by any registration body leave this box empty.
-            </div>            
-            <input class="govuk-input govuk-!-width-two-thirds" id="contact_type" name="contact_type" type="text" autocomplete="contact_type"></div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="company_number">
-        Registered number <span class="govuk-visually-hidden">line 1 of 2</span>
-            </label>
-            <input class="govuk-input govuk-!-width-two-thirds" id="company_number" name="company_number" type="text" autocomplete="company_number"></div>
-
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="company-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h4 class="govuk-heading-s">Registered organisation address</h4>
+            <h1 class="govuk-fieldset__heading">Enter details of the employer</h1>
           </legend>
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-line-1">
-        Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
-            </label>
-            <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1"></div>
 
           <div class="govuk-form-group">
-            <label class="govuk-label" for="address-line-2">
-              <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+            <label class="govuk-label" for="company_name">
+              Registered organisation name
             </label>
-            <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2"></div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-town">
-              Town or city
-            </label>
-            <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2"></div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-county">
-              County
-            </label>
-            <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-postcode">
-              Postcode
-            </label>
-            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
-
-          <button class="govuk-button" data-module="govuk-button">
-                Continue
-            </button>
-        </fieldset>
+            <input class="govuk-input govuk-!-width-two-thirds" id="company_name" name="company_name" type="text"
+              spellcheck="false" autocomplete="name">
+          </div>
       </div>
-      <br>
 
-    </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="contact_type">
+          Who is the employer registered with?<span class="govuk-visually-hidden">line 1 of 2</span>
+        </label>
+        <div id="register-hint" class="govuk-hint">
+          For example, Companies House, Charity Commission for England and Wales, Office of the Scottish Charity
+          Regulator, public sector organisation. If they are not recorded by any registration body leave this box empty.
+        </div>
+        <input class="govuk-input govuk-!-width-two-thirds" id="contact_type" name="contact_type" type="text"
+          autocomplete="organization-title">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="company_number">
+          Registered number <span class="govuk-visually-hidden">line 1 of 2</span>
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="company_number" name="company_number" type="text"
+          autocomplete="organization"></div>
+
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h4 class="govuk-heading-s">Registered organisation address</h4>
+      </legend>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-1">
+          Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+        </label>
+        <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-2">
+          <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+        </label>
+        <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-town">
+          Town or city
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text"
+          autocomplete="address-level2"></div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-county">
+          County
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-postcode">
+          Postcode
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text"
+          autocomplete="postal-code"></div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+      </fieldset>
   </div>
+
+</div>
 
 </form>
 </div>

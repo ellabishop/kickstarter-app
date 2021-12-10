@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-What type of roles do you plan to create for the Kickstart Scheme? - Kickstart scheme application
+What sort of roles – Apply for a Kickstart Scheme Grant for Employers – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -11,36 +11,30 @@ What type of roles do you plan to create for the Kickstart Scheme? - Kickstart s
 
     <form action="kickstart-employability-support-1" method="post" novalidate>
 
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--l" for="type-of-roles">What type of roles do you plan to create for the
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="300">
+        <div class="govuk-form-group">
+          <h1 class="form-title govuk-heading-l" for="word-count">
+            What type of role/s do you plan to create for the
             Kickstart Scheme?
-          </label>
-        </h1>
+          </h1>
 
-        <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="300">
-          <div class="govuk-form-group">
-
-            <div id="register-hint" class="govuk-hint">
-              <p class="govuk-body">For example: </p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>retail assistant</li>
-                <li>landscape gardener</li>
-                <li>web designer</li>
-                <li>marketing executive</li>
-              </ul>
-
-            </div>
-            <textarea class="govuk-textarea govuk-js-character-count" id="type-of-roles" name="type-of-rolest" rows="10"
-              aria-describedby="word-count-info"></textarea>
+          <div id="register-hint" class="govuk-hint">
+            <p class="govuk-body">For example:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>retail assistant</li>
+              <li>landscape gardener</li>
+              <li>web designer</li>
+              <li>marketing executive</li>
+            </ul>
           </div>
 
-          <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-            You can enter up to 300 words
-          </div>
-
+          <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10"
+            aria-describedby="word-count-info"></textarea>
         </div>
 
+        <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You have 300 words remaining
+        </div>
       </div>
 
       <button class="govuk-button" data-module="govuk-button">

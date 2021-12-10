@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-How will you help the young person improve their job prospects? - Kickstart scheme application
+How will you help the young person improve their job prospects? – Apply for a Kickstart Scheme Grant for Employers – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -11,30 +11,30 @@ How will you help the young person improve their job prospects? - Kickstart sche
 
       <form action="where-placements-based" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="job-prospects">How will you help the young person improve their job prospects?</label>
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+          <div class="govuk-form-group">
+            <h1 class="form-title govuk-heading-l" for="word-count">
+            How will you help the young person improve their job prospects?
           </h1>
 
-          <div id="register-hint" class="govuk-hint">
-This could include providing training on CV writing, interview techniques and other employability skills.
+            <div id="register-hint" class="govuk-hint">
+            This could include providing training on CV writing, interview techniques and other employability skills.
           </div>
 
-          <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="400">
-            <div class="govuk-form-group">
-              <textarea class="govuk-textarea govuk-js-character-count" id="job-prospects" name="job-prospects" rows="10" aria-describedby="word-count-info"></textarea>
-            </div>
-
-            <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-              You can enter up to 400 words
-            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10"
+            aria-describedby="word-count-info"></textarea>
           </div>
 
-          <button class="govuk-button" data-module="govuk-button">
+          <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You have 500 words remaining
+        </div>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-        </form>
-      </div>
+      </form>
     </div>
+  </div>
 
-  {% endblock %}
+{% endblock %}

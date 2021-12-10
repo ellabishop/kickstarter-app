@@ -1,76 +1,67 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Apply for a Kickstart Scheme Grant for Employers
-{% endblock %}
-
-{% block beforeContent %}
-  <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-      beta
-    </strong>
-      <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-    </p>
-  </div>
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+Apply for a Kickstart Scheme Grant for Employers
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <form action="upload-file" method="post" novalidate >
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="upload-file" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                Download a template to tell us about all employers with additional jobs 
-                </h1>
-            </legend>
-            <p class="govuk-body">For security reasons you must use the template we provide, or <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/employer-details">submit details of each employer one-by-one</a>. You cannot upload your own file.</p>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Download a template to tell us about all employers with additional jobs
+            </h1>
+          </legend>
+          <p class="govuk-body">For security reasons you must use the template we provide, or <a class="govuk-link"
+              href="/design-features/1197_grant-variations/gateway/employer-details">submit details of each employer
+              one-by-one</a>. You cannot upload your own file.</p>
 
-            <div class="govuk-inset-text govuk-!-margin-bottom-8">
-                This service will time out after 60 minutes. Please make sure you have time to complete all steps before you begin. 
+          <div class="govuk-inset-text govuk-!-margin-bottom-8">
+            This service will time out after 60 minutes. Please make sure you have time to complete all steps before you
+            begin.
+          </div>
+
+          <div class="govuk-grid-row govuk-!-margin-bottom-8">
+            <div class="govuk-grid-column-one-quarter">
+              <div id="attachment-thumb" class="attachment-thumb" role="region" aria-live="assertive" tabindex="-1">
+              </div>
             </div>
-
-            <div class="govuk-grid-row govuk-!-margin-bottom-8">
-                <div class="govuk-grid-column-one-quarter">
-                  <div id="attachment-thumb" class="attachment-thumb" role="region" aria-live="assertive" tabindex="-1"></div>
-                </div>
-                <div class="govuk-grid-column-three-quarters">
-                  <p class="govuk-body govuk-!-font-size-24">
-                    Template (XLS)
-                  </p>
-                  <p class="govuk-body-s"><a class="govuk-link" href="#">Download MS Excel Spreadsheet, 1.19MB</a></p>
-                </div>
+            <div class="govuk-grid-column-three-quarters">
+              <p class="govuk-body govuk-!-font-size-24">
+                Template (XLS)
+              </p>
+              <p class="govuk-body-s"><a class="govuk-link" href="#">Download MS Excel Spreadsheet, 1.19MB</a></p>
             </div>
+          </div>
 
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-one-quarter">
-                  <div id="attachment-thumb" class="attachment-thumb" role="region" aria-live="assertive" tabindex="-1"></div>
-                </div>
-                <div class="govuk-grid-column-three-quarters">
-                  <p class="govuk-body govuk-!-font-size-24">
-                    Template (CSV)
-                  </p>
-                  <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/view-csv-template">View online</a> &nbsp; &nbsp; <a class="govuk-link" href="#">Download CSV (195 Bytes)</a>
-                </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-quarter">
+              <div id="attachment-thumb" class="attachment-thumb" role="region" aria-live="assertive" tabindex="-1">
+              </div>
             </div>
+            <div class="govuk-grid-column-three-quarters">
+              <p class="govuk-body govuk-!-font-size-24">
+                Template (CSV)
+              </p>
+              <a class="govuk-link" href="/design-features/1197_grant-variations/gateway/view-csv-template">View
+                online</a> &nbsp; &nbsp; <a class="govuk-link" href="#">Download CSV (195 Bytes)</a>
+            </div>
+          </div>
 
-          </fieldset>
-        </div>
+        </fieldset>
+      </div>
 
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
 
-        <button class="govuk-button" data-module="govuk-button">
-                  Continue
-                </button>
-
-      </form>
-    </div>
+    </form>
   </div>
+</div>
 
 {% endblock %}

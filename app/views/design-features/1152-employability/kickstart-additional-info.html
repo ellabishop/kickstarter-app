@@ -1,50 +1,49 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-What information do you have to show your job placements are just for the Kickstart Scheme? - Kickstart scheme application
+Information that vacancy is just for Kickstart – Apply for a Kickstart Scheme Grant for Employers – GOV.UK
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <form action="organisation-details" method="post" novalidate>
+    <form action="organisation-details" method="post" novalidate>
 
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
         <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="jobs-for-ks">What information do you have to show your job placements are just for the Kickstart Scheme?</label>
+          <h1 class="form-title govuk-heading-l" for="word-count">
+            What information do you have to show your job placements are just for the Kickstart Scheme?
           </h1>
 
-          <p class="govuk-body">
-          Kickstart Scheme job placements must be created just for the scheme. They must:</p>
-
-          <ul class="govuk-list govuk-list--bullet">
-            <li>be funded by the Kickstart Scheme grant and would not exist without this funding</li>
-            <li>be paid from the grant money for the 25 hours per week on National Minimum Wage (employers can pay a higher wage and pay for more hours)</li>
-            <li>not replace existing or planned vacancies </li>
-            <li>not cause existing employees or contractors to lose or reduce their employment</li>
-          </ul>
-
-          <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="400">
-            <div class="govuk-form-group">
-              <div id="register-hint" class="govuk-hint">
-                Enter all the information you have to support your application.
-              </div>
-              <textarea class="govuk-textarea govuk-js-character-count" id="jobs-for-ks" name="jobs-for-ks" rows="10" aria-describedby="word-count-info"></textarea>
-            </div>
-
-            <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-              You can enter up to 400 words
-            </div>
-
+          <div id="register-hint" class="govuk-hint">
+            <p class="govuk-body">Provide information that the Kickstart Scheme job placements from your organisation
+              are created just for the Kickstart Scheme. This includes that they must:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>be funded by the Kickstart Scheme grant and would not exist without this funding</li>
+              <li>be paid from the grant money for the 25 hours per week on National Minimum Wage (employers can pay a
+                higher wage and pay for more hours)</li>
+              <li>not replace existing or planned vacancies</li>
+              <li>not cause existing employees or contractors to lose or reduce their employment</li>
+            </ul>
           </div>
 
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-        </form>
-      </div>
-    </div>
+          <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10"
+            aria-describedby="word-count-info"></textarea>
+        </div>
 
-  {% endblock %}
+        <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You have 500 words remaining
+        </div>
+
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

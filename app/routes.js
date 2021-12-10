@@ -9,7 +9,7 @@ const router = express.Router()
 
 //////////////// KICK-1657-stop-GOEs-using-KS-ID – ROUTE-1 ////////////////
 
-// are you an employer
+// Are you an employer
 
 router.post('/1657-are-you-an-employer', function (req, res) {
   var kstype = req.session.data['kstype']
@@ -20,7 +20,7 @@ router.post('/1657-are-you-an-employer', function (req, res) {
   }
 });
 
-// Next we do KS grant - employer
+// Next we do KS Grant - employer
 
 router.post('/1657-have-a-kickstart-grant-employer', function (req, res) {
   var KickstartGrant = req.session.data['KickstartGrant']
@@ -31,7 +31,7 @@ router.post('/1657-have-a-kickstart-grant-employer', function (req, res) {
   }
 });
 
-//after KS grant we do criteria
+//after KS Grant we do Criteria
 
 router.post('/1657-variations-criteria', function (req, res) {
 
@@ -44,7 +44,7 @@ if (metcrit === 'true') {
 }
 });
 
-//after criteria we do additional
+//after Criteria we do Additional
 
 router.post('/1657-variations-additional', function (req, res) {
 
@@ -69,7 +69,7 @@ if (ksSupport === 'true') {
 
 //////////////// KICK-1657-stop-GOEs-using-KS-ID – ROUTE-2 ////////////////
 
-// are you an employer
+// are you an Employer
 
 router.post('/1657-2-are-you-an-employer', function (req, res) {
   var kstype = req.session.data['kstype']
@@ -80,7 +80,7 @@ router.post('/1657-2-are-you-an-employer', function (req, res) {
   }
 });
 
-// Next we do KS grant - employer
+// Next we do KS Grant - employer
 
 router.post('/1657-2-have-a-kickstart-grant-employer', function (req, res) {
   var KickstartGrant = req.session.data['KickstartGrant']
@@ -91,7 +91,7 @@ router.post('/1657-2-have-a-kickstart-grant-employer', function (req, res) {
   }
 });
 
-//after KS grant we do criteria
+//after KS Grant we do Criteria
 
 router.post('/1657-2-variations-criteria', function (req, res) {
 
@@ -104,7 +104,7 @@ if (metcrit === 'true') {
 }
 })
 
-//after criteria we do additional
+//after Criteria we do Additional
 
 router.post('/1657-2-variations-additional', function (req, res) {
 

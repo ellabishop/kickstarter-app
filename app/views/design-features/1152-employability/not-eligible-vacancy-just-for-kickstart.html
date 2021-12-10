@@ -1,22 +1,7 @@
-{% extends "layout.html" %}
+{% extends "layout_no_back.html" %}
 
 {% block pageTitle %}
-  Your Kickstart Scheme job placements need to meet the criteria - Kickstart scheme application
-{% endblock %}
-
-{% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      beta
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
-{% endblock %}
+Not eligible - Employability Support – Apply for a Kickstart Scheme Grant for Employers – GOV.UK{% endblock %}
 
 {% block content %}
 
@@ -25,34 +10,31 @@
 
       <form action="/registered-answer" method="post" novalidate>
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="company-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
           Your Kickstart Scheme job placements need to meet the criteria
         </h1>
-      </legend>
+            </legend>
 
+            <p class="govuk-body">In order to apply to the Kickstart Scheme, your job placements must:</p>
 
-      <p class="govuk-body">In order to apply to the Kickstart Scheme, your job placements must:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>be funded by the Kickstart Scheme grant and would not exist without this funding</li>
+              <li>be paid from the grant money for the 25 hours per week on National Minimum Wage (employers can pay a higher wage and pay for more hours)</li>
+              <li>not replace your existing or planned jobs</li>
+              <li>not cause existing employees or contractors to lose or reduce their employment</li>
+            </ul>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>be funded by the Kickstart Scheme grant and would not exist without this funding</li>
-<li>be paid from the grant money for the 25 hours per week on National Minimum Wage (employers can pay a higher wage and pay for more hours)</li>
-<li>not replace your existing or planned jobs</li>
-<li>not cause existing employees or contractors to lose or reduce their employment</li>
-      </ul>
+            <p class="govuk-body">You will need to make adjustments to your job placements so they meet the criteria before you apply.</p>
 
+            <p class="govuk-body">Read more about <a href="https://www.gov.uk/government/collections/kickstart-scheme#who">who can apply for Kickstart Scheme funding on the guidance page.</a>
+            </p>
 
-<p class="govuk-body">You will need to make adjustments to your job placements so they meet the criteria before you apply.</p>
+          </form>
 
-<p class="govuk-body">Read more about <a href="https://www.gov.uk/government/collections/kickstart-scheme#who">who can apply for Kickstart Scheme funding on the guidance page.</a></p>
+        </div>
+      </div>
 
-
-
-        </form>
-
-    </div>
-  </div>
-
-{% endblock %}
+    {% endblock %}

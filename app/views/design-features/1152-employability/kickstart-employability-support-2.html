@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-How will you help develop the young person’s teamwork and communication skills? - Kickstart scheme application
+How will you help develop the young person’s teamwork and communication skills? – Apply for a Kickstart Scheme Grant for Employers – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -11,29 +11,26 @@ How will you help develop the young person’s teamwork and communication skills
 
       <form action="kickstart-employability-support-3" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="teamwork">
-          How will you help develop the young person’s teamwork and communication skills?
-</label>
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="400">
+          <div class="govuk-form-group">
+            <h1 class="form-title govuk-heading-l" for="word-count">
+            How will you help develop the young person’s teamwork and communication skills?
           </h1>
 
-          <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="400">
-            <div class="govuk-form-group">
-              <textarea class="govuk-textarea govuk-js-character-count" id="teamwork" name="teamwork" rows="10" aria-describedby="word-count-info"></textarea>
-            </div>
-
-            <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-    You can enter up to 400 words
-  </div>
-
+            <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10"
+            aria-describedby="word-count-info"></textarea>
           </div>
 
-          <button class="govuk-button" data-module="govuk-button">
+          <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You have 400 words remaining
+        </div>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
         Continue
       </button>
-        </form>
-      </div>
+      </form>
     </div>
+  </div>
 
-  {% endblock %}
+{% endblock %}

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Check your answers - Kickstart scheme application
+Check answers – Apply for a Kickstart Scheme Grant for Employers – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -12,52 +12,14 @@ Check your answers - Kickstart scheme application
       <fieldset class="govuk-fieldset" aria-describedby="company-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
           <h1 class="govuk-fieldset__heading">
-            Check your answers before sending
+            Check your answers and accept the declaration
           </h1>
         </legend>
 
         <p class="govuk-body"></p>
         <form action="application-complete" method="post" novalidate>
-          <h3 class="govuk-heading-m">Employer details</h3>
-          <dl class="govuk-summary-list">
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                What information do you have to show your job placements are just for the Kickstart Scheme?
-              </dt>
-              <dd class="govuk-summary-list__value">
-                <p class="govuk-body">When you apply for a job, you often submit a resume and cover letter to outline
-                  your previous experiences that make you qualified for the position. When you get to the interview,
-                  your prospective employer has likely already reviewed your application materials and is familiar with
-                  your background. Interviewers may ask you to describe your work experience, which gives you the chance
-                  to share what you feel is most valuable to this new role.</p>
-                <p class="govuk-body">Any job has a set of duties you’ll be responsible for, so knowing your prior
-                  experience can help your interviewer gauge how prepared you are for a role. Even though they can see
-                  your experience on your resume or application, your ability to summarize your work history and relate
-                  it to the position can show that you’ve reflected on your potential employer’s expectations.</p>
-                <p class="govuk-body">This interview prompt gives you the chance to summarize the education and training
-                  that make you the most qualified candidate for the role. You can use this time to present the items on
-                  your resume more clearly in terms of how they prepare you for this position’s responsibilities and
-                  contributions to the company’s goals. Before your interview, consider writing out quick talking points
-                  to organize your thoughts, and use the following steps to help prepare your answer.</p>
-                <p class="govuk-body">Familiarize yourself with the position’s expectations to best present your ability
-                  to handle its responsibilities. Briefly outline what the role entails, including the daily tasks,
-                  necessary skills and ideal goals. You should also identify the tools listed in the job description,
-                  such as specific technology or equipment. Recalling the required and preferred qualifications can help
-                  you determine which of your skills and experiences to discuss.</p>
-                <p class="govuk-body">It’s wise to remind yourself of the professional experience you provided during
-                  the application process so you know what expectations you have set for the interviewer. Study the most
-                  relevant experiences on your resume, cover letter and formal application, and focus on the duties,
-                  skills and accomplishments of each. Use the terminology you gathered from the job listing to phrase
-                  your experiences in terms the interviewer is likely to recognize. This step can help you optimize your
-                  brief summary and focus your answer. 362/400 words</p>
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="/design-features/1152-employability/kickstart-additional-info">
-                  Change<span class="govuk-visually-hidden">Jobs are for the Kickstart Scheme</span>
-                </a>
-              </dd>
-            </div>
+          <h3 class="govuk-heading-m">Organisation details</h3>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9 check-your-answers">
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
@@ -75,7 +37,7 @@ Check your answers - Kickstart scheme application
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Companies House registration number or Charity Commission number
+                Organisation reference number
               </dt>
               <dd class="govuk-summary-list__value">
                 45678902
@@ -108,10 +70,24 @@ Check your answers - Kickstart scheme application
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Contact details
+                Contact name
               </dt>
               <dd class="govuk-summary-list__value">
                 <p>{{ data['full-name'] }}</p>
+
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                  Change<span class="govuk-visually-hidden">Contact name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Contact details
+              </dt>
+              <dd class="govuk-summary-list__value">
                 <p>{{ data['telephone-number'] }}</p>
                 <p>{{ data['email-address'] }}</p>
               </dd>
@@ -139,13 +115,6 @@ Check your answers - Kickstart scheme application
                   either the finance or human resources/learning and development function. In smaller companies it
                   should be the person responsible for co-ordinating training and development for finance professionals.
                 </p>
-                <p class="govuk-body">If you are a firm of accountants in public practice and you are applying for
-                  Practising Certificate Development approval, the primary contact must be either a training partner or
-                  a training principal within your firm.</p>
-                <p class="govuk-body">We strongly recommend that you also provide details for a secondary contact. If we
-                  can’t get in touch with your primary contact, we will contact this person in their absence.</p>
-                <p class="govuk-body">An ACCA student or affiliate cannot be listed as the primary contact for your
-                  approval, but they can be listed as your secondary contact. 284/400 words</p>
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="/design-features/1152-employability/description-of-organisation">
@@ -154,14 +123,9 @@ Check your answers - Kickstart scheme application
               </dd>
             </div>
 
-          </dl>
-
-          <h3 class="govuk-heading-m">Kickstart vacancy details</h3>
-          <dl class="govuk-summary-list">
-
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                How many paid employees are there in your organisation?
+                Number of paid employees
               </dt>
               <dd class="govuk-summary-list__value">
                 <p>{{ data['paid-employees'] }}</p>
@@ -173,9 +137,14 @@ Check your answers - Kickstart scheme application
               </dd>
             </div>
 
+          </dl>
+
+          <h3 class="govuk-heading-m">Kickstart job placement details</h3>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9 check-your-answers">
+
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                How many job placements are you planning to create for the Kickstart Scheme?
+                Number of job placements
               </dt>
               <dd class="govuk-summary-list__value">
                 <p>{{ data['number-placements'] }}</p>
@@ -219,6 +188,39 @@ Check your answers - Kickstart scheme application
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
+                Information to show job placements are just for Kickstart scheme
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">Temporary work is a great way to try out a role in a new company, or city, without
+                  the commitment of a permanent contract.</p>
+                <p class="govuk-body">Some temp roles are just that, and inevitably have an expiration date, but don’t
+                  despair. It’s not uncommon for temporary workers who perform well to be rewarded with a permanent
+                  position.</p>
+                <p class="govuk-body">The trick is to prove your worth. Make yourself indispensable to your employer and
+                  they’ll naturally want to retain you. If you have the opportunity to gain expertise in an area vital
+                  to the business, seize it. Go above and beyond to exceed expectations on a daily basis and show that
+                  you’re worth the investment.</p>
+                <p class="govuk-body">I often say a job is a problem to be solved, so show them that you are the
+                  solution to their problem.</p>
+                <p class="govuk-body">Employers also want to know that you’ll fit in well with the company culture – not
+                  just on a personal level with your colleagues, but with the company’s core values. Follow correct
+                  company etiquette when it comes to break times, socialising and meetings, and always offer to help
+                  your co-workers.</p>
+                <p class="govuk-body">Ensuring that you’re known as someone who is well-liked will go a long way with
+                  your employer when it comes to considering you for a full time position.</p>
+                <p class="govuk-body">You’re in a unique position – you already have your foot in the door – so use it
+                  to your advantage. Find out what skills are required to become a full time employee and make sure that
+                  you have them, or that you’re working on building them. 254/400 words</p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/design-features/1152-employability/kickstart-employability-support-4">
+                  Change<span class="govuk-visually-hidden">Just for Kickstart scheme</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
                 How will you help the young person manage their timekeeping and attendance?
               </dt>
               <dd class="govuk-summary-list__value">
@@ -243,7 +245,7 @@ Check your answers - Kickstart scheme application
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="/design-features/1152-employability/kickstart-employability-support-1">
-                  Change<span class="govuk-visually-hidden">Types of support</span>
+                  Change<span class="govuk-visually-hidden">Timekeeping and attendance</span>
                 </a>
               </dd>
             </div>
@@ -321,7 +323,7 @@ Check your answers - Kickstart scheme application
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="/design-features/1152-employability/kickstart-employability-support-3">
-                  Change<span class="govuk-visually-hidden">Experience and skills</span>
+                  Change<span class="govuk-visually-hidden">Training</span>
                 </a>
               </dd>
             </div>
@@ -342,26 +344,17 @@ Check your answers - Kickstart scheme application
                   you’re worth the investment.</p>
                 <p class="govuk-body">I often say a job is a problem to be solved, so show them that you are the
                   solution to their problem.</p>
-                <p class="govuk-body">Employers also want to know that you’ll fit in well with the company culture – not
-                  just on a personal level with your colleagues, but with the company’s core values. Follow correct
-                  company etiquette when it comes to break times, socialising and meetings, and always offer to help
-                  your co-workers.</p>
-                <p class="govuk-body">Ensuring that you’re known as someone who is well-liked will go a long way with
-                  your employer when it comes to considering you for a full time position.</p>
-                <p class="govuk-body">You’re in a unique position – you already have your foot in the door – so use it
-                  to your advantage. Find out what skills are required to become a full time employee and make sure that
-                  you have them, or that you’re working on building them. 254/400 words</p>
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="/design-features/1152-employability/kickstart-employability-support-4">
-                  Change<span class="govuk-visually-hidden">Help look for work</span>
+                  Change<span class="govuk-visually-hidden">Job prospects</span>
                 </a>
               </dd>
             </div>
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Where will your Kickstart Scheme job placements be based?
+                Location of job placements
               </dt>
               <dd class="govuk-summary-list__value">
                 <p>{{ data['region'] }}
@@ -370,7 +363,7 @@ Check your answers - Kickstart scheme application
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="/design-features/1152-employability/where-placements-based">
-                  Change<span class="govuk-visually-hidden">Employability support</span>
+                  Change<span class="govuk-visually-hidden">Location of jobs</span>
                 </a>
               </dd>
             </div>

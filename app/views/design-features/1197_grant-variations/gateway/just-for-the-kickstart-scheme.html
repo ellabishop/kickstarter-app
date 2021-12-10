@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  How do you check that organisations in your gateway have created these roles just for the Kickstart Scheme? - Kickstart scheme application
+  Information that vacancy is just for Kickstart – Apply for a Kickstart Scheme Grant for Employers – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -11,28 +11,29 @@
 
       <form action="where-placements-based" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="just-for-ks">How do you check that organisations in your gateway have created these roles just for the Kickstart Scheme?</label>
-          </h1>
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-heading govuk-heading-l" for="word-count">
+              How do you check that organisations in your gateway have created these roles just for the Kickstart Scheme?
+            </label>
+            </h1>
 
-          <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
-            <div class="govuk-form-group">
-
-              <div id="register-hint" class="govuk-hint">
-                <p class="govuk-body">Kickstart jobs must not:</p>
-                <ul class="govuk-list govuk-list--bullet">
-                  <li>replace existing or planned vacancies</li>
-                  <li>cause existing employees to lose work or have their hours reduced</li>
-                </ul>
-              </div>
-              <textarea class="govuk-textarea govuk-js-character-count" id="just-for-ks" name="just-for-ks" rows="10" aria-describedby="word-count-info"></textarea>
+            <div id="register-hint" class="govuk-hint">
+              <p class="govuk-body">Kickstart jobs must not:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>replace existing or planned vacancies</li>
+                <li>cause existing employees to lose work or have their hours reduced</li>
+              </ul>
             </div>
 
-            <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-              You can enter up to 500 words
-            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10"
+            aria-describedby="word-count-info"></textarea>
           </div>
+
+          <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You have 500 words remaining
+        </div>
         </div>
 
         <button class="govuk-button" data-module="govuk-button">

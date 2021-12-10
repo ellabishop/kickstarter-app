@@ -1,101 +1,110 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Who is the employer registered with? - Kickstart scheme application
+Who is the employer registered with? - Kickstart scheme application
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <form action="/who-registered-with" method="post" novalidate >
+    <form action="/who-registered-with" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="registered-with">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                Who is the employer registered with?
-              </h1>
-            </legend>
-            <div id="contact-hint" class="govuk-hint">
-      Select one option
-    </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="registered-with">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Who is the employer registered with?
+            </h1>
+          </legend>
+          <div id="contact-hint" class="govuk-hint">
+            Select one option
+          </div>
 
-            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="reg-number" data-aria-controls="conditional-contact">
-                <label class="govuk-label govuk-radios__label" for="contact">
-          Charity Commission for England and Wales
-        </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-reg-number">
-            Enter their Charity Commission number
-          </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="reg-number" name="reg-number" type="reg-number" spellcheck="false" autocomplete="reg-number"></div>
-
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="scot-number" data-aria-controls="conditional-contact-2">
-                <label class="govuk-label govuk-radios__label" for="contact-2">
-          Office of the Scottish Charity Regulator
-        </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-scot-number">
-            Enter their Scottish Charity number
-          </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-scot-number" name="contact-by-scot-number" type="tel" autocomplete="tel"></div>
-
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
-                <label class="govuk-label govuk-radios__label" for="contact-3">
-                  Public sector organisation or exempt charity
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="reg-number"
+                data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-radios__label" for="contact">
+                Charity Commission for England and Wales
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-reg-number">
+                  Enter their Charity Commission number
                 </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-public-sector">
-                    Enter the name of an accredited body if they are registered with one
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-public-sector" name="contact-public-sector" type="tel" autocomplete="tel"></div>
-
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-4">
-                <label class="govuk-label govuk-radios__label" for="contact-4">
-                  Other
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-other">
-                    Enter the name of an accredited body if they are registered with one
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-other" name="contact-other" type="tel" autocomplete="tel"></div>
-
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-5" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-5">
-                <label class="govuk-label govuk-radios__label" for="contact-5">
-                  None
-                </label>
-              </div>
+                <input class="govuk-input govuk-!-width-one-third" id="reg-number" name="reg-number" type="reg-number"
+                  spellcheck="false" autocomplete="reg-number"></div>
 
             </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="scot-number"
+                data-aria-controls="conditional-contact-2">
+              <label class="govuk-label govuk-radios__label" for="contact-2">
+                Office of the Scottish Charity Regulator
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-scot-number">
+                  Enter their Scottish Charity number
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-scot-number"
+                  name="contact-by-scot-number" type="tel" autocomplete="tel"></div>
 
-          </fieldset>
-        </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text"
+                data-aria-controls="conditional-contact-3">
+              <label class="govuk-label govuk-radios__label" for="contact-3">
+                Public sector organisation or exempt charity
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-public-sector">
+                  Enter the name of an accredited body if they are registered with one
+                </label>
+                <input class="govuk-input govuk-input--width-10" id="contact-public-sector" name="contact-public-sector"
+                  type="tel" autocomplete="tel"></div>
 
-        <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-      </form>
-    </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="text"
+                data-aria-controls="conditional-contact-4">
+              <label class="govuk-label govuk-radios__label" for="contact-4">
+                Other
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-other">
+                  Enter the name of an accredited body if they are registered with one
+                </label>
+                <input class="govuk-input govuk-input--width-10" id="contact-other" name="contact-other" type="tel"
+                  autocomplete="tel"></div>
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-5" name="contact" type="radio" value="text"
+                data-aria-controls="conditional-contact-5">
+              <label class="govuk-label govuk-radios__label" for="contact-5">
+                None
+              </label>
+            </div>
+
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
   </div>
+</div>
 
 {% endblock %}

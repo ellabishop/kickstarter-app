@@ -1,42 +1,42 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-What is your Kickstart Scheme Application ID? - Kickstart scheme application
+What is your Kickstart Scheme Application ID? – Apply for a Kickstart Scheme Grant for Employers – GOV.UK
 {% endblock %}
 
 {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <form action="employer-details" method="post" novalidate>
+    <form action="employer-details" method="post" novalidate>
 
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--l" for="application-id">
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="application-id">
           What is your Kickstart Scheme Application ID?
         </label>
-        </h1>
+      </h1>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-            <p class="govuk-body">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <p class="govuk-body">
             You can find your Kickstart Scheme Application ID on your grant agreement or on payment remittance
             documents.
           </p>
 
-            <div id="registered-hint" class="govuk-hint">
+          <div id="registered-hint" class="govuk-hint">
             It starts with KS followed by 8 characters. For example: KS123ABC78.
           </div>
 
-            <div class="govuk-form-group">
-              <input class="govuk-input govuk-input--width-20" id="application-id" name="application-id" type="text">
-            </div>
+          <div class="govuk-form-group">
+            <input class="govuk-input govuk-input--width-20" id="application-id" name="application-id" type="text">
           </div>
+      </div>
 
-          <button class="govuk-button" data-module="govuk-button">
+      <button class="govuk-button" data-module="govuk-button">
         Continue
       </button>
-        </form>
-      </div>
-    </div>
+    </form>
+  </div>
+</div>
 
-  {% endblock %}
+{% endblock %}

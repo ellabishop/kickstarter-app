@@ -1,21 +1,8 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Provide information to show that these jobs have been created just for the Kickstart Scheme - Kickstart scheme application
-{% endblock %}
-
-{% block beforeContent %}
-  <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-      beta
-    </strong>
-      <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-    </p>
-  </div>
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+Provide information to show that these jobs have been created just for the Kickstart Scheme - Kickstart scheme
+application
 {% endblock %}
 
 {% block content %}
@@ -25,36 +12,38 @@
 
       <form action="what-additional-support-is-needed" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="just-for-ks">Provide information to show that these jobs have been created just for the Kickstart Scheme 
-</label>
-          </h1>
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-heading govuk-heading-l" for="word-count">
+              Provide information to show that these jobs have been created just for the Kickstart Scheme
+            </label>
+            </h1>
 
-          <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
-            <div class="govuk-form-group">
-
-              <div id="register-hint" class="govuk-hint">
-                <p class="govuk-body">This means each new role must:</p>
-                <ul class="govuk-list govuk-list--bullet">
-                  <li>be funded by the Kickstart Scheme grant and would not exist without the funding</li>
-                  <li>be paid from the grant money for the 25 hours per week on National Minimum Wage (employers can pay a higher wage and pay for more hours)</li>
-                  <li>not replace existing or planned vacancies</li>
-                  <li>not cause existing employees or contractors to lose or reduce their employment</li>
-                </ul>
-              </div>
-              <textarea class="govuk-textarea govuk-js-character-count" id="just-for-ks" name="just-for-ks" rows="10" aria-describedby="word-count-info"></textarea>
+            <div id="register-hint" class="govuk-hint">
+              <p class="govuk-body">This means each new role must:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>be funded by the Kickstart Scheme grant and would not exist without the funding</li>
+                <li>be paid from the grant money for the 25 hours per week on National Minimum Wage (employers can pay a
+                higher wage and pay for more hours)</li>
+                <li>not replace existing or planned vacancies</li>
+                <li>not cause existing employees or contractors to lose or reduce their employment</li>
+              </ul>
             </div>
 
-            <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-              You can enter up to 500 words
-            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10"
+            aria-describedby="word-count-info"></textarea>
           </div>
+
+          <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You have 500 words remaining
+        </div>
+
         </div>
 
         <button class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
+        Continue
+      </button>
 
       </form>
     </div>

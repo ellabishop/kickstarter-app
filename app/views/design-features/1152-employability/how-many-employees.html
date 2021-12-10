@@ -1,29 +1,30 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  How many paid employees are there where the job placements will be based? - Kickstart scheme application
+How many paid employees – Apply for a Kickstart Scheme Grant for Employers – GOV.UK
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <form action="how-many-placements" method="post" novalidate>
+    <form action="how-many-placements" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="paid-employees">How many paid employees are there in your organisation?</label>
-          </h1>
-          <input class="govuk-input govuk-input--width-5" id="paid-employees" name="paid-employees" type="text">
-        </div>
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="form-title govuk-heading-l" for="paid-employees">How many paid employees are there in your
+            organisation?</label>
+        </h1>
+        <input class="govuk-input govuk-input--width-5" id="paid-employees" name="paid-employees" type="text">
+      </div>
 
-        <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-      </form>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
 
-    </div>
   </div>
+</div>
 
 {% endblock %}

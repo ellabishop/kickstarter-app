@@ -1,63 +1,46 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Is any additional employability support required for the new placements? - Kickstart scheme application
-{% endblock %}
-
-{% block beforeContent %}
-  <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-      beta
-    </strong>
-      <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-    </p>
-  </div>
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+Is any additional employability support required for the new placements? - Kickstart scheme application
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <form action="/employability-support" method="post" novalidate >
+    <form action="/employability-support" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                Is any additional employability support required for the new placements?
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Is any additional employability support required for the new placements?
             </h1>
-            </legend>
-            <div id="register-hint" class="govuk-hint">
-              If these new roles bla bla bla.
+          </legend>
+          <div id="register-hint" class="govuk-hint">
+            If these new roles bla bla bla.
+          </div>
+
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ksSupport" name="ksSupport" type="radio" value="false">
+              <label class="govuk-label govuk-radios__label" for="ksSupport">Yes</label>
             </div>
 
-            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="ksSupport" name="ksSupport" type="radio" value="false">
-                <label class="govuk-label govuk-radios__label" for="ksSupport">Yes</label>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="ksSupport" name="ksSupport" type="radio" value="true">
-                <label class="govuk-label govuk-radios__label" for="ksSupport">No</label>
-              </div>
-
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ksSupport" name="ksSupport" type="radio" value="true">
+              <label class="govuk-label govuk-radios__label" for="ksSupport">No</label>
             </div>
+          </div>
+        </fieldset>
+      </div>
 
-          </fieldset>
-        </div>
-
-        <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-      </form>
-
-    </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
   </div>
+</div>
 
 {% endblock %}

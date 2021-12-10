@@ -1,80 +1,71 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Can you provide employability support to young people? - Kickstart scheme application
-{% endblock %}
-
-{% block beforeContent %}
-  <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-      beta
-    </strong>
-      <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-    </p>
-  </div>
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+Can you provide employability support to young people? - Kickstart scheme application
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <form action="/variations-employability-support" method="post" novalidate>
+    <form action="/variations-employability-support" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                Can you provide employability support to young people?
-              </h1>
-            </legend>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Can you provide employability support to young people?
+            </h1>
+          </legend>
 
-            <p class="govuk-body">Young people need support so that they are in a better position to find work in the future.</p>
+          <p class="govuk-body">Young people need support so that they are in a better position to find work in the
+            future.</p>
 
-            <p class="govuk-body">By creating a Kickstart Scheme job you are helping young people who are at risk of being unemployed in the long term.</p>
+          <p class="govuk-body">By creating a Kickstart Scheme job you are helping young people who are at risk of being
+            unemployed in the long term.</p>
 
-            <p class="govuk-body">The Kickstart Scheme job  should help them get basic work skills. This includes: </p>
+          <p class="govuk-body">The Kickstart Scheme job should help them get basic work skills. This includes: </p>
 
-            <ul class="govuk-list govuk-list--bullet">
-              <li>attendance</li>
-              <li>timekeeping</li>
-              <li>teamwork</li>
-              <li>communication</li>
-              <li>travelling to work</li>
-            </ul>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>attendance</li>
+            <li>timekeeping</li>
+            <li>teamwork</li>
+            <li>communication</li>
+            <li>travelling to work</li>
+          </ul>
 
-            <p class="govuk-body">Kickstart participants may also need help with:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>CV and interviews</li>
-              <li>looking for long term work</li>
-            </ul>
-            
-            <p class="govuk-body">You need to offer support so they are employable by you or other organisations. You can also work with other organisations to provide this employability support on your behalf.</p>
+          <p class="govuk-body">Kickstart participants may also need help with:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>CV and interviews</li>
+            <li>looking for long term work</li>
+          </ul>
 
-            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="ksSupport-yes" name="ksSupport" type="radio" value="true">
-                <label class="govuk-label govuk-radios__label" for="ksSupport-yes">Yes, I can provide employability support to young people</label>
-              </div>
+          <p class="govuk-body">You need to offer support so they are employable by you or other organisations. You can
+            also work with other organisations to provide this employability support on your behalf.</p>
 
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="ksSupport-no" name="ksSupport" type="radio" value="false">
-                <label class="govuk-label govuk-radios__label" for="ksSupport-no"> No, I cannot provide employability support to young people</label>
-              </div>
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ksSupport-yes" name="ksSupport" type="radio" value="true">
+              <label class="govuk-label govuk-radios__label" for="ksSupport-yes">Yes, I can provide employability
+                support to young people</label>
             </div>
-          </fieldset>
-        </div>
 
-        <button class="govuk-button" data-module="govuk-button">
-            Continue
-        </button>
-      </form>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ksSupport-no" name="ksSupport" type="radio" value="false">
+              <label class="govuk-label govuk-radios__label" for="ksSupport-no"> No, I cannot provide employability
+                support to young people</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
 
-    </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+
   </div>
+</div>
 
 {% endblock %}

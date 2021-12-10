@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-What training will the young person receive as part of the role you are offering? - Kickstart scheme application
+What training will the young person receive as part of the role you are offering? – Apply for a Kickstart Scheme Grant for Employers – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -11,33 +11,34 @@ What training will the young person receive as part of the role you are offering
 
       <form action="kickstart-employability-support-4" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="training">What training will the young person receive as part of the role you are offering?</label>
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="400">
+          <div class="govuk-form-group">
+            <h1 class="form-title govuk-heading-l" for="word-count">
+            What training will the young person receive as part of the role you are offering?
           </h1>
 
-          <p class="govuk-body">Include details of any recognised certificates they may get, for example Level 1 Food Hygiene Certificate.</p>
+            <div id="register-hint" class="govuk-hint">
+              <p class="govuk-body">Include details of any recognised certificates they may get, for example Level 1 Food Hygiene Certificate.</p>
+            </div>
 
-          <div id="register-hint" class="govuk-hint">
+            <div id="register-hint" class="govuk-hint">
             We ask about employability training, such as CV writing or mock interviews next. Do not include that type of training here.
           </div>
 
-          <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="400">
-            <div class="govuk-form-group">
-              <textarea class="govuk-textarea govuk-js-character-count" id="training" name="training" rows="10" aria-describedby="word-count-info"></textarea>
-            </div>
-
-            <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-              You can enter up to 400 words
-            </div>
-
+            <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10"
+            aria-describedby="word-count-info"></textarea>
           </div>
 
-          <button class="govuk-button" data-module="govuk-button">
+          <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You have 400 words remaining
+        </div>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-        </form>
-      </div>
+      </form>
     </div>
+  </div>
 
-  {% endblock %}
+{% endblock %}

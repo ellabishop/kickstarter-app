@@ -1,21 +1,7 @@
-{% extends "layout.html" %}
+{% extends "layout_no_back.html" %}
 
 {% block pageTitle %}
-  Your Kickstart Scheme job placements need to include employability support
-{% endblock %}
-
-{% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      beta
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+Not eligible - Employability Support – Apply for a Kickstart Scheme Grant for Employers – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -25,50 +11,46 @@
 
       <form action="/registered-answer" method="post" novalidate>
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="company-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="company-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
           Your Kickstart Scheme job placements need to include employability support
         </h1>
-      </legend>
+            </legend>
 
+            <p class="govuk-body">You need to provide employability support to young people to get a Kickstart Scheme grant.</p>
 
-      <p class="govuk-body">You need to provide employability support to young people to get a Kickstart Scheme grant.</p>
+            <p class="govuk-body">The type of support we expect is anything that will help a young person be in a better position to find work in the future.</p>
 
-<p class="govuk-body">The type of support we expect is anything that will help a young person be in a better position to find work in the future.</p>
+            <p class="govuk-body">The Kickstart Scheme job placements should help them get basic work skills. This includes:</p>
 
-<p class="govuk-body">The Kickstart Scheme job placements should help them get basic work skills. This includes:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>attendance</li>
+              <li>timekeeping</li>
+              <li>communication</li>
+              <li>teamwork</li>
+              <li>travelling to work</li>
+            </ul>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>attendance</li>
-<li>timekeeping</li>
-<li>communication</li>
-<li>teamwork</li>
-<li>travelling to work</li>
-      </ul>
+            <p class="govuk-body">Kickstart participants may also need help with:</p>
 
+            <ul class="govuk-list govuk-list--bullet">
+              <li>CV and interviews</li>
+              <li>looking for long term work</li>
+            </ul>
 
-<p class="govuk-body">Kickstart participants may also need help with:</p>
+            <p class="govuk-body">You can also work with other organisations to provide this employability support on your behalf.</p>
 
-<ul class="govuk-list govuk-list--bullet">
-  <li>CV and interviews</li>
-<li>looking for long term work</li>
-</ul>
+            <p class="govuk-body">Apply for the Kickstart Scheme grant when you have included employability support with your job placements.</p>
 
-<p class="govuk-body">You can also work with other organisations to provide this employability support on your behalf.</p>
+            <p class="govuk-body">
+              <a href="https://www.gov.uk/government/collections/kickstart-scheme">Read more about the Kickstart Scheme on the guidance page.</a>
+            </p>
 
-<p class="govuk-body">Apply for the Kickstart Scheme grant when you have included employability support with your job placements.</p>
+          </form>
 
+        </div>
+      </div>
 
-
-<p class="govuk-body"><a href="https://www.gov.uk/government/collections/kickstart-scheme">Read more about the Kickstart Scheme on the guidance page.</a></p>
-
-
-
-        </form>
-
-    </div>
-  </div>
-
-{% endblock %}
+    {% endblock %}

@@ -4,20 +4,6 @@
   Check your answers - Kickstart scheme application
 {% endblock %}
 
-{% block beforeContent %}
-  <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-      beta
-    </strong>
-      <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-    </p>
-  </div>
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
-{% endblock %}
-
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -25,18 +11,16 @@
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="company-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
               Check your answers and accept the declaration
-            </h1>
           </legend>
 
           <p class="govuk-body"></p>
-        <form action="application-complete" method="post" novalidate>
+          <form action="application-complete" method="post" novalidate>
 
-              <h3 class="govuk-heading-m">Employer details</h3>
-          <dl class="govuk-summary-list">
+            <h3 class="govuk-heading-m">Employer details</h3>
+            <dl class="govuk-summary-list">
 
-            <div class="govuk-summary-list__row">
+              <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                   Organisation name
                 </dt>
@@ -48,9 +32,9 @@
                   Change<span class="govuk-visually-hidden">Organisation reference number</span>
                   </a>
                 </dd>
-            </div>
+              </div>
 
-            <div class="govuk-summary-list__row">
+              <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                   Companies House reference number, Charity Commision number or Office of the Scottish Charity Regulator number
                 </dt>
@@ -62,9 +46,9 @@
                   Change<span class="govuk-visually-hidden">Organisation reference number</span>
                   </a>
                 </dd>
-            </div>            
+              </div>
 
-            <div class="govuk-summary-list__row">
+              <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                   Organisation address
                 </dt>
@@ -80,7 +64,7 @@
                     Change<span class="govuk-visually-hidden">Organisation address</span>
                   </a>
                 </dd>
-            </div>
+              </div>
 
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -94,7 +78,7 @@
                     Change<span class="govuk-visually-hidden">Contact details</span>
                   </a>
                 </dd>
-              </div> 
+              </div>
 
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -109,53 +93,53 @@
                     Change<span class="govuk-visually-hidden">Contact details</span>
                   </a>
                 </dd>
-              </div>                           
-          </dl>          
-          <dl class="govuk-summary-list">
+              </div>
+            </dl>
+            <dl class="govuk-summary-list">
 
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
                   Kickstart Scheme Application ID
               </dt>
-              <dd class="govuk-summary-list__value">
+                <dd class="govuk-summary-list__value">
                 KS1234KH7D
               </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
                   Change<span class="govuk-visually-hidden">Organisation reference number</span>
-                </a>
-              </dd>
-            </div>
+                  </a>
+                </dd>
+              </div>
 
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
                   Number of paid employees
               </dt>
-              <dd class="govuk-summary-list__value">
+                <dd class="govuk-summary-list__value">
                 20
               </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
                   Change<span class="govuk-visually-hidden">Organisation reference number</span>
-                </a>
-              </dd>
-            </div>
+                  </a>
+                </dd>
+              </div>
 
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
                   Kickstart Scheme jobs applying for
               </dt>
-              <dd class="govuk-summary-list__value">
+                <dd class="govuk-summary-list__value">
                 2
               </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/design-features/1152-employability/organisation-details">
                   Change<span class="govuk-visually-hidden">Organisation reference number</span>
-                </a>
-              </dd>
-            </div>
-          </dl>
-              
+                  </a>
+                </dd>
+              </div>
+            </dl>
+
             <h3 class="govuk-heading-m">Employability and additionality</h3>
             <dl class="govuk-summary-list">
 
@@ -211,8 +195,6 @@
               </div>
 
             </dl>
-
-          
 
             <h3 class="govuk-heading-m">Accept and send your application</h3>
 
